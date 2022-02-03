@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JQuery</title><link href="css/style.css" rel="stylesheet">
+<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet"></head>
+<body><div class="ui-helper-hidden"></div><div id="dialogBox" title="'Les 1'"><p>Starten in de opleiding zal je doen met basiskennis van selectors, attributen en variabelen.</p></div>
+	
+<!---------------------------------------------------------------------------------------------------->
+
+<h1>Intro</h1>
+
+<div id="bodycontainer">
+   <div id="contentt" style="opacity: 80">
+		<p>Je zal de cursus aanvangen met basiskennis van selectors, attributen en variabelen. Bij wijze van voorbeeld kan je op de knop klikken om de achtergrondkleur te doen veranderen. Een ander voorbeeld dat je al vaardig bent na het inleidende hoofdstuk is een stappenteller.</p>
+
+      <button class="a">bg-color</button>
+
+      <button class="c">0</button>
+      
+
+
+      <p>
+      <button class="b">next les</button></p>
+</div></div>
+
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script>window.jQuery || document.write ('<script src="js/jquery-3.6.0.min.js"><\/script>')</script><!------------------------------------------------------------------------------------------------------------------------>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script><!---------------------------------------------------------------------------------------------------------------------->
+<script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script><!--------------------------------------------------------------------------------------------------------->
+<script>$(function() { //---------------------------------- SCRIPT --------------------------------|
+$('button').button();
+
+ $("#dialogBox").dialog({
+            modal: true,
+            title: "Welkom,",
+            width: 400,
+            height: 400
+                  }, {
+show: "slide",
+   hide: "puff"
+});
+ $("#dialogBox").dialog({ modal: true,
+                     buttons: {
+                           
+                           Ok: function() {
+                              $(this).dialog("close");},}
+}, {
+show: "slide",
+   hide: "puff"
+});
+//hoe defuck kan ik 'on.click' 'ok button dialog' 'fadein #contentt' ?
+$('button#b').on('click', function (){
+   window.location="index3app.html";
+});
+
+});</script><!----------------------------------------- END SCRIPT --------------------------------|
+</body></html>
