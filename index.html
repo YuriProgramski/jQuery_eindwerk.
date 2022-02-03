@@ -19,7 +19,23 @@
 			<a href="contact.html">Contact</a>
 		</div>
 	</nav>
+	<div class="headerimg"><img src="img/headerimg.png"></img></div>
 </header>
+<main>
+	<!-- Accordion -->
+<h2 class="demoHeaders">Info</h2>
+<div id="accordion">
+	<!-- class="ui-icon ui-icon-plus" -->
+	<h3 >bevruchting</h3>
+	<div>bevruchting ei</div>
+	<h3>leggen</h3>
+	<div>leggen ei</div>
+	<h3>uitkomen</h3>
+	<div>uitkomen ei: bruin, wit, gespikkeld.</div>
+	<h3>kringloop</h3>
+	<div><img src="images/wie-eerst.gif"/></div>
+</div>
+	</main>
 </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -31,6 +47,9 @@
 <!-- <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script> -->
 <!--------------------------------------------------------------------------------------------------------------------------------------->
 <script>$(document).ready(function() {
+
+$( "#accordion" ).accordion({active: false, collapsible: true,  icons: { "header": "ui-icon-plus" }});
+
 
 
 
