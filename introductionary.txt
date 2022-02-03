@@ -8,3 +8,14 @@ _____________________________________________
 => FIGMA aangemaakt:
 
 '  https://www.figma.com/file/LGYlqzGZzdFu0RZQI8sFF0/Untitled?node-id=0%3A1  '
+
+
+CURSUS JQUERY
+---------------
+1. inleiding (basisselectors, attr, ..) OPDRACHT STAPPENTELLER
+2. events (mouse(hover,..), doc(reload,..) OPDRACHT ARROWKEYS LOGGEN , OPDRACHT STERRENBEELD
+3. effects (hide/show, toggle, toggle met callback, slidetoggle, ...) OPDRACHT SHARE SOCIAL MEDIABAR, OPDRACHT ANIMATE MENU
+4. UI (buttons, dialogboxes, ... shopping cart, ..) OPDRACHT KIP EI
+5. Animate (timeout, animate.OnFormVal, ..Curtains) OPDRACHT MENU 
+6. plugins
+7. external data (load(txt; html content, ...)OPDRACHT CARS
