@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Template JQuery</title>
+	<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div id="dialogDiv" title="Window title">
+    	<p> Inhoud van de dialog box</p>
+</div>
+Open effect
+<select id="effectopen">
+   	<option>No effect</option>
+    	<option>blind</option>
+    	<option>bounce</option>
+    	<option>clip</option>
+    	<option>drop</option>
+    	<option>fold</option>
+    	<option>highlight</option>
+    	<option>puff</option>
+    	<option>pulsate</option>
+    	<option>scale</option>
+    	<option>slide</option>
+</select> <br />
+Close effect
+<select id="effectclose">
+    	<option>No effect</option>
+    	<option>blind</option>
+    	<option>bounce</option>
+    	<option>clip</option>
+    	<option>drop</option>
+    	<option>fold</option>
+    	<option>highlight</option>
+    	<option>puff</option>
+    	<option>pulsate</option>
+    	<option>scale</option>
+    	<option>slide</option>
+</select> <br />
+<input id="open" type="button" value="Open">
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script>
+$(function(){let $t = $('input#open');
+	$t.button();
+let $dialog = $("div#dialogDiv");
+$dialog.dialog({ autoOpen: false });
+$("#effectopen").change(function() {
+   	let effect = $(this).val();
+   	if (effect == "No effect") effect = false;
+   	$dialog.dialog("option", "show", effect);
+});
+$("#effectclose").change(function() {
+   	let effect = $(this).val();
+   	if (effect == "No effect") effect = false;
+   	$dialog.dialog("option", "hide", effect);
+});
+$("#open").click(function() {
+   	$dialog.dialog("open");
+});
+
+
+
+});
+</script>
+
+
+
+</body>
