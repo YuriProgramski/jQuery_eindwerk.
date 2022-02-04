@@ -1,0 +1,219 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sterrenbeeld</title><link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+<style>@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Russo+One&family=Sacramento&display=swap');/*------------------------------------------------------------------------------------------*/
+
+.cf:after       {content: ""; clear: both; display: table;}
+.left           {float: left; text-align:   right   ;}
+.right           {float: right;}
+img             {max-width: 269px; max-height:  300px;}
+body            {color: beige; background-color: #1f2547; text-align: center; font-size: 17px; font-family: "Public Sans";}
+.container      {background-color: blue; max-width: 888px; margin: auto; margin-top: 111px;}
+.kader1         {background-color: #590515;  padding-top: 33px; padding-bottom: 133px; margin-bottom: 17px}
+.kader2         { background-color: #00135e; padding-top: 55px; padding-bottom: 22px; max-width: 777px; margin: auto; margin-bottom: 44px; padding-left: 11px; padding-right: 11px;}
+.kader3         {background-color: beige; padding-top: 33px; padding-bottom: 44px; ; margin-bottom:  22px;}
+.result         {padding-left: 33px; padding-right: 33px;color: darkslateblue; background-color: beige; max-height: 169px; max-width: 269px; margin: auto; padding:  0;}
+h1              {font-family: 'Sacramento', serif; font-size: 69px; color: #eddd2f; font-weight: lighter;}
+h2              {font-family: 'Russo One', serif; font-size: 33px; color: #ffaf40; font-weight: lighter;}
+/*--Jq.js------------------------------------------------*/
+.highlight      {border: 10px solid lightseagreen; }
+.highlight2     {border: 5px solid #fa6464; }
+#hint           {cursor:pointer;}
+.tooltip        {margin-left:44px;padding:8px;border:1px solid blue;background-color:yellow;position: absolute;z-index: 2; color: darkred;}
+.uitroep       {font-size: 23px; color: #fa6464;}
+#dialogBox      {display: none;}
+
+/*-------*/</style></head><body><div id="dialogBox" title="'Les 2 bonus'"><p><img src="img/ster.png"/></p><p>Met Jquery kan je nu bijvoorbeeld al een kleine app maken om jouw sterrenbeeld te berekenen. Merk vooral op hoe de 'bereken'-knop pas klikbaar wordt bij een juiste veldingave! Vervolgens toont JQuery verschillende resultaten die jij volledig kan instellen, gebaseerd op de datuminvoer van de gebruiker. Probeer het zelf maar eens!</p></div>
+
+<div class="container">
+
+        <div class="kader1">
+                <h1>Sterrenbeeld</h1>
+                <!-- <div class="result"></img> -->
+                <div class="result"><p id="p">test</p><p><img src="img/ster.png"></p>
+                </div>
+        </div> 
+
+        <div class="kader2 cf"><form action="" method="">
+                <div class="left">
+                        <p><img src="img/imgl.png"/></p>
+                        <p><label for="d">dag</label></p>
+                        <p><span class="uitroep" id="uitroepd"></span><input type="text" name="d" id="d" placeholder="d" href="d"/><span id="d">(?)</span></p>
+                </div>
+                <div class="right">
+                        <p><img src="img/imgr.png"/></p>
+                        <p><label for="m">maa</label></p>
+                        <p><span class="uitroep" id="uitroepm"></span><input type="text" name="m" id="m" placeholder="m"/><span>(?)</span>
+                </div>                
+        </div>
+        <div class="kader3">
+                <div id="divappend"></div>
+                <button id="butt">Bereken!</button>
+        </form></div><button class="b2">next les</button>
+</div>
+<!---------------------------------------JQuery SCRIPT------------------------------------------>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><script>$(function(){//---------------------------------------------
+//------------------------------
+let input = $("form input");
+let inputdag;
+let inputmaa;
+let b = $('button#butt');
+let span = $("span");
+let dagok = false;
+let maandok = false;
+let append = $('div#divappend');
+let alertonsend = $('form button#butt');
+let kader2 = $('div.kader2');
+let divresult = $('div.result img');
+//------------------------------------------------
+$('button').button();
+b.button({disabled: true });
+//---------------------------------------------------------------------------------onInput(opmaak&controle)|
+input
+.on('focusin', function() {$(this).addClass("highlight").removeAttr("placeholder");})
+.on('focusout', function() {$(this).removeClass("highlight");})
+//----------------------------------
+.blur(function(){ let value = $(this).val(); let attr = $(this).attr("href"); let parsedval = parseInt(value);
+    $(this).addClass("highlight2"); 
+    //---------
+    //IF DAG--
+    if (attr === "d") { let spand = $('span#uitroepd');
+            if(!(value == 0 || !$.isNumeric(value))) { 
+                    dagok = false;
+                    if (parsedval >= 0 && parsedval < 32) { dagok = true;
+                                $(this).css("border-color", "#63d934");
+                                spand.text('');
+                                inputdag = parsedval;}
+                    else {dagok = false;}}
+            else if (value == 0) {dagok = false;}
+            //test---
+            if(dagok == true) {console.log($(this).attr('href')); console.log($(this).attr('id'));}
+            else { alert('Geef een geldige dag in!');//-----------------------------------alert
+                   spand.text('(!)');
+                    }}
+    //---------
+    //IF MAA--
+    else {  let spanm = $('span#uitroepm');
+            if(!(value == 0 || !$.isNumeric(value))) { 
+                    maandok = false;
+                    if (parsedval >= 0 && parsedval < 13) { maandok = true;
+                                $(this).css("border-color", "#63d934");
+                                spanm.text('');
+                                inputmaa = parsedval;}
+                    else {maandok = false;}}
+            else if (value == 0) {maandok = false;}
+            //test---
+            if(maandok == true) {console.log($(this).attr('href')); console.log($(this).attr('id'));}
+            else { alert('Geef een geldige maand in!');//-----------------------------------alert
+                   spanm.text('(!)');}}
+    if (dagok == true && maandok == true) { b.button({disabled: false});}//CONTROLEIFBOTHINPUTSTHENSHOWBUTTON
+;});//---------------------------------------------------------------------buttonsendvisible|
+//ON_clickBereken---------------------------------------------------
+b
+.on('click', function(event) { event.preventDefault();//---------------------BEREKENING HOROSCOOP-----------------------------
+    /*test-----*/console.log('test click button ok');console.log(inputdag);console.log(inputmaa);
+    $('.kader2').css('background-color', '#1b0826');
+    //(!)(!)(!)-----TEST IF INPUT DONE. START ACTUAL CONTROLE---------------------------(!)
+    let pp = $('div.result p#p');
+    if (inputdag < 20 && inputmaa == "1") { 
+        divresult.attr('src','img/1.png');
+        pp.text('steenbok');}
+    else if (inputdag > 18 && inputdag <= 31 && inputmaa == "1") { 
+        divresult.attr('src','img/2.png');
+        pp.text('waterman');}
+    else if (inputdag < 19 && inputmaa == "2") { 
+        divresult.attr('src','img/2.png');
+        pp.text('waterman');}
+    else if (inputdag > 18 && inputdag < 29 && inputmaa == "2") { 
+         divresult.attr('src','img/3.png');
+       pp.text('vissen');}
+    else if (inputdag < 21 && inputmaa == "3") { 
+        divresult.attr('src','img/3.png');
+        pp.text('vissen');}
+    else if (inputdag > 20 && inputdag <= 31 && inputmaa == "3") { 
+        divresult.attr('src','img/4.png');
+        pp.text('ram');}
+    else if (inputdag < 21 && inputmaa == "4") { 
+        divresult.attr('src','img/4.png');
+        pp.text('ram');}
+    else if (inputdag > 20 && inputdag < 31 && inputmaa == "4") { 
+        divresult.attr('src','img/5.png');
+        pp.text('stier');}
+    else if (inputdag < 22 && inputmaa == "5") { 
+         divresult.attr('src','img/5.png');
+       pp.text('stier');}
+    else if (inputdag > 21 && inputdag <= 31 && inputmaa == "5") { 
+        divresult.attr('src','img/6.png');
+       pp.text('tweelingen');}
+    else if (inputdag < 23 && inputmaa == "6") { 
+        divresult.attr('src','img/6.png');
+        pp.text('tweelingen');}
+    else if (inputdag > 21 && inputdag < 31 && inputmaa == "6") { 
+        divresult.attr('src','img/7.png');
+        pp.text('kreeft');}
+    else if (inputdag < 23 && inputmaa == "7") { 
+        divresult.attr('src','img/7.png');
+        pp.text('kreeft');}
+    else if (inputdag > 22 && inputdag <= 31 && inputmaa == "7") { 
+         divresult.attr('src','img/8.png');
+       pp.text('leeuw');}
+    else if (inputdag < 23 && inputmaa == "8") { 
+        divresult.attr('src','img/8.png');
+        pp.text('leeuw');}
+    else if (inputdag > 22 && inputdag <= 31 && inputmaa == "8") { 
+         divresult.attr('src','img/9.png');
+       pp.text('maagd');}
+    else if (inputdag < 23 && inputmaa == "9") { 
+         divresult.attr('src','img/9.png');
+       pp.text('maagd');}
+    else if (inputdag > 22 && inputdag < 31 && inputmaa == "9") { 
+        divresult.attr('src','img/10.png');
+        pp.text('weegschaal');}
+    else if (inputdag < 23 && inputmaa == "10") { 
+        divresult.attr('src','img/10.png');
+       pp.text('weegschaal');}
+    else if (inputdag > 22 && inputdag <= 31 && inputmaa == "10") { 
+        divresult.attr('src','img/11.png');
+        pp.text('schorpioen');}
+    else if (inputdag < 23 && inputmaa == "11") { 
+        divresult.attr('src','img/11.png');
+        pp.text('schorpioen');}
+    else if (inputdag > 22 && inputdag < 31 && inputmaa == "11") { 
+         divresult.attr('src','img/12.png');
+       pp.text('boogschutter');}
+    else if (inputdag < 21 && inputmaa == "12") { 
+        divresult.attr('src','img/12.png');
+        pp.text('boogschutter');}
+    else if (inputdag > 20 && inputdag <= 31 && inputmaa == "11") { 
+        divresult.attr('src','img/1.png');
+        pp.text('steenbok');}
+});//-------------------------------------------------------------------------------Tooltip|
+span
+.on('mouseenter', function showTooltip() { $(this).css('cursor', 'pointer'); let id = $(this).attr('id'); 
+    if (id == 'd') {$('<div class="tooltip">1-31</div>').appendTo('body')}
+    else { $('<div class="tooltip">1-12</div>').appendTo('body')};})
+.on('mouseleave', function hideTooltip() {$('div.tooltip').remove();})
+.on('mousemove', function changeTooltipPos(e) { let tooltipX = e.pageX - 8; let tooltipY = e.pageY + 8;$('div.tooltip').css({ top: tooltipY, left: tooltipX });});
+
+$("#dialogBox").dialog({
+            modal: true,
+            title: "Events",
+            width: 666,
+            height: 666
+                  }, {
+show: "slide",
+   hide: "puff"
+});
+ $("#dialogBox").dialog({ modal: true,
+                     buttons: {
+                           
+                           Ok: function() {
+                              $(this).dialog("close");},}
+}, {
+show: "slide",
+   hide: "puff"
+});
+$('button.b2').on('click', function (){
+   window.location="index4app.html";
+});
+});
+</script></body></html>
