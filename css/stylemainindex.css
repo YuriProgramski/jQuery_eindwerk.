@@ -13,7 +13,8 @@
     clear: both;
     display: table;
 }
-.leftnav{float: left;}
+.leftnav{float: left;
+vertical-align:   middle  ;}
 .rightnav{float: right;
 vertical-align:   middle  ;}
 .rightnav a{color: white;
@@ -22,10 +23,11 @@ vertical-align:   middle  ;}
   text-align:   center  ;
   margin-right:   22px;
 vertical-align:   middle  ;}
-.container{max-width: 777px;
+.container{max-width: 990px;
 margin: auto;}
 body {margin: 0;
-padding-top: 69px;}
+padding-top: 69px;
+background-color:   #fafffb;}
 .mainnav {background-color:  #47C09A;}
 .headerimg{min-height:  333px;
 text-align:   center  ;}
