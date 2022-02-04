@@ -1,34 +1,17 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JQuery</title><link href="../css/styleapp.css" rel="stylesheet">
-<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
-   <style>#hint{
-   cursor:pointer;
-}
-.tooltip{
-   margin-left:33px;
-   padding:8px;
-   border:1px solid blue;
-   background-color:yellow;
-   position: absolute;
-   z-index: 2;
-}
-</style></head>
-<body><div class="ui-helper-hidden"><div id="dialogBox" title="'Les 2'"><p><img src="img/dexter3.jpg"/></p><p>Vervolgen doen we met 'events'; of gebeurtenissen.</p></div>
-	
+<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet"></head>
+<body><div class="ui-helper-hidden"></div><div id="dialogBox" title="'Les 2'"><p><img src="img/dexter3.jpg"/></p><p>Vervolgen doen we met een verdieping in 'events, of gebeurtenissen.</p></div>
+   
 <!---------------------------------------------------------------------------------------------------->
 
-<h1>Intro</h1>
+<h1>Events</h1>
 
 <div id="bodycontainer">
-   <div id="contentt" style="opacity: 80">
-		<p>Events zijn gebeurtenissen waarop acties afgesteld kunnen worden. Bijvoorbeeld: wanneer er met de muis over een vraagteken gegaan wordt, toont er een tooltip naast de cursor</p>
-      <p><span class="hint">?</p>
-         <p>Bijvoorbeeld: wanneer er op een bepaalde knop geklikt wordt, moet een bepaald deel verschijnen/verbergen zoals bij een aanmeldplugin.</p>
-      <p>-----------------sign in sign up ding-------------</p>
+   <div id="contentt">
+      <p>Na de basis gaan we verder in op 'events'. Op een webpagina speelt zich een constante kakafonie van gebeurtenissen af. We kunnen dus niet enkel items selecteren om acties op toe passen, maar we kunnen aan de hand van triggers dus ook acties enkel laten uitvoeren wanneer er zich een bepaald event voordoet. Muis-events, maar ook document, window, keyboard zijn de voornaamste traceerbare handelingen waarop we acties kunnen instellen.</p><hr>
 
-      <p>arrow key log en input focus</p>
-      
-
+     <p>Klik ergens willekeurig op de pagina om de x- en y-coordinaten hier te loggen: <span id="xy"></span></p>
 
       <p>
       <button class="b">next les</button></p>
@@ -42,10 +25,14 @@
 <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script><!--------------------------------------------------------------------------------------------------------->
 <script>$(function() { //---------------------------------- SCRIPT --------------------------------|
 $('button').button();
+$('div#contentt').delay(2666).fadeIn(6222);
+$(document).on('click', function(event) {
+$('span#xy').append("U hebt geklikt op x : " + event.pageX + " en y : " + event.pageY);
+});
 
-$("#dialogBox").dialog({
+ $("#dialogBox").dialog({
             modal: true,
-            title: "Basis",
+            title: "Events",
             width: 666,
             height: 666
                   }, {
@@ -63,21 +50,8 @@ show: "slide",
 });
 //hoe defuck kan ik 'on.click' 'ok button dialog' 'fadein #contentt' ?
 $('button.b').on('click', function (){
-   window.location="index4app.html";
+   window.location="index3app.html";
 });
-$(function(){
 
-$("span.hint")
-.on('mouseenter', function showTooltip() {
-$('<div class="tooltip">Typ je naam in. Minstens 2 karakters.</div>').appendTo('body');
-})
-.on('mouseleave', function hideTooltip() {
-$('div.tooltip').remove();
-})
-.on('mousemove', function changeTooltipPos(e) {
-let tooltipX = e.pageX + 150;
-let tooltipY = e.pageY + 8;
-$('div.tooltip').css({ top: tooltipY, left: tooltipX });
-});
-</script>
+});</script><!----------------------------------------- END SCRIPT --------------------------------|
 </body></html>
