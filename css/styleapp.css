@@ -24,7 +24,7 @@ div{
 #content3{background-color: lightgreen;}
 #content2 {background-color: lightskyblue;}
 #content{background-color:#ffaa00;}
-#contentt{padding: 	22px; border: .3px solid lightgoldenrodyellow;}
+#contentt{padding: 	22px; border: .3px solid lightgoldenrodyellow; display: 	none	;}
 ul{
   	margin: 0 0 1em;
   	width: 125px;

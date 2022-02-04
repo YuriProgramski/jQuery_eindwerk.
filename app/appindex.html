@@ -5,12 +5,19 @@
 	
 <!---------------------------------------------------------------------------------------------------->
 
-<h1>Intro</h1>
+<h1>Welkom,</h1>
 
 <div id="bodycontainer">
-   <div id="contentt" style="opacity: 80">
-		<p>Welkom bij onze JQuery-cursus, toegepast in deze korte rondleiding. Zo dadelijk krijgt U een kort overzicht van de cursusinhoud, met op elke pagina een dialoogvenster met een inleidende uitleg, gevolgd door een praktisch voorbeeld. Zo krijgt U een concreet beeld van de mogelijkheden van Jquery. Klik op 'next' en ontdek de wondere wereld van Jquery! </p>
-      <button class="b">next</button>
+   <div id="contentt"><button id="knoptoggle">Verberg/toon Uitleg</button>
+
+      <div class="inhoud">
+      <p>Welkom bij de interactieve rondleiding van onze jQuery-cursus.</br>
+         JQuery is een framework bovenop JavaScript om naargelang het motto 'write less, do more' zowel minder codeerwerk als dataverbruik te beogen. Op deze manier is er een nette scheiding tussen html, css en js; en wordt het praktischer en minder omslachtig om uitgebreide animaties te combineren.
+
+         <p>Graag nemen wij U stapsgewijs mee doorheen de toegepaste kennis die u zal vergaren tijdens onze opleiding.</br>Opgemerkt hoe er een custom dialoogvenster verscheen? Deze kan jijzelf volledig vormgeven! Ook verscheen het inhoudblokje pas na een kleine vertraging, om dan over een bepaalde tijdsspanne in te 'faden'. Daarnaast kan je met zeer simpele code reeds een stukje inhoud doen laten verdwijnen of verschijnen door middel van een klik op de knop. Dit zijn maar enkele basisvoorbeelden van hoe jQuery wordt toegepast in webdesign & programming.</P><hr></div>
+
+            <p>Volg de stappen, experimenteer en verken verder de wondere wereld van Jquery! </p>
+      <button class="b">Ontdek!!</button>
 </div></div>
 
 
@@ -21,7 +28,9 @@
 <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script><!--------------------------------------------------------------------------------------------------------->
 <script>$(function() { //---------------------------------- SCRIPT --------------------------------|
 $('button').button();
-
+$("#knoptoggle").on('click', function() {$(".inhoud").toggle();
+});
+$('div#contentt').delay(2666).fadeIn(6222);
  $("#dialogBox").dialog({
             modal: true,
             title: "Welkom,",
