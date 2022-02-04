@@ -13,7 +13,7 @@
    z-index: 2;
 }
 </style></head>
-<body><div class="ui-helper-hidden"></div><div id="dialogBox" title="'Les 2'"><p>Vervolgen doen we met 'events'.</p></div>
+<body><div class="ui-helper-hidden"><div id="dialogBox" title="'Les 2'"><p><img src="img/dexter3.jpg"/></p><p>Vervolgen doen we met 'events'; of gebeurtenissen.</p></div>
 	
 <!---------------------------------------------------------------------------------------------------->
 
@@ -43,11 +43,11 @@
 <script>$(function() { //---------------------------------- SCRIPT --------------------------------|
 $('button').button();
 
- $("#dialogBox").dialog({
+$("#dialogBox").dialog({
             modal: true,
-            title: "Welkom,",
-            width: 400,
-            height: 400
+            title: "Basis",
+            width: 666,
+            height: 666
                   }, {
 show: "slide",
    hide: "puff"
@@ -79,5 +79,5 @@ let tooltipX = e.pageX + 150;
 let tooltipY = e.pageY + 8;
 $('div.tooltip').css({ top: tooltipY, left: tooltipX });
 });
-});</script><!----------------------------------------- END SCRIPT --------------------------------|
+</script>
 </body></html>

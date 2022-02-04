@@ -5,7 +5,7 @@
 	
 <!---------------------------------------------------------------------------------------------------->
 
-<h1>Intro</h1>
+<h1>Basis</h1>
 
 <div id="bodycontainer">
    <div id="contentt" style="opacity: 80">
@@ -32,8 +32,8 @@
 <script>$(function() { //---------------------------------- SCRIPT --------------------------------|
 $('button').button();
 $('button.color').click(function() {
-let $stylesheetNaam = $(this).text();
-    $('link').attr('href', $stylesheetNaam + '.css');
+let $color = $(this).text();
+    $(this).css('color', $color);
     $('button').button();
 
 });
