@@ -1,8 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Russo+One&family=Sacramento&display=swap');
 
-    /*font-family: 'Public sans'; font-size: 20px;} <-- Opm: bij wat hoort dit joeri???*/
+/*font-family: 'Public sans'; font-size: 20px;} <-- Opm: bij wat hoort dit joeri???*/
 
-h1 {
+:root {
+	--main-color: #50adac;
+}
+
+body {
+  margin: 0;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo h1 {
+  font-size: 50px;
+  padding: 25px;
+}
+
+.logo h1::first-letter {
+  border: 5px solid white;
+  padding: 0 15px;
+}
+
+nav {
+  background: var(--main-color);
+}
+
+.nav_bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; 
+}
+
+.nav_bar li {
+  list-style-type: none;
+}
+
+.nav_bar a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+}
+
+main h1 {
+  color: white;
+  z-index: 999;
+  position: absolute;
+  margin-top: 150px;
+  font-size: 150px;
+  padding: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  background: var(--main-color);
+  height: 100px;
+}
+
+    /* h1 {
   font-family: 'Sacramento'; 
   color: gold; 
   font-size: 59px;
@@ -58,7 +126,7 @@ body {
 
 .headerimg {
   min-height:  333px;
-  text-align:   center  ;}
+  text-align:   center  ;} */
 
 #accordion div {
   background-color: #47C09A;
