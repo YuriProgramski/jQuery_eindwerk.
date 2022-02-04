@@ -1,33 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Russo+One&family=Sacramento&display=swap');
 
-    font-family: 'Public sans'; font-size: 20px;}
-h1    {font-family: 'Sacramento'; color: gold; font-size: 59px;} h2{font-family: 'Russo One'; font-weight: lighter;color: #47C09A; font-size: 30px;}
-/**/
-.cf:after
-{
-  content: "";
-    clear: both;
-    display: table;
+    /*font-family: 'Public sans'; font-size: 20px;} <-- Opm: bij wat hoort dit joeri???*/
+
+h1 {
+  font-family: 'Sacramento'; 
+  color: gold; 
+  font-size: 59px;
+} 
+
+h2 {
+  font-family: 'Russo One'; 
+  font-weight: lighter;
+  color: #47C09A; 
+  font-size: 30px;
 }
-.leftnav{float: left;
-vertical-align:   middle  ;}
-.rightnav{float: right;
-vertical-align:   middle  ;}
-.rightnav a{color: white;
+
+.cf:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.leftnav {
+  float: left;
+  vertical-align: middle;
+}
+
+.rightnav {
+  float: right;
+  vertical-align: middle;
+}
+
+.rightnav a {
+  color: white;
   padding: 9px;
   border: 0.5px solid white;
-  text-align:   center  ;
-  margin-right:   22px;
-vertical-align:   middle  ;}
-.container{max-width: 990px;
-margin: auto;}
-body {margin: 0;
-padding-top: 69px;
-background-color:   #fafffb;
-text-align: center;}
-.mainnav {background-color:  #47C09A;}
-.headerimg{min-height:  333px;
-text-align:   center  ;}
+  text-align: center;
+  margin-right: 22px;
+  vertical-align: middle;
+}
 
-#accordion div{background-color: #47C09A;
-color: beige;}
+.container {
+  max-width: 990px;
+  margin: auto;
+}
+
+body {
+  margin: 0;
+  padding-top: 69px;
+  background-color: #fafffb;
+  text-align: center;
+}
+  
+.mainnav {
+  background-color: #47C09A;
+}
+
+.headerimg {
+  min-height:  333px;
+  text-align:   center  ;}
+
+#accordion div {
+  background-color: #47C09A;
+  color: beige;
+}
