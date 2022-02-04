@@ -1,15 +1,17 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JQuery</title><link href="../css/styleapp.css" rel="stylesheet">
 <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet"></head>
-<body><div class="ui-helper-hidden"></div><div id="dialogBox" title="'Les 3'"><p>Vervolgen doen we met 'effects'.</p></div>
+<body><div class="ui-helper-hidden"></div><div id="dialogBox" title="'Les 3'"><p><img src="img/dexter4.png"/></p><p>Na wat ervaring opgedaan te hebben met de basiselementen en events, kunnen we nu gaan spelen met effectjes.</p></div>
 	
 <!---------------------------------------------------------------------------------------------------->
 
-<h1>Intro</h1>
-
 <div id="bodycontainer">
-   <div id="contentt" style="opacity: 80">
-		<p>Na de basis onder de knie te hebben, zal je vervolgens leren om al te beginnen spelen met effectjes.</p>
+   <div id="contentt"><button id="knoptoggle">Verberg/toon Uitleg</button>
+
+      <div class="inhoud">
+		<p>Click op de button en na 3s zie je de alert</p>
+<button id="alert">Klik</button>
+<p>Na de basis onder de knie te hebben, zal je vervolgens leren om al te beginnen spelen met effectjes.</p>
       <p>show/hide, fadetoggle, slide</p>
       <p>accordion</p>
       <p>social media bar</p>
@@ -17,7 +19,7 @@
       
 
 
-      <p>
+      <p></p></div>
       <button class="b">next les</button></p>
 </div></div>
 
@@ -29,12 +31,19 @@
 <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script><!--------------------------------------------------------------------------------------------------------->
 <script>$(function() { //---------------------------------- SCRIPT --------------------------------|
 $('button').button();
-
+$('button#alert').on('click', function() {
+setTimeout(function() { 
+alert("Hello world"); }, 3000);
+})
+$('div#contentt').delay(2666).fadeIn(6222);
+$("#knoptoggle").on('click', function() {
+      $(".inhoud").toggle();
+});
  $("#dialogBox").dialog({
             modal: true,
-            title: "Welkom,",
-            width: 400,
-            height: 400
+            title: "Effects",
+            width: 555,
+            height: 666
                   }, {
 show: "slide",
    hide: "puff"
