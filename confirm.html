@@ -11,64 +11,29 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-<style>#send{padding: 	22px; background-color: 	orange	;}#hidden{background-image: url('img/confirm.png'); background-repeat: no-repeat	;padding: 22px; min-height: 444px ;/*display: none;*/}</style></head>
+<style>body{}#send{padding: 	22px; background-color: 	orange	;}#hidden{text-align:  center; margin-top: 69px;;padding: 22px; min-height: 444px ;display: none;}</style></head>
 
 <body>
 	
 	<header>
-		<nav>
-			<div class="logo">
-				<a href="index.html">vSchool</a>
-			</div>
-			<ul class="nav_bar">
-				<!---krijg de list niet mooi in het midden met align-items: center-->
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Cursus</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav>
-		<main>
-			<!-- Header image slider maken met jquery??? -->
-			<h1>jQuery</h1>
-			<img src="img/danny_bert.jpeg" alt="foto docent jquery">
-		</main>
+		test confirm
 	</header>
 
 
 	<section>
 		<button value="send" id="send"></button>
-		<div id="hidden">hidden</div>
+		<div id="hiddenimg" style="display: none;">
+			<img src="img/confirmm.png"/></div>
+			<div id="hiddentekst" style="display: none;"><p>Bedankt voor je aanvraag!</p>
+			<p>Wij hebben je aanvraag goed ontvangen en zullen je aanvraag zsm verwerken.</p>
+			<p>Je ontvangt van ons nog een e-mail ter bevestiging van je aanvraag.</p>
+			<hr></div>
+			<div id="newtekst" style="display: none;"><p>Alvast succes!</p><p><a href="index.html">Home</a></p>
+		</div>
+		
 	</section>
 
-	<footer>
-
-		<div class="footer_container">
-			<div>
-				<h1>Meer info</h1>
-				<!--- waarom wordt deze H1 als een link getoond???-->
-				<ul class="footer_nav">
-					<li><a href="#">Opleiding</a></li>
-					<li><a href="#">Inschrijven</a></li>
-					<li><a href="#">Over ons</a></li>
-				</ul>
-			</div>
-			<div>
-				<h1>Contact info</h1>
-				<ul class="footer_contact">
-					<li>011 53 87 33</li>
-					<li>Schachtplein 1 <br> 3550 Heusden-Zolder</li>
-				</ul>
-			</div>
-			<div>
-				<h1>Volg ons</h1>
-				<ul class="footer_socialmedia">
-					<li>Facebook (=icon)</li>
-					<li>Instagram (=icon)</li>
-				</ul>
-			</div>
-		</div>
-
-	</footer>
+	
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
@@ -81,8 +46,13 @@
 	<script>$(document).ready(function () {
 
 $('#send').on('click', function() {
-	$('#hidden').show();
-})
+
+	$('#hiddenimg').fadeIn(9999);
+	$('#hiddentekst').fadeIn(666).delay(5000).fadeOut().next().fadeIn();
+	// $('#hiddentekst').fadeIn(333);
+		// $('#newtekst').fadeIn(666);
+
+});
 
 
 
