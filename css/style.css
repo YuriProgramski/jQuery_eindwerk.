@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Russo+One&family=Sacramento&display=swap');
 
+
 /*font-family: 'Public sans'; font-size: 20px;} <-- Opm: bij wat hoort dit joeri???*/
 
 /*------ Variabel section ------- */
@@ -19,7 +20,7 @@ header {
 }
 
 .navbar .nav_container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -57,34 +58,54 @@ body {
 /*-------- Footer section --------*/
 footer {
   background: var(--main-color);
-  height: 200px;
 }
 
 .footer_container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.container_rows {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-.footer_container h1 {
+.container_columns {
+  width: 30%;
+  padding: 0 15px;
+
+}
+
+.container_columns h1 {
   color: white;
+  margin-bottom: 20px;
+  margin-left: 37px;
+
 }
 
-.footer_nav li, .footer_contact li {
-  list-style-type: none;
-  color: white;
+.container_columns li {
+  padding: 5px 0
 }
 
-.footer_nav a {
+.container_columns a {
   text-decoration: none;
   color: white;
-
 }
 
-/*-------- jQuery section --------*/
-#accordion div {
-  background-color: #47C09A;
-  color: beige;
+.container_columns i {
+  font-size: 20px;
+  padding-right: 10px;
 }
+
+.social_links {
+  margin-left: 40px;
+}
+
+ul {
+  list-style-type: none;
+}
+
 
 
 
