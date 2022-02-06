@@ -8,55 +8,43 @@
 }
 
 /*------- Header section ------- */
-nav {
+header {
   background: var(--main-color);
-  height: 150px;
 }
 
-.logo {
-  display: flex;
-}
-
-.logo a {
+.navbar {
+  width: 100%;
   color: white;
-  text-decoration: none;
-  font-size: 50px;
-  padding: 20px;
+  height: 100px;
 }
 
-.logo a::first-letter {
-  border: 5px solid white;
-  padding: 0 15px;
-}
-
-.nav_bar {
+.navbar .nav_container {
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
 }
 
-.nav_bar li {
+nav ul {
+  display: flex;
+  margin-right: 10px;
+}
+nav ul li {
   list-style-type: none;
 }
 
-.nav_bar a {
+nav ul li a {
   text-decoration: none;
   color: white;
-  padding: 20px;
+  margin: 0 10px;
 }
 
-main h1 {
-  color: white;
-  z-index: 999;
-  position: absolute;
-  margin-top: 150px;
-  font-size: 150px;
-  padding: 50px;
-}
 
 /*-------- body section --------*/
 body {
   margin: 0;
-  text-align:   center  ;
 }
 .container{max-width:   999px; margin:  auto;text-align:  center  ;}
 /*align content----------------joeri*/
