@@ -56,9 +56,10 @@ main h1 {
 /*-------- body section --------*/
 body {
   margin: 0;
+  text-align:   center  ;
 }
-
-
+.container{max-width:   999px; margin:  auto;text-align:  center  ;}
+/*align content----------------joeri*/
 
 
 

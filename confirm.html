@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,12 +11,11 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-</head>
+<style>#send{padding: 	22px; background-color: 	orange	;}#hidden{background-image: url('img/confirm.png'); background-repeat: no-repeat	;padding: 22px; min-height: 444px ;/*display: none;*/}</style></head>
 
 <body>
-	<!-- <div class="ui-helper-hidden"></div> Opm: waar dient dit voor Joeri? -->
+	
 	<header>
-		<!-- Header sticky maken met jquery??? -->
 		<nav>
 			<div class="logo">
 				<a href="index.html">vSchool</a>
@@ -33,34 +34,12 @@
 		</main>
 	</header>
 
-<div class="container"> <!-- align  content     joeri -->
+
 	<section>
-		<!-- Accordion -->
-		<h2 class="demoHeaders">Info</h2>
-		<div id="accordion">
-			<!-- class="ui-icon ui-icon-plus" -->
-			<h3>Cursus</h3>
-			<div>bevruchting ei</div>
-			<h3>Programma</h3>
-			<div>leggen ei</div>
-			<h3>Docent</h3>
-			<div><img src="img/soulkwatscher.jpg" /></div>
-			<h3>Inschrijving</h3>
-			<div>test</div>
-			<h3>Virtuele cursusrondleiding</h3>
-			<div><a href="app/appindex.html" />Start</div>
-		</div>
+		<button value="send" id="send"></button>
+		<div id="hidden">hidden</div>
 	</section>
 
-
-	<section class="confirm" id="confirm">
-		<div id="b_confirm">Verzenden</div>
-
-		<div id="hidden_confirm" style="display: none">
-			<p>fanks bruv</p>
-		</div>
-	</section>
-</div>
 	<footer>
 
 		<div class="footer_container">
@@ -101,10 +80,8 @@
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<script>$(document).ready(function () {
 
-			$("#accordion").accordion({ active: false, collapsible: true, icons: { "header": "ui-icon-plus" } });
-$('button').button();
-('div#b_confirm').on ('click', function() {
-	$('div#hidden_confirm').fadeIn(3000);
+$('#send').on('click', function() {
+	$('#hidden').show();
 })
 
 
