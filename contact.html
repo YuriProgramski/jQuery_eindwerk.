@@ -115,7 +115,7 @@ input
 .on('focusout', function() {$(this).removeClass("highlight");})
 //----------------------------------
 .blur(function(){ 
-    if(!(value == 0)) { 
+    if((value == 0)) { 
                    
     $(this).addClass("highlight2");}});
 });
