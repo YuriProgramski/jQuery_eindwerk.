@@ -4,12 +4,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JQuery</title>
+	<title>JQuery Eindopdracht</title>
 	<link href="jquery-ui.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<!--flexslider css-->
+	<link rel="stylesheet" href="css/flexslider.css">
 	<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<!--flexslider script-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
 	<style>
 		#tabs li {
@@ -20,6 +24,18 @@
 		#tabs li a {
 			color: red;
 		}
+
+		.flexslider{
+			max-width: 600px;
+		 }
+
+		.sticky {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 999;
+		}
+
 	</style>
 </head>
 
@@ -41,8 +57,16 @@
 			</div>
 		</div>
 	</header>
+
 	<section>
-		<img src="img/danny_bert.jpeg" alt="foto docent jquery">
+		<div class="flexslider">
+		  <ul class="slides">
+			<li><img src="img/danny_bert.jpeg" alt="foto docent jquery">Flex 1</li>
+			<li><img src="img/danny_bert.jpeg" alt="foto docent jquery">Flex 2</li>
+			<li><img src="img/danny_bert.jpeg" alt="foto docent jquery">Flex 3</li>
+			<li><img src="img/danny_bert.jpeg" alt="foto docent jquery">Flex 4</li>
+		  </ul>
+		</div>
 	</section>
 
 	<section>
@@ -142,6 +166,8 @@
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
 	<script src="animatie.js"></script>
+
+	<script src="js/jquery.flexslider.js"></script>
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<!-- <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script> -->
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
@@ -154,6 +180,29 @@
 			$knop1.on('click', function () {
 				$fade.fadeToggle();
 			});
+
+			$(window).scroll(function(){
+		      let scroll = $(window).scrollTop();
+		      if (scroll > 0) {
+		        $("header").addClass("sticky");
+		      } 
+		      else {
+		        $("header").removeClass("sticky");
+		      }
+		    });
+    	
+    	
+    	$('.flexslider').flexslider({
+                animation: "slide",
+                slideshowSpeed: 2500,
+                pauseOnAction: true,//Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+                pauseOnHover: true,
+                useCSS: true,//Boolean: Slider will use CSS3 transitions if available
+                touch: true,
+                directionNav: true
+            });
+
+
 		});
 	</script>
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
