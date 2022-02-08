@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <button id="butt1">Danny</button>
+    <button id="butt2">Leraar 2</button>
+ 
+        <div id="div1"style="display:none;"><h1>Danny Drijvers</h1><img src="img/soulkwatscher.jpg"/>
+            <p>info info info</p>
+        </div>
+        
+        <div id="div2"style="display:none;"><h1>leraar 2</h1><img src="img/soulkwatscher.jpg"/>
+            <p>info info info</p>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+
+let $knop1 = $("#butt1");
+let $knop2 = $("#butt2");
+$knop1.on('click', function() {
+$("#div1").fadeToggle(1000);
+});
+$knop2.on('click', function() {
+$("#div2").fadeToggle(1000);
+});
+
+    });
+    </script>
+</body>
+
+</html>
