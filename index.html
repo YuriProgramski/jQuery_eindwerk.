@@ -52,15 +52,25 @@
 		    	<ul>
 		            <li><a href="#tabs-1">Cursus</a></li>
 		            <li><a href="#tabs-2">Programma</a></li>
-		            <li><a href="#tabs-3">Docenten</a></li>
+		            <li><a href="#tabs-3">Docent</a></li>
 		            <li><a href="#tabs-4">Inschrijven</a></li>
 		        </ul>
 		        <div id="tabs-1">Inhoud jquery cursus
 		        	<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus, delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam, quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere quasi dolore.</div>
 		        <div id="tabs-2">Inhoud jquery programma
 		        	<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus, delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam, quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere quasi dolore.</div>
-		        <div id="tabs-3">Inhoud jquery docenten
-		        	<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus, delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam, quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere quasi dolore.</div>
+		        <div id="tabs-3">
+		        	<div class="cf">
+		        		<div class="docentleft">
+		        			<h1 class="animate__animated animate__bounceIn">Danny Drijvers</h1>
+		        			<p><img src="img/danny.png"/></p>
+		        		</div>
+		        		<div class="docentright">
+		        			<button id="butt1">Meer info ></button>
+		        			<div id="fadeinfo" style="display: none">Is leerkracht in het interessegebied Webdesigner. Voor vSchool ontwikkelde hij de cursussen JavaScript, jQuery en Vue.js. Een elegante code is de voedingsbodem voor essentiële creativiteit.Behaalde een graduaat in toegepaste informatica, en specialiseerde zich tot Master in Science Technology Enhanced Learning, Innovation and Change aan de Sheffield Hallam University. In de kinderjaren van het internet begon hij zijn carrière als programmeur, die hij sinds 1999 combineert met zijn loopbaan als leraar. Kan een waaier aan programmeer ervaringen voorleggen die een periode van 30 jaar omvatten, net als een grondige deskundigheid over het leren zelf. Haast pal tegenover zijn identiteit als programmeur, staat de kunstenaar, zoekend naar een grafische vormgeving aan de stroom van het leven. Danny Drijvers produceert al meer dan tien jaar internationaal tentoongesteld werk, waarin hij multidisciplinair te werk gaat. Komt helemaal tot zichzelf tijdens een avondje Salsa Dansen.'</div>
+		        		</div>
+		        	</div>   
+		        </div>
 		        <div id="tabs-4">Inhoud inschrijven
 		        	<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus, delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam, quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere quasi dolore.</div>
 		    </div>
@@ -110,8 +120,14 @@
 	<!-- <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script> -->
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<script>$(document).ready(function () {
-		$("#tabs").tabs();
-            
+$("#tabs").tabs();
+$('button').button();
+
+let $knop1 = $("button#butt1");
+let $fade = $("div#fadeinfo");
+$knop1.on('click', function() {
+$fade.fadeToggle();
+});
 		});
 	</script>
 	<!--------------------------------------------------------------------------------------------------------------------------------------->

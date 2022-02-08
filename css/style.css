@@ -157,7 +157,20 @@ ul {
   list-style-type: none;
 }
 
+.cf{}
+.cf:after
+{
+  content: "";
+    clear: both;
+    display: table;
+}
 
+.docentleft{float: left};
+.docentright{float: right;}
+#butt1{margin-top:  55px;
+margin-left:  -55px;
+margin-bottom: 33px;}
+#fadeinfo{padding-left:   300px;}
 
 
 
