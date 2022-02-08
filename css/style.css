@@ -51,9 +51,51 @@ body {
 /*align content----------------joeri*/
 
 
+/*-------- Contact form section --------*/
+.inschrijfform {
+  width: 800px;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  font-family: 'Russo One', sans-serif;
+}
 
+.inschrijf-titel h2 {
+  text-align: center;
+  font-size: 50px;
+}
 
+.inputs input {
+  width: 500px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
 
+.opleiding p {
+  text-align: center;
+  background-color: gray;
+  padding: 15px 0;
+  font-size: 20px;
+  color: white;
+  margin-top: -1px;
+}
+
+.verzenden-button {
+  display: grid;
+  justify-content: center;
+}
+
+.verzenden-button input {
+  color: white;
+  border: none;
+  background-color: #696969;
+  padding: 7px 25px;
+  margin-bottom: 25px;
+}
+
+.verzenden-button input:focus {
+  background-color: #303030;
+}
 
 /*-------- Footer section --------*/
 footer {
