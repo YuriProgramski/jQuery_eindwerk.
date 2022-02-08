@@ -10,10 +10,17 @@
 <div id="bodycontainer">
    <div id="contentt"><button id="knoptoggle">Verberg/toon Uitleg</button>
 
-      <div class="inhoud"></div>
-		<p>Click op de button en na 3s zie je de alert</p>
-<button id="alert">Klik</button>
-<p>Na de basis onder de knie te hebben, zal je vervolgens leren om al te beginnen spelen met effectjes.</p>
+      <div class="inhoud"><p>Na de basis onder de knie te hebben, zal je vervolgens leren om al te beginnen spelen met effectjes zoals delay, hide, fade en allerhande andere combinaties</p></div>
+		<p><fieldset><p>Click op de button en na 3s zie je de alert</p>
+<button id="alert">Klik</button></fieldset></p>
+      
+
+
+<p><fieldset><div class="mydiv">
+Dit is mijn div.
+</div>
+<input id="hide" type="button" value="Hide" />
+<input id="show" type="button" value="Show" /></fieldset></p>
       <p>show/hide, fadetoggle, slide</p>
       <p>accordion</p>
       <p>social media bar</p>
@@ -63,6 +70,15 @@ show: "slide",
 $('button.b').on('click', function (){
    window.location="index5app.html";
 });
+   let mydiv = $("div.mydiv");
+   let show = $("input#show");
+   let hide = $("input#hide");
 
+show.on('click', function() {
+      mydiv.show(3000);
+});
+hide.on('click', function() {
+      mydiv.hide(300);
+});
 });</script><!----------------------------------------- END SCRIPT --------------------------------|
 </body></html>
