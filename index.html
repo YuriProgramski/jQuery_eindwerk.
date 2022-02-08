@@ -62,12 +62,12 @@
 		        <div id="tabs-3">
 		        	<div class="cf">
 		        		<div class="docentleft">
-		        			<p>Danny Drijvers</p>
+		        			<h1 class="animate__animated animate__bounceIn">Danny Drijvers</h1>
 		        			<p><img src="img/danny.png"/></p>
 		        		</div>
 		        		<div class="docentright">
 		        			<button id="butt1">Meer info ></button>
-		        			<p id="appenddocent"></p>
+		        			<div id="fadeinfo" style="display: none">Is leerkracht in het interessegebied Webdesigner. Voor vSchool ontwikkelde hij de cursussen JavaScript, jQuery en Vue.js. Een elegante code is de voedingsbodem voor essentiële creativiteit.Behaalde een graduaat in toegepaste informatica, en specialiseerde zich tot Master in Science Technology Enhanced Learning, Innovation and Change aan de Sheffield Hallam University. In de kinderjaren van het internet begon hij zijn carrière als programmeur, die hij sinds 1999 combineert met zijn loopbaan als leraar. Kan een waaier aan programmeer ervaringen voorleggen die een periode van 30 jaar omvatten, net als een grondige deskundigheid over het leren zelf. Haast pal tegenover zijn identiteit als programmeur, staat de kunstenaar, zoekend naar een grafische vormgeving aan de stroom van het leven. Danny Drijvers produceert al meer dan tien jaar internationaal tentoongesteld werk, waarin hij multidisciplinair te werk gaat. Komt helemaal tot zichzelf tijdens een avondje Salsa Dansen.'</p>
 		        		</div>
 		        	</div>   
 		        </div>
@@ -121,11 +121,12 @@
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<script>$(document).ready(function () {
 $("#tabs").tabs();
+$('button').button();
 
 let $knop1 = $("button#butt1");
-let $ptoappend = $("p#appenddocent");
+let $fade = $("div#fadeinfo");
 $knop1.on('click', function() {
-$ptoappend.text('Is leerkracht in het interessegebied Webdesigner. Voor vSchool ontwikkelde hij de cursussen JavaScript, jQuery en Vue.js. Een elegante code is de voedingsbodem voor essentiële creativiteit.Behaalde een graduaat in toegepaste informatica, en specialiseerde zich tot Master in Science Technology Enhanced Learning, Innovation and Change aan de Sheffield Hallam University. In de kinderjaren van het internet begon hij zijn carrière als programmeur, die hij sinds 1999 combineert met zijn loopbaan als leraar. Kan een waaier aan programmeer ervaringen voorleggen die een periode van 30 jaar omvatten, net als een grondige deskundigheid over het leren zelf. Haast pal tegenover zijn identiteit als programmeur, staat de kunstenaar, zoekend naar een grafische vormgeving aan de stroom van het leven. Danny Drijvers produceert al meer dan tien jaar internationaal tentoongesteld werk, waarin hij multidisciplinair te werk gaat. Komt helemaal tot zichzelf tijdens een avondje Salsa Dansen.');
+$fade.fadeToggle();
 });
 		});
 	</script>
