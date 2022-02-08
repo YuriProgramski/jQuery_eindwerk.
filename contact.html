@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JQuery</title>
-    <link href="jquery-ui.css" rel="stylesheet">
+    <!-- <link href="jquery-ui.css" rel="stylesheet"> -->
     <link href="css/style.css" rel="stylesheet">
     <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+<style>.highlight      {border: 10px solid lightseagreen; }
+.highlight2     {border: 5px solid #fa6464; }</style>
 </head>
 
 <body>
@@ -45,7 +46,7 @@
                     <p>jQuery</p>
                 </div>
                 <div class="verzenden-button">
-                    <input type="submit" value="Verzenden">
+                    <input type="submit" value="Verzenden" id="knop">
                 </div>
                 
             </form>
@@ -107,7 +108,17 @@ $('#newtekst').hide();
         // $('#newtekst').fadeIn(666);
 
 });
-        });
+let input = $('input');
+let value = input.val();
+input
+.on('focusin', function() {$(this).addClass("highlight").removeAttr("placeholder");})
+.on('focusout', function() {$(this).removeClass("highlight");})
+//----------------------------------
+.blur(function(){ 
+    if(!(value == 0)) { 
+                   
+    $(this).addClass("highlight2");}});
+});
     </script>
 </body>
 
