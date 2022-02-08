@@ -139,7 +139,26 @@
                 }
             });
 
-            
+            $('#testsend').on('click', function () {
+                $('#newtekst').hide();
+                $('#hiddenimg').fadeIn(9999);
+                $('#hiddentekst').fadeIn(666).delay(5000).fadeOut().next().fadeIn();
+                // $('#hiddentekst').fadeIn(333);
+                // $('#newtekst').fadeIn(666);
+
+            });
+            let input = $('input');
+            let value = input.val();
+            input
+                .on('focusin', function () { $(this).addClass("highlight").removeAttr("placeholder"); })
+                .on('focusout', function () { $(this).removeClass("highlight"); })
+                //----------------------------------
+                .blur(function () {
+                    if ((value == 0)) {
+
+                        $(this).addClass("highlight2");
+                    }
+                });
        
 
         //TEST JOERI CONFIRM ON SEND-------------------------------------
