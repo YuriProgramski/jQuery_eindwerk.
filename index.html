@@ -10,6 +10,18 @@
 	<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+	<style>
+		#tabs li {
+			width: 22%;
+			background: yellow;
+		}
+
+		#tabs li a {
+			color: red;
+		}
+		
+	</style>
 </head>
 
 <body>
@@ -33,26 +45,28 @@
 		<img src="img/danny_bert.jpeg" alt="foto docent jquery">
 	</section>
 
-	<div class="container">
-		<!-- align  content     joeri -->
-		<section>
-			<!-- Accordion -->
-			<h2 class="demoHeaders">Info</h2>
-			<div id="accordion">
-				<!-- class="ui-icon ui-icon-plus" -->
-				<h3>Cursus</h3>
-				<div>bevruchting ei</div>
-				<h3>Programma</h3>
-				<div>leggen ei</div>
-				<h3>Docent</h3>
-				<div><img src="img/soulkwatscher.jpg" /></div>
-				<h3>Inschrijving</h3>
-				<div>test</div>
-				<h3>Virtuele cursusrondleiding</h3>
-				<div><a href="app/appindex.html" />Start</div>
-			</div>
-		</section>
-	</div>
+	<section>
+		<div class="main_container">
+				<!--jquery tabs ui-->
+		    	<div id="tabs">
+		    	<ul>
+		            <li><a href="#tabs-1">Cursus</a></li>
+		            <li><a href="#tabs-2">Programma</a></li>
+		            <li><a href="#tabs-3">Docenten</a></li>
+		            <li><a href="#tabs-4">Inschrijven</a></li>
+		        </ul>
+		        <div id="tabs-1">Inhoud jquery cursus
+		        	<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus, delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam, quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere quasi dolore.</div>
+		        <div id="tabs-2">Inhoud jquery programma
+		        	<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus, delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam, quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere quasi dolore.</div>
+		        <div id="tabs-3">Inhoud jquery docenten
+		        	<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus, delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam, quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere quasi dolore.</div>
+		        <div id="tabs-4">Inhoud inschrijven
+		        	<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus, delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam, quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere quasi dolore.</div>
+		    </div>
+		</div>
+		
+	</section>
 
 	<footer>
 		<div class="footer_container">
@@ -96,13 +110,10 @@
 	<!-- <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script> -->
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<script>$(document).ready(function () {
-
-			$("#accordion").accordion({ active: false, collapsible: true, icons: { "header": "ui-icon-plus" } });
-
-
-
-
-		});</script>
+		$("#tabs").tabs();
+            
+		});
+	</script>
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 </body>
 
