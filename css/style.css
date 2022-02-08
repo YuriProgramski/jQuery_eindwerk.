@@ -74,9 +74,11 @@ body {
 
 .error {
   color: red;
+  display: block;
 }
 
 .opleiding p {
+  width: 525px;
   text-align: center;
   background-color: gray;
   padding: 15px 0;

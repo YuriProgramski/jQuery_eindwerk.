@@ -10,8 +10,15 @@
     <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<style>.highlight      {border: 10px solid lightseagreen; }
-.highlight2     {border: 5px solid #fa6464; }</style>
+    <style>
+        .highlight {
+            border: 10px solid lightseagreen;
+        }
+
+        .highlight2 {
+            border: 5px solid #fa6464;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,8 +45,8 @@
                     <h2>Inschrijving</h2>
                 </div>
                 <div class="inputs">
-                    <input type="text" name="naam" id="naam" placeholder="Naam"><br>
-                    <span id="naam-check" class="error"></span>
+                    <input type="text" name="naam" id="naam" placeholder="Naam">
+                    <span id="naam_check" class="error"></span>
                     <input type="email" name="email" id="email" placeholder="E-mail">
                 </div>
                 <div class="opleiding">
@@ -47,21 +54,27 @@
                 </div>
                 <div class="verzenden-button">
                     <input type="submit" value="Verzenden" id="knop">
+                    <input id="submit_button" type="submit" value="Verzenden">
                 </div>
-                
+
             </form>
             <section>
-                    <button value="testsend" id="testsend">test</button>
-                    <div id="hiddenimg" style="display: none;">
-                    <img src="img/confirmm.png"/></div>
-                    <div id="hiddentekst" style="display: none;"><p>Bedankt voor je aanvraag!</p>
-                        <p>Wij hebben je aanvraag goed ontvangen en zullen je aanvraag zsm verwerken.</p>
-                        <p>Je ontvangt van ons nog een e-mail ter bevestiging van je aanvraag.</p>
-                        <hr></div>
-                    <div id="newtekst" style="display: none;"><p>Alvast succes!</p><p><a href="index.html">Home</a></p>
-                     </div>
-        
-                 </section>
+                <button value="testsend" id="testsend">test</button>
+                <div id="hiddenimg" style="display: none;">
+                    <img src="img/confirmm.png" />
+                </div>
+                <div id="hiddentekst" style="display: none;">
+                    <p>Bedankt voor je aanvraag!</p>
+                    <p>Wij hebben je aanvraag goed ontvangen en zullen je aanvraag zsm verwerken.</p>
+                    <p>Je ontvangt van ons nog een e-mail ter bevestiging van je aanvraag.</p>
+                    <hr>
+                </div>
+                <div id="newtekst" style="display: none;">
+                    <p>Alvast succes!</p>
+                    <p><a href="index.html">Home</a></p>
+                </div>
+
+            </section>
         </main>
     </div>
     <footer>
@@ -100,27 +113,76 @@
     <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
     <script>
         $(document).ready(function () {
+            //Steven jQuery
+            let $naam_check = $('#naam_check');
+            let $button = $('#submit_button');
+            $naam_check.hide();
+            let $naam_error = false;
+            let $naam = $('#naam').val();
+            $button.on('click', function () {
+                if ($naam.length == '') {
+                    $naam_check.show();
+                    $naam_check.html('Geef een naam in');
+                    event.preventDefault();
+                    $naam_error = true;
+                    return true;
+                }
+                else if ($naam.length < 3) {
+                    $naam_check.show();
+                    $naam_check.html('Geef een naam langer dan 3 karakters in');
+                    event.preventDefault();
+                    $naam_error = true;
+                    return true;
+                }
+                else {
+                    $naam_check.hide();
+                }
+            });
 
-//TEST JOERI CONFIRM ON SEND-------------------------------------
-$('#testsend').on('click', function() {
-$('#newtekst').hide();
-    $('#hiddenimg').fadeIn(9999);
-    $('#hiddentekst').fadeIn(666).delay(5000).fadeOut().next().fadeIn();
-    // $('#hiddentekst').fadeIn(333);
-        // $('#newtekst').fadeIn(666);
+            $('#testsend').on('click', function () {
+                $('#newtekst').hide();
+                $('#hiddenimg').fadeIn(9999);
+                $('#hiddentekst').fadeIn(666).delay(5000).fadeOut().next().fadeIn();
+                // $('#hiddentekst').fadeIn(333);
+                // $('#newtekst').fadeIn(666);
+
+            });
+            let input = $('input');
+            let value = input.val();
+            input
+                .on('focusin', function () { $(this).addClass("highlight").removeAttr("placeholder"); })
+                .on('focusout', function () { $(this).removeClass("highlight"); })
+                //----------------------------------
+                .blur(function () {
+                    if ((value == 0)) {
+
+                        $(this).addClass("highlight2");
+                    }
+                });
         });
-//----------------------------------------------------------------
 
-//SUGGESTIE JOERI INPUT ANIMATIES---------------------------------
-let input = $('input');
-let value = input.val();
-input
-.on('focusin', function() {$(this).addClass("highlight").removeAttr("placeholder");})
-.on('focusout', function() {$(this).removeClass("highlight");})
-.blur(function(){ 
-    if((value == 0)) { 
-                   
-    $(this).addClass("highlight2");}});
+        //TEST JOERI CONFIRM ON SEND-------------------------------------
+        $('#testsend').on('click', function () {
+            $('#newtekst').hide();
+            $('#hiddenimg').fadeIn(9999);
+            $('#hiddentekst').fadeIn(666).delay(5000).fadeOut().next().fadeIn();
+            // $('#hiddentekst').fadeIn(333);
+            // $('#newtekst').fadeIn(666);
+        });
+        //----------------------------------------------------------------
+
+        //SUGGESTIE JOERI INPUT ANIMATIES---------------------------------
+        let input = $('input');
+        let value = input.val();
+        input
+            .on('focusin', function () { $(this).addClass("highlight").removeAttr("placeholder"); })
+            .on('focusout', function () { $(this).removeClass("highlight"); })
+            .blur(function () {
+                if ((value == 0)) {
+
+                    $(this).addClass("highlight2");
+                }
+            });
 //-----------------------------------------------------------------
 
 });
