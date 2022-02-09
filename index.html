@@ -66,6 +66,10 @@
 			<img src="" alt="">
 			content 
 		</p>
+
+		<div class="auto_writer">
+  			<h1>Docent </h1><h1 id="typewriter"></h1>
+		</div>
 		
 	</section>
 
@@ -148,6 +152,7 @@
 	<script src="animatie.js"></script>
 
 	<script src="js/jquery.flexslider.js"></script>
+	<script src="https://rawgit.com/Ashish-Bansal/jquery-typewriter/master/jquery.typewriter.js" defer=""></script>
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<!-- <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script> -->
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
@@ -180,6 +185,14 @@
                 touch: true,
                 directionNav: true
             });
+
+    	$("#typewriter").typewriter({
+		        prefix : "Hallo ",
+		        text : ["mijn naam is", "Danny", "Danny Drijvers"],
+		        typeDelay : 100,
+		        waitingTime : 1500,
+		        blinkSpeed : 800
+	    	});
 
 
 		});
