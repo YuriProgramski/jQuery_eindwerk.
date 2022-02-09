@@ -17,14 +17,44 @@
 
 <style>
 
+	html,
+	body {
+  		height: 3000px;
+	}
+	.right-button-wrap {
+	  position: fixed;
+	  top: 20px;
+	  right: -200px;
+	  width 100px;
+	  transition: right 0.3s;
+	}
+
+	.right-button-wrap.slide-in {
+	  right: 400px;
+	}
+	.left-button-wrap {
+	  position: fixed;
+	  top: 20px;
+	  left: -200px;
+	  width 100px;
+	  transition: left 0.3s;
+	}
+
+	.left-button-wrap.slide-in {
+	  left: 400px;
+	}
+
 </style>
 
 </head>
 
 <body>
 
-	<div class="container">
-  	<h1>Docent </h1><h1 id="typewriter"></h1>
+	<div class="right-button-wrap">
+  		<img src="img/danny.png" alt="">
+	</div>
+	<div class="left-button-wrap">
+  		<img src="img/danny.png" alt="">
 	</div>
 	
 
@@ -41,13 +71,11 @@
 	<script src="https://rawgit.com/Ashish-Bansal/jquery-typewriter/master/jquery.typewriter.js" defer=""></script>
 
 	<script>$(document).ready(function () {
-		$("#typewriter").typewriter({
-        prefix : "Hallo ",
-        text : ["mijn naam is", "Danny", "Danny Drijvers"],
-        typeDelay : 100,
-        waitingTime : 1500,
-        blinkSpeed : 800
-    	});
+		$(window).on('scroll', function() {
+  			var y = $(this).scrollTop();
+  				$('.right-button-wrap').toggleClass('slide-in', y > 500 && y < 1500)
+  				$('.left-button-wrap').toggleClass('slide-in', y > 500 && y < 1500)
+			});
 			
 
 		});
