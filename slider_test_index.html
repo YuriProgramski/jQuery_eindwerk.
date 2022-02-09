@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>JQuery</title>
 	<link href="jquery-ui.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+
 	<!--flexslider css-->
 	<link rel="stylesheet" href="css/flexslider.css">
 	<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
@@ -15,114 +15,58 @@
 	<!--flexslider script-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
-	<style>
-		#tabs li {
-			width: 22%;
-			background: yellow;
-		}
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
-		#tabs li a {
-			color: red;
-		}
+.header_image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/cvo1.jpeg");
+  height: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
-		.flexslider{
-			max-width: 600px;
-		 }
+.header_text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
 
-		.sticky {
-			position: fixed;
-			top: 0;
-			width: 100%;
-			z-index: 999;
-		}
+.header_text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
 
-		
-	</style>
+.header_text button:hover {
+  background-color: #555;
+  color: white;
+}
+</style>
+
 </head>
 
 <body>
-	<header>
-		<div class="navbar">
-			<div class="nav_container">
-				<div class="logo">
-					<h1>vSchool</h1>
-				</div>
-				<nav>
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Cursus</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</header>
-	<section>
-		<div class="flexslider">
-		  <ul class="slides">
-			<li><img src="img/danny_bert.jpeg" alt="foto docent jquery">Flex 1</li>
-			<li><img src="img/danny_bert.jpeg" alt="foto docent jquery">Flex 2</li>
-			<li><img src="img/danny_bert.jpeg" alt="foto docent jquery">Flex 3</li>
-			<li><img src="img/danny_bert.jpeg" alt="foto docent jquery">Flex 4</li>
-		  </ul>
-		</div>
-	</section>
+	<div class="header_image">
+		<div class="header_text">
+		    <h1>jQuery</h1>
+		    <h2>Leer jQuery aan de CVO De Verdieping</h2>
+		    <button>Inschrijven</button>
+	  	</div>
+	</div>
 
-	<section>
-		<div class="main_container">
-				<!--jquery tabs ui-->
-		    	<div id="tabs">
-		    	<ul>
-		            <li><a href="#tabs-1">Cursus</a></li>
-		            <li><a href="#tabs-2">Programma</a></li>
-		            <li><a href="#tabs-3">Docenten</a></li>
-		            <li><a href="#tabs-4">Inschrijven</a></li>
-		        </ul>
-		        <div id="tabs-1">Inhoud jquery cursus
-		        	<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus, delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam, quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere quasi dolore.</div>
-		        <div id="tabs-2">Inhoud jquery programma
-		        	<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus, delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam, quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere quasi dolore.</div>
-		        <div id="tabs-3">Inhoud jquery docenten
-		        	<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus, delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam, quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere quasi dolore.</div>
-		        <div id="tabs-4">Inhoud inschrijven
-		        	<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus, delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam, quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere quasi dolore.</div>
-		    </div>
-		</div>
-		
-	</section>
-
-	<footer>
-		<div class="footer_container">
-			<div class="container_rows">
-				<div class="container_columns">
-					<h1>Meer info</h1>
-					<!--- waarom wordt deze H1 als een link getoond???-->
-					<ul>
-						<li><a href="#">Opleiding</a></li>
-						<li><a href="#">Inschrijven</a></li>
-						<li><a href="#">Over ons</a></li>
-					</ul>
-				</div>
-
-				<div class="container_columns">
-					<h1>Contact info</h1>
-					<ul>
-						<li><a href="#">011 53 87 33</a></li>
-						<li><a href="#">Schachtplein 1 3550</a></li>
-						<li><a href="#">3550 Heusden-Zolder</a></li>
-					</ul>
-				</div>
-
-				<div class="container_columns">
-					<h1>Volg ons</h1>
-					<div class="social_links">
-						<a href="#"><i class="fab fa-facebook"></i></a>
-						<a href="#"><i class="fab fa-instagram"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
@@ -135,31 +79,10 @@
 	<script src="js/jquery.flexslider.js"></script>
 
 	<script>$(document).ready(function () {
-			$(window).scroll(function(){
-		      let scroll = $(window).scrollTop();
-		      if (scroll > 0) {
-		        $("header").addClass("sticky");
-		      } 
-		      else {
-		        $("header").removeClass("sticky");
-		      }
-		    })
-    	
-		$("#tabs").tabs();
-    	
-    	$('.flexslider').flexslider({
-                animation: "slide",
-                slideshowSpeed: 2500,
-                pauseOnAction: true,//Boolean: Pause the slideshow when interacting with control elements, highly recommended.
-                pauseOnHover: true,
-                useCSS: true,//Boolean: Slider will use CSS3 transitions if available
-                touch: true,
-                directionNav: true
-            });
+			
 
-    	});
 
-    
+			});
 
 	</script>
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
