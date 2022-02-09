@@ -90,7 +90,7 @@ body, html {
 
 /*-------- Contact form section --------*/
 .inschrijfform {
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
   display: grid;
   justify-content: center;
@@ -107,11 +107,16 @@ body, html {
   width: 500px;
   padding: 10px;
   margin-bottom: 15px;
+  display: grid;
+  justify-content: center;
 }
 
 .error {
   color: red;
-  display: block;
+}
+
+.error_border {
+  border: 1px solid red;
 }
 
 .opleiding p {
