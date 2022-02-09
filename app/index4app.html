@@ -21,7 +21,43 @@ Dit is mijn div.
 </div>
 <input id="hide" type="button" value="Hide" />
 <input id="show" type="button" value="Show" /></fieldset></p>
-      <p>show/hide, fadetoggle, slide</p>
+
+
+<p><fieldset><div class="mydiv2">
+Dit is mijn div.
+</div>
+<input id="knop2" type="button" value="Hide/Show" /></fieldset></p>
+
+<p><fieldset><div id="foto">
+<img src="img/fade.png" />
+</div>
+<input id="knop3" type="button" value="fadeOut" /></fieldset></p>
+
+
+<p><fieldset><div id="paneel">
+<img src="img/fade.png" />
+</div>
+<p class="slider">
+        <a href="#" class="link-slide">Slide Paneel</a>
+    </p></fieldset></p>
+
+
+<p><fieldset>
+   <div class="accordion">
+        <h1>accordeontitel1</h1>
+        <div style="display:none;"><p>accordeoncontent1</p>
+            <p>info info info</p>
+        </div>
+        <h1>accordeontitel2</h1>
+        <div style="display:none;">accordeoncontent2
+            <p>info info info</p></div>
+       
+       
+    </div>
+
+ </fieldset></p>
+
+
       <p>accordion</p>
       <p>social media bar</p>
       <p>animated menu</p>
@@ -79,6 +115,25 @@ show.on('click', function() {
 });
 hide.on('click', function() {
       mydiv.hide(300);
+});
+$("#knop2").on('click', function() {
+$(".mydiv2").toggle(2222);
+});
+$('#knop3').on('click', function() {
+$("#foto").fadeToggle(6000);
+    if ($(this).val() == "fadeOut") {
+        $(this).val('fadeIn');
+    } else {
+        $(this).val('fadeOut');
+    }
+});
+$(".link-slide").on('click', function(e) {
+$("#paneel").slideToggle("slow");
+    //functionaliteit van a uitschakelen
+    e.preventDefault();
+});
+$('div.accordion h1').on('click', function() {
+$(this).next().slideToggle('500').siblings('div').slideUp('500');
 });
 });</script><!----------------------------------------- END SCRIPT --------------------------------|
 </body></html>
