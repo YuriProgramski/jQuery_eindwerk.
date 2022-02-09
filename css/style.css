@@ -13,13 +13,14 @@ header {
   background: var(--main-color);
 }
 
-.header_image {
+/*.header_image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/cvo1.jpeg");
   height: 70%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  display: block;
 }
 
 .header_text {
@@ -44,9 +45,16 @@ header {
 
 .header_text button:hover {
   background-color: #555;
-  color: white;
+  color: white;*/
 }
 
+/*Om header sticky te maken*/
+.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+}
 
 .navbar {
   width: 100%;
