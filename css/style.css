@@ -13,7 +13,7 @@ header {
   background: var(--main-color);
 }
 
-.header_image {
+/*.header_image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/cvo1.jpeg");
   height: 70%;
   background-position: center;
@@ -45,7 +45,7 @@ header {
 
 .header_text button:hover {
   background-color: #555;
-  color: white;
+  color: white;*/
 }
 
 /*Om header sticky te maken*/
