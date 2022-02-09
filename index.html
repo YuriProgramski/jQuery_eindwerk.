@@ -79,61 +79,42 @@
 	</section>
 
 	<section>
-		<div class="main_container">
-			<!--jquery tabs ui-->
-			<div id="tabs">
-				<ul>
-					<li><a href="#tabs-1">Cursus</a></li>
-					<li><a href="#tabs-2">Programma</a></li>
-					<li><a href="#tabs-3">Docent</a></li>
-					<li><a href="#tabs-4">Inschrijven</a></li>
-				</ul>
-				<div id="tabs-1">Inhoud jquery cursus
-					<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus,
-					delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus
-					pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam,
-					quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere
-					quasi dolore.
-				</div>
-				<div id="tabs-2">Inhoud jquery programma
-					<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus,
-					delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus
-					pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam,
-					quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere
-					quasi dolore.
-				</div>
-				<div id="tabs-3">
-					<div class="cf">
-						<div class="docentleft">
-							<h1 class="animate__animated animate__bounceIn">Danny Drijvers</h1>
-							<p><img src="img/danny.png" /></p>
-						</div>
-						<div class="docentright">
-							<button id="butt1">Meer info ></button>
-							<div id="fadeinfo" style="display: none">Is leerkracht in het interessegebied Webdesigner.
-								Voor vSchool ontwikkelde hij de cursussen JavaScript, jQuery en Vue.js. Een elegante
-								code is de voedingsbodem voor essentiële creativiteit.Behaalde een graduaat in
-								toegepaste informatica, en specialiseerde zich tot Master in Science Technology Enhanced
-								Learning, Innovation and Change aan de Sheffield Hallam University. In de kinderjaren
-								van het internet begon hij zijn carrière als programmeur, die hij sinds 1999 combineert
-								met zijn loopbaan als leraar. Kan een waaier aan programmeer ervaringen voorleggen die
-								een periode van 30 jaar omvatten, net als een grondige deskundigheid over het leren
-								zelf. Haast pal tegenover zijn identiteit als programmeur, staat de kunstenaar, zoekend
-								naar een grafische vormgeving aan de stroom van het leven. Danny Drijvers produceert al
-								meer dan tien jaar internationaal tentoongesteld werk, waarin hij multidisciplinair te
-								werk gaat. Komt helemaal tot zichzelf tijdens een avondje Salsa Dansen.'</div>
-						</div>
-					</div>
-				</div>
-				<div id="tabs-4">Inhoud inschrijven
-					<br>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ipsa adipisci minima maiores minus,
-					delectus nisi temporibus doloremque cumque quibusdam, eveniet, possimus incidunt. Temporibus
-					pariatur eum eos exercitationem obcaecati harum dolor itaque, in cupiditate. Eos nihil ipsam,
-					quibusdam, similique velit deserunt, at dolorum, corrupti ullam nobis molestiae accusantium facere
-					quasi dolore.
-				</div>
-			</div>
-		</div>
+			<h1>jQuery cursus</h1>
+				<p>	
+					Eenvoudig en snel programmeren, dat doe je met jQuery. Het is een rijke, snelle en elegante uitbreiding op JavaScript. Het is opensource, er is een uitgebreide documentatie voorzien en een zeer actieve community. Daardoor wordt er heel regelmatig een update uitgebracht en verschijnen er constant nieuwe plugins.
+				</p>
+				<p>
+					Het gemak waarmee je in deze cursus jQuery leert programmeren tegenover gewone JavaScript is verbazend. Een lichtgewicht qua KB, uitstekende performantie en zeer uitgebreide ingebouwde voorzieningen laten de huidige webdesigners kiezen voor deze tool.
+				</p>
+				<p>
+					jQuery is een verzameling van functies die de oorspronkelijke JavaScript functies uitbreiden. Je hebt complete controle over de DOM (Document Object Model), met andere woorden de elementen in je HTML-pagina.
+				</p>
+				<p>
+					Er zijn 2 belangrijke uitbreidingen op jQuery zelf, namelijk jQuery UI, een plugin voor effecten en gebruikersinteractie elementen, enjQuery Mobile, om te ontwikkelen voor alle mobiele platformen.
+				</p>
+				
+				<p>
+					jQuery ondersteunt alle populaire en minder populaire browsers.
+				</p>
+
+				<p>
+					Websites die gebruik maken van jQuery zijn onder andere Google, Amazon, IBM, Microsoft, Twitter, Dell, NBC, WordPress, Drupal, Mozilla, Opera, …
+				</p>
+	</section>
+	<section>
+		<h1>Het programma</h1>
+		<ul>
+			<li>Basisprincipes javascript – variabelen, functies, strings, arrays,…</li>
+			<li>Basistechnieken jQuery – implementatie script</li>
+			<li>Selectors – selecteren van elementen op de pagina</li>
+			<li>Events – gebeurtenissen opsporen en afhandelen, bijvoorbeeld een muisklik, pagina inladen,…</li>
+			<li>Effects – fade, slide, toggle, animate,…</li>
+			<li>jQuery UI – gebruikers interactie elementen toevoegen en instellen</li>
+			<li>JSON en AJAX – externe data inlezen en wegschrijven, zonder een pagina refresh te doen</li>
+			<li>jQuery Mobile – ontwerp voor mobiel</li>
+
+		</ul>
+
 
 	</section>
 
@@ -181,7 +162,6 @@
 	<!-- <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script> -->
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<script>$(document).ready(function () {
-			$("#tabs").tabs();
 			$('button').button();
 
 			let $knop1 = $("button#butt1");
