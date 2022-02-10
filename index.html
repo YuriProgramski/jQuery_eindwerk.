@@ -75,8 +75,12 @@
 
 .content {
 	background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 10px;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	padding: 10px;
+}
+
+section {
+	height: 800px;
 }
 
 
@@ -105,9 +109,9 @@
 	<section>
 		<div class="flexslider">
 		  <ul class="slides">
-			<li><img src="img/cvo.png" alt="CVO De Verdieping gebouw"></li>
+			<li><img src="img/cvo.jpeg" alt="CVO De Verdieping gebouw"></li>
 			<li><img src="img/cvo4.jpeg" alt="CVO De Verdieping gebouw"></li>
-			<li><img src="img/danny_bert.jpeg" alt="foto docent jquery"></li>
+			<li><img src="img/dannybert.jpeg" alt="foto docent jQuery"></li>
 		  </ul>
 		</div>
 	</section> 
@@ -280,8 +284,8 @@
 
     	$(window).on('scroll', function() {
   			var y = $(this).scrollTop();
-  				$('.right-button-wrap').toggleClass('slide-in', y > 1000 && y < 1500)
-  				$('.left-button-wrap').toggleClass('slide-in', y > 1000 && y < 1500)
+  				$('.right-button-wrap').toggleClass('slide-in', y > 1600 && y < 2000)
+  				$('.left-button-wrap').toggleClass('slide-in', y > 1600 && y < 2000)
 			});
 
 
