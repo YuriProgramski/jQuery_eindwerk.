@@ -1,27 +1,37 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JQuery</title><link href="../css/styleapp.css" rel="stylesheet">
+<title>JQuery</title>   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+<link href="../css/styleapp.css" rel="stylesheet">
 <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet"></head>
-<body><div class="ui-helper-hidden"></div><div id="dialogBox" title="'Les 1'"><p><img src="img/dexter2.jpg"/></p><p>Starten in de opleiding zal je doen met basiskennis van selectors, attributen en variabelen.</p><p>Selectors heb je nodig om een bepaald item te selecteren waarop je een actie wilt ondernemen.</br>
-      (vb.: Je selecteert een bepaalde knop, of titel)</br>
-         Attributen zijn eigenschappen van items, die je een waarde kan geven.</br>(vb.: De tekstkleur van een titel, of knop, die kan je blauw maken.
-            </p></div>
+<body><div class="ui-helper-hidden"></div>
+
+
+<!---------------------------------------------------------------------------------------------------->
+
+   <div id="dialogBox" title="'Les 1'"><p><img src="img/dexter2.jpg"/></p><p>Na de inleidende basiskennis van jQuery & DOM zal je aanvangen met basiskennis van selectors, attributen en variabelen.</p><p>Selectors heb je nodig om een bepaald item in het document ('element' in 'Document Object Model') te selecteren waarop je een actie wilt ondernemen. (h1, p, div, ... [met de id/klasse])</p>
+      <p>Attributen zijn eigenschappen van items, die je een waarde kan geven.(class, href, placeholder, ...)
+            </p><p>vb.: $('h1#hoofdtitel').css('font-weight' : 'bold');</br>
+      In dit voorbeeld gaan we de h1 met id 'hoofdtitel' vetgedrukt maken.</p>
+         </div>
 	
 <!---------------------------------------------------------------------------------------------------->
 
-<h1>Basis</h1>
+<h1 class="animate__animated animate__bounceIn">Inleiding,</h1>
 
 <div id="bodycontainer">
    <div id="contentt">
-   <div class="inhoud"><fieldset>
-      <p>Je zal de cursus aanvangen met basiskennis van selectors, attributen en variabelen.</p>
-      
-         <p>Bij wijze van voorbeeld kan je hieronder wat experimenteren zodat je een idee krijgt wat je al zou kunnen na de cursusinleiding.</p></fieldset>
-         </div>
-   <button id="knoptoggle">Verberg/toon Uitleg</button></div>
-
+      <div class="inhoud"><fieldset>
+            <p>Je zal de cursus aanvangen met basiskennis van selectors, attributen en variabelen.</p>
       
          
-         <p><fieldset><button id="hover">Hover here</button><p id="hovercontent"></p></fieldset></p>
+      </fieldset>
+      <button id="knoptoggle">info</button>
+      <button class="vb">vb</button>
+      <button class="b">next</button>
+   </div>
+      <div class="voorbeelden" style="display: none">
+         <p><fieldset><button id="hover">Hover here</button><button id="buttonhovercode">Code</button>
+            <p id="hovercontent"></p><p id="codehover" style="display: none"><img src="img/codehover.png"/></br>
+         Wanneer de muis over de button met id 'hover' gaat, wordt er tekst toegevoegd aan de paragraaf met id 'hovercontent'.</p></fieldset></p>
       <fieldset><p><button class="color">red</button>
     <button class="color">blue</button>
     <button class="color">green</button></p></fieldset>
@@ -29,9 +39,9 @@
       <p><fieldset><p>log when click this: <button class="c">0</button></p>
       <p>log when click any: <button class="d">0</button></p></fieldset></p>
 
+      </div>
 
-      <p>
-      <button class="b">next les</button></p>
+      </div>
 </div>
 
 
@@ -41,8 +51,10 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script><!---------------------------------------------------------------------------------------------------------------------->
 <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script><!--------------------------------------------------------------------------------------------------------->
 <script>$(function() { //---------------------------------- SCRIPT --------------------------------|
-
 $('button').button();
+
+$('div#contentt').fadeIn(5000);
+ $('div#inhoud').delay(5333).fadeIn(2222);
 
 $("#dialogBox").dialog({
             modal: true,
@@ -63,19 +75,26 @@ show: "slide",
  $("#knoptoggle").click(function () {
             $('#dialogBox').dialog('open');
         });
-
-$('div#contentt').delay(2666).fadeIn(6222);
-
-$("#knoptoggle").on('click', function() {
-      $(".inhoud").toggle();
+$('button.vb').on('click', function (){
+   $('.voorbeelden').toggle();
 });
 
+$('button.b').on('click', function (){
+   window.location="index2app.html";
+});
 $("button#hover").mouseover(function(){
       $("p#hovercontent").text("jQuery is watching you hover on that button");
 });
 $("button#hover").mouseleave(function(){
    $("p#hovercontent").text("");
+
 });
+$('#buttonhovercode').on('click', function() {
+$('p#codehover').toggle();
+});
+
+
+
 $('button.color').mouseover(function(){
    let $color = $(this).text();
     $(this).css('color', $color);
@@ -112,28 +131,5 @@ $('button').click(function() {
     console.log($nummer2);
     $button2.text($nummer2);
 });
- $("#dialogBox").dialog({
-            modal: true,
-            title: "Basis",
-            width: 666,
-            height: 666
-                  }, {
-show: "slide",
-   hide: "puff"
-});
- $("#dialogBox").dialog({ modal: true,
-                     buttons: {
-                           
-                           Ok: function() {
-                              $(this).dialog("close");},}
-}, {
-show: "slide",
-   hide: "puff"
-});
-//hoe defuck kan ik 'on.click' 'ok button dialog' 'fadein #contentt' ?
-$('button.b').on('click', function (){
-   window.location="index3app.html";
-});
-
 });</script><!----------------------------------------- END SCRIPT --------------------------------|
 </body></html>

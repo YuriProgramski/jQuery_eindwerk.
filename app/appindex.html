@@ -7,26 +7,25 @@
 
 <!---------------------------------------------------------------------------------------------------->
 
-   <div id="dialogBox" title="Welkom"><p><img src="img/dexter1.png"/></p><p>Laten we starten met de rondleiding!</p><p>Welkom bij de interactieve rondleiding van onze jQuery-cursus.</p>
-         <p>JQuery is een JavaScript dat naar het motto 'write less, do more' zowel minder codeerwerk als dataverbruik oplevert. Zo is er een nette scheiding tussen html, css en js; en wordt het praktischer om uitgebreide animaties te combineren.</p>
+   <div id="dialogBox" title="Welkom"><p><img src="img/dexter1.png"/></p><p>Laten we starten met de rondleiding!</br>In de inleiding leer je eerst wat jQuery en DOM is.</p>
 
-         <p>Graag nemen we je stapsgewijs mee doorheen de toegepaste kennis die je zal op doen tijdens de opleiding.</p>
-         <p>Opgemerkt hoe er een custom dialoogvenster verscheen?</br>
-         Deze kan jijzelf volledig vormgeven! Ook verscheen het inhoudblokje met een 'fade', na een kleine vertraging. Ook kan je met zeer simpele code al een stukje inhoud doen laten verdwijnen of verschijnen door middel van een klik op de knop.</p>
-         <p>Dit zijn maar enkele basisvoorbeelden van hoe jQuery wordt toegepast in webdesign & programming.</P></div>
+         <p>JQuery is een JavaScript-framework dat volgens het motto 'write less, do more' zowel minder codeerwerk als dataverbruik oplevert. Zo is er een nette scheiding tussen html, css en js; en wordt het praktischer om uitgebreide animaties te combineren.</p>
+         <p>Daarna krijg je een korte introductie in het 'Document Object Model', waarmee elementen van de pagina worden aangesproken.</p>
+         <p>Een eerste praktisch voorbeeld van jQuery is dit eigenste dialoogscherm, dat verscheen na een klik op de knop. Ook het knopje om de voorbeeldsectie te laten verschijnen, is gecodeerd met jQuery. Tevens hebben we zo ook de titel laten shaken en de inhoud laten 'infaden'.</p>
+         </br>Dit zijn maar enkele basisconcepten van hoe jQuery bijvoorbeeld wordt toegepast in webdesign & programming.</P></div>
 	
 <!---------------------------------------------------------------------------------------------------->
 
-<h1>Welkom,</h1>
+<h1 class="animate__animated animate__bounceIn">Welkom,</h1>
 
 <div id="bodycontainer">
    <div id="contentt">
       <div class="inhoud"><fieldset>
-            <p>Welkom bij de interactieve rondleiding van de jQuery-cursus. Ontdek wat je allemaal zal leren door telkens op 'info' en 'next' te klikken.</p>
+            <p>Welkom bij de interactieve rondleiding van de jQuery-cursus. Stapsgewijs laten we je graag de cursusinhoud ontdekken. Klik op 'info' voor meer informatie, of op 'next' voor de volgende les.</p>
       </fieldset></div>
 
       <button id="knoptoggle">info</button>
-      <button class="b">next</button>
+      <button class="b">next</button></div>
 </div>
 
 
@@ -37,6 +36,8 @@
 <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script><!--------------------------------------------------------------------------------------------------------->
 <script>$(function() { //---------------------------------- SCRIPT --------------------------------|
 $('button').button();
+$('div#contentt').fadeIn(5000);
+ $('div#inhoud').delay(5333).fadeIn(2222);
 
 $("#dialogBox").dialog({
             modal: true,
@@ -52,22 +53,18 @@ $("#dialogBox").dialog({
 show: "slide",
    hide: "puff"
 });
-//  $("#dialogBox").dialog({ modal: true,
-//                      }
-// }, {
-// show: "slide",
-//    hide: "puff"
-// });
+
 
  $("#knoptoggle").click(function () {
             $('#dialogBox').dialog('open');
         });
 
-$('div#contentt').fadeIn(5000);
- $('div#inhoud').delay(3333).fadeIn(2222);
+$('button.c').on('click', function (){
+   window.location="appindex2.html";
+});
 
 $('button.b').on('click', function (){
-   window.location="index2app.html";
+   window.location="appindex2.html";
 });
 
 });</script><!----------------------------------------- END SCRIPT --------------------------------|
