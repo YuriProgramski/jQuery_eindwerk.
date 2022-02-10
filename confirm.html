@@ -39,8 +39,9 @@
 				
 				<h2 id="typewriter2"></h2>
 		</div>
+		<h3 id="h3" style="display: none;">CVO De Verdieping | vSchool</h3>
 			<div id="newtekst" style="display: none;">
-				<h3>CVO De Verdieping | vSchool</h3>
+				
 				<h2 id="typewriter"></h2><p><a href="index.html">Home</a></p>
 		</div>
 		
@@ -66,20 +67,22 @@ $('#send').on('click', function() {
 	}, 333);
 	$('#hiddentekst').fadeIn(5000).delay(500).fadeOut(3000);
 	$('#hiddenimg').delay(10000).fadeIn(666);
-	$('#newtekst').delay(15000).fadeIn(1666);
-		$('#newtekst2').delay(6666).fadeIn(6666);
+	$('#newtekst').delay(15000).fadeIn(666);
+	$('#h3').delay(16000).fadeIn(4666);
+
+		$('#newtekst2').delay(6666).fadeIn(666);
 
 	$('#koffer').delay(10000).animate({
 		left: "+=422px"
-	}, 3333);
+	}, 2222);
 	$('#pc').delay(10000).animate({
 		top: "+=422px"
-	}, 3333);
+	}, 1669);
 });
 
-$("#typewriter").typewriter({
+$("div#newtekst h2#typewriter").delay(15000).typewriter({
 		        prefix : [""],
-		        text : ["proef en krijg goesting", "hedendaagse helden", "digitale duizendpoten", "future fanatics", "web weavers", "practical programmers"],
+		        text : ["proef en krijg goesting", "hedendaagse helden", "digitale duizendpoten", "veel succes", "future fanatics", "web weavers", "practical programmers"],
 		        typeDelay : 100,
 		        waitingTime : 1500,
 		        blinkSpeed : 800
@@ -88,7 +91,7 @@ $("#typewriter").typewriter({
 
 
 //------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!-----------------------
-// $("#typewriter2").delay(1000).typewriter({
+// $("div#newtekst2 h2#typewriter2").delay(1000).typewriter({
 // 		        prefix : [""],
 // 		        text : ["alvast veel succes!"],
 // 		        typeDelay : 400,
