@@ -16,46 +16,95 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
 <style>
+	* {
+  box-sizing: border-box;
+}
 
-	html,
-	body {
-  		height: 3000px;
-	}
-	.right-button-wrap {
-	  position: fixed;
-	  top: 20px;
-	  right: -200px;
-	  width 100px;
-	  transition: right 0.3s;
-	}
+.box {
+  max-width: 1200px;
+  margin: auto;
+}
 
-	.right-button-wrap.slide-in {
-	  right: 400px;
-	}
-	.left-button-wrap {
-	  position: fixed;
-	  top: 20px;
-	  left: -200px;
-	  width 100px;
-	  transition: left 0.3s;
-	}
+.row {
+  margin: 8px -16px;
+}
 
-	.left-button-wrap.slide-in {
-	  left: 400px;
-	}
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+}
 
 </style>
 
 </head>
 
 <body>
+	<section>
+		<div class="box">
+			<div class="row">
+			  <div class="column">
+			    <div class="content">
+			      <img src="img/studie.jpeg" alt="jQuery cursus" style="width:100%">
+			      <h1>jQuery cursus</h1>
+			      <p>	
+					Eenvoudig en snel programmeren, dat doe je met jQuery. Het is een rijke, snelle en elegante uitbreiding op JavaScript. Het is opensource, er is een uitgebreide documentatie voorzien en een zeer actieve community. Daardoor wordt er heel regelmatig een update uitgebracht en verschijnen er constant nieuwe plugins.
+				</p>
+				<p>
+					Het gemak waarmee je in deze cursus jQuery leert programmeren tegenover gewone JavaScript is verbazend. Een lichtgewicht qua KB, uitstekende performantie en zeer uitgebreide ingebouwde voorzieningen laten de huidige webdesigners kiezen voor deze tool.
+				</p>
+				<p>
+					jQuery is een verzameling van functies die de oorspronkelijke JavaScript functies uitbreiden. Je hebt complete controle over de DOM (Document Object Model), met andere woorden de elementen in je HTML-pagina.
+				</p>
+				<p>
+					Er zijn 2 belangrijke uitbreidingen op jQuery zelf, namelijk jQuery UI, een plugin voor effecten en gebruikersinteractie elementen, enjQuery Mobile, om te ontwikkelen voor alle mobiele platformen.
+				</p>
+				
+				<p>
+					jQuery ondersteunt alle populaire en minder populaire browsers.
+				</p>
 
-	<div class="right-button-wrap">
-  		<img src="img/danny.png" alt="">
-	</div>
-	<div class="left-button-wrap">
-  		<img src="img/danny.png" alt="">
-	</div>
+				<p>
+					Websites die gebruik maken van jQuery zijn onder andere Google, Amazon, IBM, Microsoft, Twitter, Dell, NBC, WordPress, Drupal, Mozilla, Opera, …
+				</p>
+			    </div>
+			  </div>
+			  <div class="column">
+			    <div class="content">
+			      	<img src="img/coding.webp" alt="jQuery programma" style="width:100%">
+			      	<h1>Het programma</h1>
+			      	<ul>
+						<li>Basisprincipes javascript – variabelen, functies, strings, arrays,…</li>
+						<li>Basistechnieken jQuery – implementatie script</li>
+						<li>Selectors – selecteren van elementen op de pagina</li>
+						<li>Events – gebeurtenissen opsporen en afhandelen, bijvoorbeeld een muisklik, pagina inladen,…</li>
+						<li>Effects – fade, slide, toggle, animate,…</li>
+						<li>jQuery UI – gebruikers interactie elementen toevoegen en instellen</li>
+						<li>JSON en AJAX – externe data inlezen en wegschrijven, zonder een pagina refresh te doen</li>
+						<li>jQuery Mobile – ontwerp voor mobiel</li>
+					</ul>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</section>
+		
+	
 	
 
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
@@ -71,11 +120,7 @@
 	<script src="https://rawgit.com/Ashish-Bansal/jquery-typewriter/master/jquery.typewriter.js" defer=""></script>
 
 	<script>$(document).ready(function () {
-		$(window).on('scroll', function() {
-  			var y = $(this).scrollTop();
-  				$('.right-button-wrap').toggleClass('slide-in', y > 500 && y < 1500)
-  				$('.left-button-wrap').toggleClass('slide-in', y > 500 && y < 1500)
-			});
+		
 			
 
 		});
