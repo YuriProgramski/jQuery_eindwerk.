@@ -95,8 +95,10 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
         $(document).ready(function () {
+
             let $button = $('#submit_button');
             $button.on('click', function(e) {
                 e.preventDefault();
@@ -113,14 +115,18 @@
                 if ($naam.length == '') {
                     $('span#naam_check').show().html('Vul uw naam in');
                     $naam_border.addClass('error_border');
+                    $('#naam').effect("shake");
+
                 }
                 else if ($naam.length < 3) {
                     $('span#naam_check').show().html('Uw naam moet 3 karakters of langer zijn');
                     $naam_border.addClass('error_border');
+                    $('#naam').effect("shake");
                 }
                 if ($email.length == '') {
                     $('span#email_check').show().html('Vul uw email in');
                     $email_border.addClass('error_border');
+                    $('#email').effect("shake");
                 }
                 else {
                     const $regEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -128,7 +134,11 @@
                     if (!$geldige_email) {
                         $('span#email_check').show().html('Geef een geldige email in');
                         $email_border.addClass('error_border');
+                        $('#email').effect("shake");
                     }
+                }
+                if (!$naam_border.hasClass('error_border') && !$email_border.hasClass('error_border')) {
+                    $('.inschrijfform').fadeOut(750);
                 }
             });
         });
