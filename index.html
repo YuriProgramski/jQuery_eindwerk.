@@ -22,25 +22,25 @@
 	.right-button-wrap {
 	  position: fixed;
 	  top: 20px;
-	  right: -400px;
+	  right: -500px;
 	  width 100px;
 	  transition: right 0.3s;
 	}
 
 	.right-button-wrap.slide-in {
-	  right: 20px;
+	  right: 175px;
 	}
 	
 	.left-button-wrap {
 	  position: fixed;
 	  top: 20px;
-	  left: -400px;
+	  left: -500px;
 	  width 100px;
 	  transition: left 0.3s;
 	}
 
 	.left-button-wrap.slide-in {
-	  left: 20px;
+	  left: 175px;
 	}
 
 /*section boxes*/
@@ -123,6 +123,7 @@ section {
 		</div>
 	</section> 
 
+
 	<section>
 		<div class="box">
 			<div class="row">
@@ -160,7 +161,7 @@ section {
 			<div class="row">
                 <div class="left-button-wrap"> 
                     <div class="column">
-                        <div class="content">
+                        <div class="content" style="width: 500px;">
                             <img src="img/studie.jpeg" alt="jQuery cursus" style="width:100%">
                             <h1>jQuery cursus</h1>
                             <p>	
@@ -189,7 +190,7 @@ section {
 
                 <div class="right-button-wrap">
                     <div class="column">
-                        <div class="content">
+                        <div class="content" style="width: 500px;">
                             <img src="img/coding.jpeg" alt="jQuery programma" style="width:100%">
                             <h1>Het programma</h1>
                             <ul>
@@ -214,6 +215,7 @@ section {
 		<img src="img/ipad.jpg" alt="ipad frame app">
 
 	</section>
+
 
 	<footer>
 		<div class="footer_container">
@@ -299,8 +301,8 @@ section {
 
     	$(window).on('scroll', function() {
   			var y = $(this).scrollTop();
-  				$('.right-button-wrap').toggleClass('slide-in', y > 1400 && y < 1800)
-  				$('.left-button-wrap').toggleClass('slide-in', y > 1400 && y < 1800)
+  				$('.right-button-wrap').toggleClass('slide-in', y > 1450 && y < 1800)
+  				$('.left-button-wrap').toggleClass('slide-in', y > 1450 && y < 1800)
 			});
 
 
