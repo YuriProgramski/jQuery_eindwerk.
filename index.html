@@ -22,25 +22,25 @@
 	.right-button-wrap {
 	  position: fixed;
 	  top: 20px;
-	  right: -800px;
+	  right: -400px;
 	  width 100px;
 	  transition: right 0.3s;
 	}
 
 	.right-button-wrap.slide-in {
-	  right: 25px;
+	  right: 20px;
 	}
 	
 	.left-button-wrap {
 	  position: fixed;
 	  top: 20px;
-	  left: -800px;
+	  left: -400px;
 	  width 100px;
 	  transition: left 0.3s;
 	}
 
 	.left-button-wrap.slide-in {
-	  left: 25px;
+	  left: 20px;
 	}
 
 /*section boxes*/
@@ -155,7 +155,7 @@ section {
 		</div>
 	</section>
 
-	<!-- <section>
+	<section>
 		<div class="box">
 			<div class="row">
                 <div class="left-button-wrap"> 
@@ -190,7 +190,7 @@ section {
                 <div class="right-button-wrap">
                     <div class="column">
                         <div class="content">
-                            <img src="img/coding.webp" alt="jQuery programma" style="width:100%">
+                            <img src="img/coding.jpeg" alt="jQuery programma" style="width:100%">
                             <h1>Het programma</h1>
                             <ul>
                                 <li>Basisprincipes javascript – variabelen, functies, strings, arrays,…</li>
@@ -207,7 +207,7 @@ section {
                 </div>
 			</div>
 		</div>
-	</section> -->
+	</section> 
 
 	<section>
 		<h1>jQuery app</h1>
@@ -299,8 +299,8 @@ section {
 
     	$(window).on('scroll', function() {
   			var y = $(this).scrollTop();
-  				$('.right-button-wrap').toggleClass('slide-in', y > 1600 && y < 2000)
-  				$('.left-button-wrap').toggleClass('slide-in', y > 1600 && y < 2000)
+  				$('.right-button-wrap').toggleClass('slide-in', y > 1400 && y < 1800)
+  				$('.left-button-wrap').toggleClass('slide-in', y > 1400 && y < 1800)
 			});
 
 
