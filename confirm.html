@@ -7,11 +7,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>JQuery</title>
-	<link href="jquery-ui.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-<style>body{}#send{padding: 	22px; background-color: 	orange	;}#hidden{text-align:  center; margin-top: 69px;;padding: 22px; min-height: 444px ;display: none;}</style></head>
+<style>body{}#send{padding: 	22px; background-color: 	orange	;}#hidden{text-align:  center; margin-top: 69px;;padding: 22px; min-height: 444px ;display: none;}#test {max-width: 150px;min-height: 	150px; background-color: 	grey;}</style></head>
 
 <body>
 	
@@ -22,6 +21,8 @@
 
 	<section>
 		<button value="send" id="send"></button>
+		<!-- <div id="test">test</div> -->
+		<div class="check" style="display: none;"><img src="img/check.png"/></div>
 		<div id="hiddenimg" style="display: none;">
 			<img src="img/confirmm.png"/></div>
 			<div id="hiddentekst" style="display: none;"><p>Bedankt voor je aanvraag!</p>
@@ -39,22 +40,24 @@
 	<script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
-	<script src="animatie.js"></script>
+	
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<!-- <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script> -->
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<script>$(document).ready(function () {
 
 $('#send').on('click', function() {
-$('#newtekst').hide();
-	$('#hiddenimg').fadeIn(9999);
-	$('#hiddentekst').fadeIn(666).delay(5000).fadeOut().next().fadeIn();
-	// $('#hiddentekst').fadeIn(333);
-		// $('#newtekst').fadeIn(666);
-
+	$('.check').fadeIn(3000).fadeOut(3000);
+	$('#hiddentekst').fadeIn(666).delay(5000).fadeOut(333);
+	$('#hiddenimg').delay(5999).fadeIn(666);
+	$('#newtekst').delay(6333).fadeIn(666);
 });
 
+// $('#test')    .hover(
+//                 function() {
 
+//                    $(this).stop().animate({top: '-40px' }, { duration:350, easing:'easeOutBounce'});
+//                 });
 
 		});</script>
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
