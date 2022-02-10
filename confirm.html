@@ -13,7 +13,7 @@
 <style>body{}#send{padding: 	22px; background-color: 	orange	;}#hidden{text-align:  center; margin-top: 69px;;padding: 22px; min-height: 444px ;display: none;}#test {max-width: 150px;min-height: 	150px; background-color: 	grey;}
 #koffer {position: 	absolute	; left: 	-250px; top: 269px;}
 #pc {position: 	absolute	; left: 	444px; top: -150px; }
-#hiddenimg img {position: relative; z-index: 3;}
+#hiddenimg{}
 </style></head>
 
 <body>
@@ -29,12 +29,12 @@
 		<!-- <div id="test">test</div> -->
 		<div class="check" style="display: none;"><img src="img/check.png"/></div>
 		<div id="hiddenimg" style="display: none;">
-			<img src="img/con.png"/></div>
+			<img src="img/confirmm.png"/></div>
 			<div id="hiddentekst" style="display: none;"><p>Bedankt voor je aanvraag!</p>
 			<p>Wij hebben je aanvraag goed ontvangen en zullen je aanvraag zsm verwerken.</p>
 			<p>Je ontvangt van ons nog een e-mail ter bevestiging van je aanvraag.</p>
 			<hr></div>
-			<div id="newtekst" style="display: none;"><p>Alvast succes!</p><p><a href="index.html">Home</a></p>
+			<div id="newtekst" style="display: none;"><h2 id="typewriter"></h2><p><a href="index.html">Home</a></p>
 		</div>
 		
 	</section>
@@ -48,6 +48,7 @@
 	
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<!-- <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script> -->
+	<script src="https://rawgit.com/Ashish-Bansal/jquery-typewriter/master/jquery.typewriter.js" defer=""></script>
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<script>$(document).ready(function () {
 
@@ -67,7 +68,13 @@ $('#send').on('click', function() {
 	}, 3333);
 });
 
-
+$("#typewriter").typewriter({
+		        
+		        text : ["Proef en krijg goesting", "Hedendaagse helden", "Digitale duizendpoten", "Future fanaten", "Web wevers", "Proef en krijg goesting"],
+		        typeDelay : 100,
+		        waitingTime : 1500,
+		        blinkSpeed : 800
+	    	});
 
 
 // $(this).animate({ left: '+=140' }, 500);
