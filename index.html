@@ -49,7 +49,7 @@
 }
 
 .box {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -83,6 +83,13 @@ section {
 	height: 800px;
 }
 
+/*flexslider border section*/
+
+.flexslider {
+	border: 0;
+
+}
+
 
 	</style>
 </head>
@@ -111,36 +118,44 @@ section {
 		  <ul class="slides">
 			<li><img src="img/cvo.jpeg" alt="CVO De Verdieping gebouw"></li>
 			<li><img src="img/cvo4.jpeg" alt="CVO De Verdieping gebouw"></li>
-			<li><img src="img/dannybert.jpeg" alt="foto docent jQuery"></li>
+			<li><img src="img/dannybert.jpg" alt="foto docent jQuery"></li>
 		  </ul>
 		</div>
 	</section> 
 
-	<!-- <section> Hero image test
-		<div class="header_image">
-			<div class="header_text">
-			    <h1>jQuery</h1>
-			    <h2>Leer jQuery aan de CVO De Verdieping</h2>
-			    <button>Inschrijven</button>
-		  	</div>
-		</div>
-	</section> -->
-
 	<section>
-		<h1>Docent - Danny</h1>
-		<p>
-			<img src="" alt="">
-			content 
-		</p>
-
-		<div class="auto_writer">
-  			<h1>Docent </h1><h1 id="typewriter"></h1>
+		<div class="box">
+			<div class="row">
+			  <div class="column">
+			    <div class="content">
+			     <div class="auto_writer">
+		  			<h1>jQuery Docent</h1>
+		  			<h2 id="typewriter"></h2>
+		  			<p>
+		  				Is leerkracht in het interessegebied Webdesigner. Voor vSchool ontwikkelde hij de cursussen JavaScript, jQuery en Vue.js. Een elegante code is de voedingsbodem voor essentiële creativiteit.
+		  			</p>
+		  			<p>
+						Behaalde een graduaat in toegepaste informatica, en specialiseerde zich tot Master in Science Technology Enhanced Learning, Innovation and Change aan de Sheffield Hallam University.
+					</p>
+					<p>
+						In de kinderjaren van het internet begon hij zijn carrière als programmeur, die hij sinds 1999 combineert met zijn loopbaan als leraar. Kan een waaier aan programmeer ervaringen voorleggen die een periode van 30 jaar omvatten, net als een grondige deskundigheid over het leren zelf.
+					</p>
+					<p>
+						Haast pal tegenover zijn identiteit als programmeur, staat de kunstenaar, zoekend naar een grafische vormgeving aan de stroom van het leven. Danny Drijvers produceert al meer dan tien jaar internationaal tentoongesteld werk, waarin hij multidisciplinair te werk gaat.
+					</p>
+				</div>
+			</div>
 		</div>
-		
-		
+			  <div class="column">
+			    <div class="content">
+						<img src="img/danny1.jpeg" alt="Foto van Danny" style="width:100%">
+			    </div>
+			  </div>
+			</div>
+		</div>
 	</section>
 
-	<section>
+	<!-- <section>
 		<div class="box">
 			<div class="row">
                 <div class="left-button-wrap"> 
@@ -192,7 +207,7 @@ section {
                 </div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section>
 		<h1>jQuery app</h1>
@@ -267,16 +282,16 @@ section {
     	$('.flexslider').flexslider({
                 animation: "slide",
                 slideshowSpeed: 2500,
-                pauseOnAction: true,//Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+                pauseOnAction: true,
                 pauseOnHover: true,
-                useCSS: true,//Boolean: Slider will use CSS3 transitions if available
+                useCSS: true,
                 touch: true,
                 directionNav: true
             });
 
     	$("#typewriter").typewriter({
 		        prefix : "Hallo ",
-		        text : ["mijn naam is", "Danny", "Danny Drijvers"],
+		        text : ["mijn naam is", "mijn naam is Danny", "mijn naam is Danny Drijvers"],
 		        typeDelay : 100,
 		        waitingTime : 1500,
 		        blinkSpeed : 800
