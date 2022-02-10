@@ -127,6 +127,11 @@ body, html {
   border: 1px solid red;
 }
 
+.check {
+  margin-left: 150px;
+  position: relative;
+}
+
 .opleiding p {
   width: 525px;
   text-align: center;

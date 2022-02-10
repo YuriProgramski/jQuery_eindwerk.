@@ -47,7 +47,10 @@
 	<script>$(document).ready(function () {
 
 $('#send').on('click', function() {
-	$('.check').fadeIn(3000).fadeOut(3000);
+	$('.check').animate({
+		right: "+=150",
+		opacity: "toggle"
+	}, 3000).fadeOut(3000);
 	$('#hiddentekst').fadeIn(666).delay(5000).fadeOut(333);
 	$('#hiddenimg').delay(5999).fadeIn(666);
 	$('#newtekst').delay(6333).fadeIn(666);
