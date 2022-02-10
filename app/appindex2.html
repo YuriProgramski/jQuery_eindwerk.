@@ -31,7 +31,7 @@
       <div class="voorbeelden" style="display: none">
          <p><fieldset><button id="hover">Hover here</button><button id="buttonhovercode">Code</button>
             <p id="hovercontent"></p><p id="codehover" style="display: none"><img src="img/codehover.png"/></br>
-         Wanneer de muis over de button met id 'hover' gaat, wordt er tekst toegevoegd aan de paragraaf met id 'hovercontent'.</p></fieldset></p>
+         Wanneer de muis over de button met id 'hover' gaat, wordt er tekst toegevoegd aan de paragraaf met id 'hovercontent'. Ook moet je dan declareren dat wanneer de muis weggaat, de tekst verdwijnt.</p></fieldset></p>
       <fieldset><p><button class="color">red</button>
     <button class="color">blue</button>
     <button class="color">green</button></p></fieldset>
@@ -82,13 +82,18 @@ $('button.vb').on('click', function (){
 $('button.b').on('click', function (){
    window.location="index2app.html";
 });
+
+
+
 $("button#hover").mouseover(function(){
       $("p#hovercontent").text("jQuery is watching you hover on that button");
 });
+
 $("button#hover").mouseleave(function(){
    $("p#hovercontent").text("");
-
 });
+
+
 $('#buttonhovercode').on('click', function() {
 $('p#codehover').toggle();
 });
