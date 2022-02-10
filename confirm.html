@@ -10,7 +10,10 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-<style>body{}#send{padding: 	22px; background-color: 	orange	;}#hidden{text-align:  center; margin-top: 69px;;padding: 22px; min-height: 444px ;display: none;}#test {max-width: 150px;min-height: 	150px; background-color: 	grey;}</style></head>
+<style>body{}#send{padding: 	22px; background-color: 	orange	;}#hidden{text-align:  center; margin-top: 69px;;padding: 22px; min-height: 444px ;display: none;}#test {max-width: 150px;min-height: 	150px; background-color: 	grey;}
+#koffer {position: 	absolute	; left: 	-250px; top: 269px;}
+#pc {position: 	absolute	; left: 	333; top: -150px;}
+</style></head>
 
 <body>
 	
@@ -18,7 +21,8 @@
 		test confirm
 	</header>
 
-
+<img id="koffer" src="app/img/koffer.png"/>
+<img id="pc" src="app/img/pc.jpg"/>
 	<section>
 		<button value="send" id="send"></button>
 		<!-- <div id="test">test</div> -->
@@ -48,13 +52,22 @@
 
 $('#send').on('click', function() {
 	$('.check').fadeIn(7500).delay(1500).animate({
-		right: "+=150",
+		right: "+=250",
 		opacity: "toggle"
 	}, 333);
 	$('#hiddentekst').fadeIn(5000).delay(500).fadeOut(3000);
 	$('#hiddenimg').delay(10000).fadeIn(666);
 	$('#newtekst').delay(10000).fadeIn(666);
+	$('#koffer').delay(10000).animate({
+		left: "+=422px"
+	}, 3333);
+	$('#pc').delay(10000).animate({
+		top: "+=422px"
+	}, 3333);
 });
+
+
+
 
 // $(this).animate({ left: '+=140' }, 500);
 
