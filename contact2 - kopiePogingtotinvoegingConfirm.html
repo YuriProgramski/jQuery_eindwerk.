@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact</title>
+    <style>body{}#confirm{min-height:   666px;}#hidden{text-align:  center; margin-top: 69px;;padding: 22px; min-height: 444px ;display: none;}#test {max-width: 150px;min-height:   150px; background-color:    grey;}
+#koffer {position:  absolute    ; left:     -250px; top: 269px;}
+#pc {position:  absolute    ; left:     444px; top: -150px; }
+#hiddenimg{position: relative; z-index: 3;}
+#proef{color: purple;}
+</style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav_container">
+                <div class="logo">
+                    <h1>vSchool</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Cursus</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="inschrijfform">
+        <main>
+            <form id="inschrijven">
+                <div class="inschrijf-titel">
+                    <h2>Inschrijving</h2>
+                </div>
+                <div class="inputs">
+                    <span id="naam_check" class="error"></span>
+                    <input type="text" name="naam" id="naam" placeholder="Naam">
+                    <span id="email_check" class="error"></span>
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                </div>
+                <div class="opleiding">
+                    <p>jQuery</p>
+                </div>
+                <div class="verzenden-button">
+                    <input id="submit_button" type="submit" value="Verzenden">
+                </div>
+
+            </form>
+            
+        </main>
+    </div>
+    <section id="confirm">
+               
+                <img id="koffer" src="app/img/koffer.png"/>
+                <img id="pc" src="app/img/pc.jpg"/>
+                <section>
+                    
+                    <div class="check" style="display: none;"><img src="img/check.png"/></div>
+                    <div id="hiddenimg" style="display: none;">
+                        <img src="img/confir.png"/></div>
+                    <div id="hiddentekst" style="display: none;"><p>Bedankt voor je aanvraag!</p>
+                        <p>Wij hebben je aanvraag goed ontvangen en zullen je aanvraag zsm verwerken.</p>
+                        <p>Je ontvangt van ons nog een e-mail ter bevestiging van je aanvraag.</p>
+                        <hr></div>
+                    <div id="newtekst2" style="display: none;">
+                        <h2 id="typewriter2"></h2>
+                    </div>
+                    
+                    <div id="newtekst" style="display: none;">
+                        <h2 id="typewriter"></h2><p><a href="index.html">Home</a></p>
+                    </div>
+                    <h3 id="h3" style="display: none;">CVO De Verdieping | vSchool</h3>
+        
+                </section>
+            </section>
+    <footer>
+        <div class="footer_container">
+            <div class="container_rows">
+                <div class="container_columns">
+                    <h1>Meer info</h1>
+                    <!--- waarom wordt deze H1 als een link getoond???-->
+                    <ul>
+                        <li><a href="#">Opleiding</a></li>
+                        <li><a href="#">Inschrijven</a></li>
+                        <li><a href="#">Over ons</a></li>
+                    </ul>
+                </div>
+
+                <div class="container_columns">
+                    <h1>Contact info</h1>
+                    <ul>
+                        <li><a href="#">011 53 87 33</a></li>
+                        <li><a href="#">Schachtplein 1 3550</a></li>
+                        <li><a href="#">3550 Heusden-Zolder</a></li>
+                    </ul>
+                </div>
+
+                <div class="container_columns">
+                    <h1>Volg ons</h1>
+                    <div class="social_links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://rawgit.com/Ashish-Bansal/jquery-typewriter/master/jquery.typewriter.js" defer=""></script>
+    <script>
+        $(document).ready(function () {
+
+            let $button = $('#submit_button');
+            $button.on('click', function(e) {
+                e.preventDefault();
+                let $naam = $('#naam').val();
+                let $email = $('#email').val();
+                let $naam_border = $('#naam');
+                let $email_border = $('#email');
+                let $error = $('.error');
+
+                $error.hide();
+                $naam_border.removeClass('error_border');
+                $email_border.removeClass('error_border');
+
+                if ($naam.length == '') {
+                    $('span#naam_check').show().html('Vul uw naam in');
+                    $naam_border.addClass('error_border');
+                    $('#naam').effect("shake");
+
+                }
+                else if ($naam.length < 3) {
+                    $('span#naam_check').show().html('Uw naam moet 3 karakters of langer zijn');
+                    $naam_border.addClass('error_border');
+                    $('#naam').effect("shake");
+                }
+                if ($email.length == '') {
+                    $('span#email_check').show().html('Vul uw email in');
+                    $email_border.addClass('error_border');
+                    $('#email').effect("shake");
+                }
+                else {
+                    const $regEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                    let $geldige_email = $regEx.test($email);
+                    if (!$geldige_email) {
+                        $('span#email_check').show().html('Geef een geldige email in');
+                        $email_border.addClass('error_border');
+                        $('#email').effect("shake");
+                    }
+                }
+                if (!$naam_border.hasClass('error_border') && !$email_border.hasClass('error_border')) {
+                    $('.inschrijfform').fadeOut(750);
+                    $('.check').fadeIn(7500).delay(1500).animate({
+        right: "+=250",
+        opacity: "toggle"
+    }, 333);
+    $('#hiddentekst').fadeIn(5000).delay(500).fadeOut(3000);
+    $('#hiddenimg').delay(10000).fadeIn(666);
+    $('#newtekst').delay(15000).fadeIn(666);
+    $('#h3').delay(16000).fadeIn(4666);
+
+        $('#newtekst2').delay(6666).fadeIn(666);
+
+    $('#koffer').delay(10000).animate({
+        left: "+=422px"
+    }, 2222);
+    $('#pc').delay(10000).animate({
+        top: "+=422px"
+    }, 1669);
+                }
+            });
+
+
+
+
+
+
+$("#typewriter").typewriter({
+                prefix : [""],
+                text : ["proef en krijg goesting", "hedendaagse helden", "digitale duizendpoten", "veel succes", "future fanatics", "web weavers", "practical programmers"],
+                typeDelay : 100,
+                waitingTime : 1500,
+                blinkSpeed : 800
+            });
+        });
+    </script>    
+</body>
+</html>
