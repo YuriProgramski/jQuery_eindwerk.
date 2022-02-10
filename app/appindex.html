@@ -35,9 +35,13 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script><!---------------------------------------------------------------------------------------------------------------------->
 <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script><!--------------------------------------------------------------------------------------------------------->
 <script>$(function() { //---------------------------------- SCRIPT --------------------------------|
+
 $('button').button();
+//------------------------buttonInitialise-------
+
 $('div#contentt').fadeIn(5000);
  $('div#inhoud').delay(5333).fadeIn(2222);
+ //-----------------------contentFade------------
 
 $("#dialogBox").dialog({
             modal: true,
@@ -46,26 +50,17 @@ $("#dialogBox").dialog({
             width: 666,
             height: 666,
             buttons: {
-                           
-                           Ok: function() {
-                              $(this).dialog("close");},}
-                  }, {
-show: "slide",
-   hide: "puff"
-});
-
+                   Ok: function() {
+                   $(this).dialog("close");},}
+                  }, {show: "slide", hide: "puff"});
+//------------------------dialogboxInitialiseNOautoOpen---
 
  $("#knoptoggle").click(function () {
-            $('#dialogBox').dialog('open');
-        });
-
-$('button.c').on('click', function (){
-   window.location="appindex2.html";
-});
+            $('#dialogBox').dialog('open');});
+//-------------------------dialogBoxopenonclick
 
 $('button.b').on('click', function (){
-   window.location="appindex2.html";
-});
-
+   window.location="appindex2.html";});
+//--------------------------linknext
 });</script><!----------------------------------------- END SCRIPT --------------------------------|
 </body></html>

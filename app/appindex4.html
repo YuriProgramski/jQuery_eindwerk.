@@ -7,10 +7,7 @@
 
 <!---------------------------------------------------------------------------------------------------->
 
-   <div id="dialogBox" title="'Les 1'"><p><img src="img/dexter2.jpg"/></p><p>Na de inleidende basiskennis van jQuery & DOM zal je aanvangen met basiskennis van selectors, attributen en variabelen.</p><p>Selectors heb je nodig om een bepaald item in het document ('element' in 'Document Object Model') te selecteren waarop je een actie wilt ondernemen. (h1, p, div, ... [met de id/klasse])</p>
-      <p>Attributen zijn eigenschappen van items, die je een waarde kan geven.(class, href, placeholder, ...)
-            </p><p>vb.: $('h1#hoofdtitel').css('font-weight' : 'bold');</br>
-      In dit voorbeeld gaan we de h1 met id 'hoofdtitel' vetgedrukt maken.</p>
+   <div id="dialogBox" title="'Les 1'"><p><img src="img/dexter2.jpg"/></p><p>Na de basis onder de knie te hebben, zal je vervolgens leren om al te beginnen spelen met effectjes zoals delay, hide, fade en allerhande andere combinaties</p><p>Zo heeft jQuery een resem aan vooraf ingestelde mogelijkheden, maar je kan evenzeer je eigen animatie verzinnen!</p>
          </div>
 	
 <!---------------------------------------------------------------------------------------------------->
@@ -20,7 +17,7 @@
 <div id="bodycontainer">
    <div id="contentt">
       <div class="inhoud"><fieldset>
-            <p>Je zal de cursus aanvangen met basiskennis van selectors, attributen en variabelen.</p>
+            <p>Nu kunnen we beginnen spelen met effectjes.</p>
       
          
       </fieldset>
@@ -29,18 +26,61 @@
       <button class="b">next</button>
    </div>
    <div class="voorbeelden" style="display: none">
-         <p><fieldset><button id="hover">Hover here</button><button id="buttonhovercode">Code</button>
-            <p id="hovercontent"></p>
-            <p id="codehover" style="display: none"><img src="img/codehover.png"/></br>
-         Wanneer de muis over de button met id 'hover' gaat, wordt er tekst toegevoegd aan de paragraaf met id 'hovercontent'. Ook moet je dan declareren dat wanneer de muis weggaat, de tekst verdwijnt.</p></fieldset></p>
+         <p><fieldset><p>Click op de button en na 3s zie je de alert</p>
+<button id="alert">Klik</button></fieldset></p>
+      
 
-      <p><fieldset><p><button class="color">red</button>
-    <button class="color">blue</button>
-    <button class="color">green</button></p>
-    </fieldset></p>
 
-      <p><fieldset><p>log when click this: <button class="c">0</button></p>
-      <p>log when click any: <button class="d">0</button></p></fieldset></p>
+<p><fieldset><div class="mydiv">
+Dit is mijn div.
+</div>
+<input id="hide" type="button" value="Hide" />
+<input id="show" type="button" value="Show" /></fieldset></p>
+
+
+<p><fieldset><div class="mydiv2">
+Dit is mijn div.
+</div>
+<input id="knop2" type="button" value="Hide/Show" /></fieldset></p>
+
+<p><fieldset><div id="foto">
+<img src="img/fade.png" />
+</div>
+<input id="knop3" type="button" value="fadeOut" /></fieldset></p>
+
+
+<p><fieldset><div id="paneel">
+<img src="img/fade.png" />
+</div>
+<p class="slider">
+        <a href="#" class="link-slide">Slide Paneel</a>
+    </p></fieldset></p>
+
+
+<p><fieldset>
+   <div class="accordion">
+        <h1>accordeontitel1</h1>
+        <div style="display:none;"><p>accordeoncontent1</p>
+            <p>info info info</p>
+        </div>
+        <h1>accordeontitel2</h1>
+        <div style="display:none;">accordeoncontent2
+            <p>info info info</p></div>
+       
+       
+    </div>
+
+ </fieldset></p>
+
+
+      <p>accordion</p>
+      <p>social media bar</p>
+      <p>animated menu</p>
+      
+
+
+      <p></p>
+      <button class="b">next les</button></p>
 
       </div>
 
@@ -81,40 +121,46 @@ $('button.b').on('click', function (){
    window.location="appindex3.html";});
 //---------------------buttonsInfoVbNext------------------
 
-$("button#hover").mouseover(function(){
-      $("p#hovercontent").text("jQuery is watching you hover on that button");});
-$("button#hover").mouseleave(function(){
-   $("p#hovercontent").text("");});
-$('#buttonhovercode').on('click', function() {
-$('p#codehover').toggle();});
-//---------------------HOVER-----------------------
+$('button#alert').on('click', function() {
+setTimeout(function() { 
+alert("Hello world"); }, 3000);
+});
+//---------------------alertDELAY-----------------------
 
-$('button.color').mouseover(function(){
-   let $color = $(this).text();
-   $(this).css('color', $color);});
-$('button.color').mouseout(function(){
-   $(this).css('color','#000000');});
-$('button.color').click(function() {
-   let $bgcolor = $(this).text();
-   $('body').css('background-color', $bgcolor);});
-//-----------------------RGBBUTTONS----------------
+ let mydiv = $("div.mydiv");
+   let show = $("input#show");
+   let hide = $("input#hide");
 
+show.on('click', function() {
+      mydiv.show(3000);
+});
+hide.on('click', function() {
+      mydiv.hide(300);
+});//-------------SHOWHIDE---------------
 
+$("#knop2").on('click', function() {
+   $(".mydiv2").toggle(2222);
+});//--------------TOGGLE----------
 
+$('#knop3').on('click', function() {
+$("#foto").fadeToggle(6000);
+    if ($(this).val() == "fadeOut") {
+        $(this).val('fadeIn');
+    } else {
+        $(this).val('fadeOut');
+    }
+});//------------fadeTOGGLE-----
 
-//-------------------------------------------COUNTERBUTTONS--------------------
-let $button = $('button.c');
-let $button2 = $('button.d');
-let $nummer1 = parseInt($button.text());
-let $nummer2 = parseInt($button2.text());
+$(".link-slide").on('click', function(e) {
+$("#paneel").slideToggle("slow");
+    //functionaliteit van a uitschakelen
+    e.preventDefault();
+});//-----------slideTOGGLE-------
 
-$('button.c').click(function() { 
-    $nummer1++;
-    console.log($nummer1);
-    $button.text($nummer1);});
-$('button').click(function() { 
-    $nummer2++;
-    console.log($nummer2);
-    $button2.text($nummer2);});
+$('div.accordion h1').on('click', function() {
+$(this).next().slideToggle('500').siblings('div').slideUp('500');
+});
+//-----------------------accordions----------------
+
 });</script><!----------------------------------------- END SCRIPT --------------------------------|
 </body></html>
