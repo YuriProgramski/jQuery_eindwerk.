@@ -14,6 +14,7 @@
 #koffer {position: 	absolute	; left: 	-250px; top: 269px;}
 #pc {position: 	absolute	; left: 	444px; top: -150px; }
 #hiddenimg{position: relative; z-index: 3;}
+#proef{color: purple;}
 </style></head>
 
 <body>
@@ -34,7 +35,13 @@
 			<p>Wij hebben je aanvraag goed ontvangen en zullen je aanvraag zsm verwerken.</p>
 			<p>Je ontvangt van ons nog een e-mail ter bevestiging van je aanvraag.</p>
 			<hr></div>
-			<div id="newtekst" style="display: none;"><h2 id="typewriter"></h2><p><a href="index.html">Home</a></p>
+			<div id="newtekst2" style="display: none;">
+				
+				<h2 id="typewriter2"></h2>
+		</div>
+			<div id="newtekst" style="display: none;">
+				<h3>CVO De Verdieping | vSchool</h3>
+				<h2 id="typewriter"></h2><p><a href="index.html">Home</a></p>
 		</div>
 		
 	</section>
@@ -59,7 +66,9 @@ $('#send').on('click', function() {
 	}, 333);
 	$('#hiddentekst').fadeIn(5000).delay(500).fadeOut(3000);
 	$('#hiddenimg').delay(10000).fadeIn(666);
-	$('#newtekst').delay(10000).fadeIn(666);
+	$('#newtekst').delay(15000).fadeIn(1666);
+		$('#newtekst2').delay(10000).fadeIn(666);
+
 	$('#koffer').delay(10000).animate({
 		left: "+=422px"
 	}, 3333);
@@ -68,14 +77,20 @@ $('#send').on('click', function() {
 	}, 3333);
 });
 
-$("#typewriter").typewriter({
-		        
-		        text : ["Proef en krijg goesting", "Hedendaagse helden", "Digitale duizendpoten", "Future fanaten", "Web wevers", "Proef en krijg goesting"],
+$("#typewriter").delay(1000).typewriter({
+		        prefix : [""],
+		        text : ["proef en krijg goesting", "hedendaagse helden", "digitale duizendpoten", "future fanatics", "web weavers", "practical programmers"],
 		        typeDelay : 100,
 		        waitingTime : 1500,
 		        blinkSpeed : 800
 	    	});
-
+// $("#typewriter2").delay(1000).typewriter({
+// 		        prefix : [""],
+// 		        text : ["alvast veel succes!"],
+// 		        typeDelay : 400,
+// 		        waitingTime : 1800,
+// 		        blinkSpeed : 500
+// 	    	});
 
 // $(this).animate({ left: '+=140' }, 500);
 
