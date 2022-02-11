@@ -1,185 +1,254 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JQuery</title>   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-<link href="../css/styleapp.css" rel="stylesheet">
-<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
-<style>
-        div.width {
-            margin:10px;
-            padding:12px;
-            border:2px solid #666;
-            width:60px;
-        }
+<!-- Joeri = alles app -->
 
-        #b {background-color: blue;}
-        #g {background-color: green;}
-        #r {background-color: red;}
-#hint{
-   cursor:pointer;
-}
-#key {color: orange  ;}
-.tooltip{
-   margin-left:33px;
-   padding:8px;
-   border:1px solid blue;
-   background-color:lightblue ;
-   color: darkred ;
-   font-weight:   bolder;
-   position: absolute;
-   z-index: 2;
-}
- #toolt, #toolt2 {cursor:pointer;color: yellow  ; border: 1px solid lightyellow  ;padding: 11px} 
- .forms{display:  none;}  </style></head>
-<body><div class="ui-helper-hidden"></div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JQuery</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+   <link href="../css/styleapp.css" rel="stylesheet">
+   <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+   <style>
+      div.width {
+         margin: 10px;
+         padding: 12px;
+         border: 2px solid #666;
+         width: 60px;
+      }
+
+      #b {
+         background-color: blue;
+      }
+
+      #g {
+         background-color: green;
+      }
+
+      #r {
+         background-color: red;
+      }
+
+      #hint {
+         cursor: pointer;
+      }
+
+      #key {
+         color: orange;
+      }
+
+      .tooltip {
+         margin-left: 33px;
+         padding: 8px;
+         border: 1px solid blue;
+         background-color: lightblue;
+         color: darkred;
+         font-weight: bolder;
+         position: absolute;
+         z-index: 2;
+      }
+
+      #toolt,
+      #toolt2 {
+         cursor: pointer;
+         color: yellow;
+         border: 1px solid lightyellow;
+         padding: 11px
+      }
+
+      .forms {
+         display: none;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="ui-helper-hidden"></div>
 
 
-<!---------------------------------------------------------------------------------------------------->
+   <!---------------------------------------------------------------------------------------------------->
 
-   <div id="dialogBox" title="'Les 4'"><p><img src="img/dexter3.jpg"/></p><p>De Jquery UI is de user interface die je momenteel ervaart.</p>
-    <p>Deze uitbreiding geef je de mogelijkheid een modernere opmaak te voorzien voor allerhande functionaliteiten zoals buttons, checkboxes, radiobuttons, dialogboxes, enz..</p>
-    <p>In de voorbeelden krijg je al een eerste inzicht in de interface. </br>Probeer zeker ook onderaan de verschillende effectjes uit waarmee bijvoorbeeld een dialoogvenster kan worden opgeroepen of gesloten.</p><p>Uiteraard zijn de mogelijkheden veel uitgebreider dan deze basisvoorbeelden.</p></div>
-	
-<!---------------------------------------------------------------------------------------------------->
-
-<h1 class="animate__animated animate__bounceIn">UI,</h1>
-
-<div id="bodycontainer">
-   <div id="contentt">
-      <div class="inhoud"><fieldset>
-            <p>Vervolgen doen we met een verdieping in 'ui', of 'user interface'.</p>
-      
-         
-      </fieldset>
-      <button class="ui" id="knoptoggle">info</button>
-      <button class="ui" id="vb">vb</button>
-      <button class="ui" id="b">next</button>
+   <div id="dialogBox" title="'Les 4'">
+      <p><img src="img/dexter3.jpg" /></p>
+      <p>De Jquery UI is de user interface die je momenteel ervaart.</p>
+      <p>Deze uitbreiding geef je de mogelijkheid een modernere opmaak te voorzien voor allerhande functionaliteiten
+         zoals buttons, checkboxes, radiobuttons, dialogboxes, enz..</p>
+      <p>In de voorbeelden krijg je al een eerste inzicht in de interface. </br>Probeer zeker ook onderaan de
+         verschillende effectjes uit waarmee bijvoorbeeld een dialoogvenster kan worden opgeroepen of gesloten.</p>
+      <p>Uiteraard zijn de mogelijkheden veel uitgebreider dan deze basisvoorbeelden.</p>
    </div>
-   <div class="voorbeelden" style="display: none">
-         <p><fieldset><p>normal button: <button>test</button></p>
-            <p>jQuery UI: <button class="ui">test2</button></p>
-            <p>UI vb. 2: <button id="dis">test2</button></fieldset></p>
 
-         <p><fieldset><p>radio button: </p><div id="geslacht"><input type="radio" id="man" name="radio"><label for="man">Man</label></input>
-<input type="radio" id="vrouw" name="radio"><label for="vrouw">Vrouw</label></input></div>
-</fieldset></p>
-     
-      
-        <p><fieldset><p>checkboxes: </p><div id="skills">
-        <input type="checkbox" name="html" id="html" class="skills">
-        <label for="html">Html</label>
-        </input>
-        <input type="checkbox" name="css" id="css" class="skills">
-        <label for="css">CSS</label>
-        </input>
-        <input type="checkbox" name="jquery" id="jquery" class="skills">
-        <label for="jquery">jQuery</label>
-        </input>
-</div>
-</fieldset></p>
+   <!---------------------------------------------------------------------------------------------------->
 
-<p><fieldset>   
-        <div id="dialogDiv" title="Window title">
-        <p> Inhoud van de dialog box</p>
-</div>
-Open effect
-<select id="effectopen">
-    <option>No effect</option>
-        <option>blind</option>
-        <option>bounce</option>
-        <option>clip</option>
-        <option>drop</option>
-        <option>fold</option>
-        <option>highlight</option>
-        <option>puff</option>
-        <option>pulsate</option>
-        <option>scale</option>
-        <option>slide</option>
-</select> <br />
-Close effect
-<select id="effectclose">
-        <option>No effect</option>
-        <option>blind</option>
-        <option>bounce</option>
-        <option>clip</option>
-        <option>drop</option>
-        <option>fold</option>
-        <option>highlight</option>
-        <option>puff</option>
-        <option>pulsate</option>
-        <option>scale</option>
-        <option>slide</option>
-</select> <br />
-<input id="open" type="button" value="Open"></fieldset></p>
+   <h1 class="animate__animated animate__bounceIn">UI,</h1>
+
+   <div id="bodycontainer">
+      <div id="contentt">
+         <div class="inhoud">
+            <fieldset>
+               <p>Vervolgen doen we met een verdieping in 'ui', of 'user interface'.</p>
+
+
+            </fieldset>
+            <button class="ui" id="knoptoggle">info</button>
+            <button class="ui" id="vb">vb</button>
+            <button class="ui" id="b">next</button>
+         </div>
+         <div class="voorbeelden" style="display: none">
+            <p>
+            <fieldset>
+               <p>normal button: <button>test</button></p>
+               <p>jQuery UI: <button class="ui">test2</button></p>
+               <p>UI vb. 2: <button id="dis">test2</button>
+            </fieldset>
+            </p>
+
+            <p>
+            <fieldset>
+               <p>radio button: </p>
+               <div id="geslacht"><input type="radio" id="man" name="radio"><label for="man">Man</label></input>
+                  <input type="radio" id="vrouw" name="radio"><label for="vrouw">Vrouw</label></input>
+               </div>
+            </fieldset>
+            </p>
+
+
+            <p>
+            <fieldset>
+               <p>checkboxes: </p>
+               <div id="skills">
+                  <input type="checkbox" name="html" id="html" class="skills">
+                  <label for="html">Html</label>
+                  </input>
+                  <input type="checkbox" name="css" id="css" class="skills">
+                  <label for="css">CSS</label>
+                  </input>
+                  <input type="checkbox" name="jquery" id="jquery" class="skills">
+                  <label for="jquery">jQuery</label>
+                  </input>
+               </div>
+            </fieldset>
+            </p>
+
+            <p>
+            <fieldset>
+               <div id="dialogDiv" title="Window title">
+                  <p> Inhoud van de dialog box</p>
+               </div>
+               Open effect
+               <select id="effectopen">
+                  <option>No effect</option>
+                  <option>blind</option>
+                  <option>bounce</option>
+                  <option>clip</option>
+                  <option>drop</option>
+                  <option>fold</option>
+                  <option>highlight</option>
+                  <option>puff</option>
+                  <option>pulsate</option>
+                  <option>scale</option>
+                  <option>slide</option>
+               </select> <br />
+               Close effect
+               <select id="effectclose">
+                  <option>No effect</option>
+                  <option>blind</option>
+                  <option>bounce</option>
+                  <option>clip</option>
+                  <option>drop</option>
+                  <option>fold</option>
+                  <option>highlight</option>
+                  <option>puff</option>
+                  <option>pulsate</option>
+                  <option>scale</option>
+                  <option>slide</option>
+               </select> <br />
+               <input id="open" type="button" value="Open">
+            </fieldset>
+            </p>
+         </div>
       </div>
-</div>
 
-</div>
+   </div>
 
-<!---------------------------------------------------------------------------------------------------------------------------------------------->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script>window.jQuery || document.write ('<script src="js/jquery-3.6.0.min.js"><\/script>')</script><!------------------------------------------------------------------------------------------------------------------------>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script><!---------------------------------------------------------------------------------------------------------------------->
-<script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script><!--------------------------------------------------------------------------------------------------------->
-<script>$(function() { //---------------------------------- SCRIPT --------------------------------|
-$('button.ui').button();
-        $('#dis').button({ icon: 'ui-icon-locked', disabled: true })
-$("#geslacht").controlgroup();
-$(".skills").checkboxradio();
-//----------------------initialise buttons------------------
+   <!---------------------------------------------------------------------------------------------------------------------------------------------->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
+   <!------------------------------------------------------------------------------------------------------------------------>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+   <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
+   <!---------------------------------------------------------------------------------------------------------------------->
+   <script>$(function () { if ($('.ui-helper-hidden:first').is(':visible') === true) { $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head'); } });</script>
+   <!--------------------------------------------------------------------------------------------------------->
+   <script>$(function () { //---------------------------------- SCRIPT --------------------------------|
+         $('button.ui').button();
+         $('#dis').button({ icon: 'ui-icon-locked', disabled: true })
+         $("#geslacht").controlgroup();
+         $(".skills").checkboxradio();
+         //----------------------initialise buttons------------------
 
-$('div#contentt').fadeIn(5000);
- $('div#inhoud').delay(5333).fadeIn(2222);
-//-----------------------fadecontent-----------------------
+         $('div#contentt').fadeIn(5000);
+         $('div#inhoud').delay(5333).fadeIn(2222);
+         //-----------------------fadecontent-----------------------
 
-$("#dialogBox").dialog({
+         $("#dialogBox").dialog({
             modal: true,
             autoOpen: false,
             title: "UI,",
             width: 666,
             height: 666,
-            buttons: {           
-                   Ok: function() {
-                     $(this).dialog("close");},}
-                  }, { show: "slide", hide: "puff"});
-//----------------------dialogboxInitialise.autoOpen:false---
+            buttons: {
+               Ok: function () {
+                  $(this).dialog("close");
+               },
+            }
+         }, { show: "slide", hide: "puff" });
+         //----------------------dialogboxInitialise.autoOpen:false---
 
- $("#knoptoggle").click(function () {
-            $('#dialogBox').dialog('open');});
-$('button#vb').on('click', function (){
-   $('.voorbeelden').toggle();});
-$('button#b').on('click', function (){
-   window.location="appindex6.html";});
-//---------------------buttonsInfoVbNext------------------
+         $("#knoptoggle").click(function () {
+            $('#dialogBox').dialog('open');
+         });
+         $('button#vb').on('click', function () {
+            $('.voorbeelden').toggle();
+         });
+         $('button#b').on('click', function () {
+            window.location = "appindex6.html";
+         });
+         //---------------------buttonsInfoVbNext------------------
 
-let $t = $('input#open');
-    $t.button();
-let $dialog = $("div#dialogDiv");
-$dialog.dialog({ autoOpen: false });
-$("#effectopen").change(function() {
-    let effect = $(this).val();
-    if (effect == "No effect") effect = false;
-    $dialog.dialog("option", "show", effect);
-});
-$("#effectclose").change(function() {
-    let effect = $(this).val();
-    if (effect == "No effect") effect = false;
-    $dialog.dialog("option", "hide", effect);
-});
-$("#open").click(function() {
-    $dialog.dialog("open");
-});
-//---------------------X&Y-----------------------
-
-
-//----------------------ARROWKEY
-
-
-//----------------------DIVKES--------------------
-
-
-//----------------------sterrenbeeldLINK----------KRIJGNIET INNEWTAB
+         let $t = $('input#open');
+         $t.button();
+         let $dialog = $("div#dialogDiv");
+         $dialog.dialog({ autoOpen: false });
+         $("#effectopen").change(function () {
+            let effect = $(this).val();
+            if (effect == "No effect") effect = false;
+            $dialog.dialog("option", "show", effect);
+         });
+         $("#effectclose").change(function () {
+            let effect = $(this).val();
+            if (effect == "No effect") effect = false;
+            $dialog.dialog("option", "hide", effect);
+         });
+         $("#open").click(function () {
+            $dialog.dialog("open");
+         });
+         //---------------------X&Y-----------------------
 
 
-//-----------------------TOOLTIP----------------
+         //----------------------ARROWKEY
 
 
-});</script><!----------------------------------------- END SCRIPT --------------------------------|
+         //----------------------DIVKES--------------------
+
+
+         //----------------------sterrenbeeldLINK----------KRIJGNIET INNEWTAB
+
+
+         //-----------------------TOOLTIP----------------
+
+
+      });</script>
+   <!----------------------------------------- END SCRIPT --------------------------------|
 </body></html>

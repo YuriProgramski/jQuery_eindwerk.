@@ -1,154 +1,202 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JQuery</title>   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-<link href="../css/styleapp.css" rel="stylesheet">
-<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet"></head>
-<body><div class="ui-helper-hidden"></div>
+<!-- Joeri = alles app -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JQuery</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+   <link href="../css/styleapp.css" rel="stylesheet">
+   <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body>
+   <div class="ui-helper-hidden"></div>
 
 
-<!---------------------------------------------------------------------------------------------------->
+   <!---------------------------------------------------------------------------------------------------->
 
-   <div id="dialogBox" title="'Les 1'"><p><img src="img/dexter4.png"/></p><p>Na de basis onder de knie te hebben, zal je vervolgens leren om al te beginnen spelen met effectjes zoals hide, fade en allerhande andere combinaties</p><p>Zo heeft jQuery een resem aan vooraf ingestelde mogelijkheden, maar je kan evenzeer je eigen animatie verzinnen!</p>
-         </div>
-	
-<!---------------------------------------------------------------------------------------------------->
-
-<h1 class="animate__animated animate__bounceIn">Effects,</h1>
-
-<div id="bodycontainer">
-   <div id="contentt">
-      <div class="inhoud"><fieldset>
-            <p>Nu kunnen we beginnen spelen met effectjes.</p>
-      
-         
-      </fieldset>
-      <button id="knoptoggle">info</button>
-      <button class="vb">vb</button>
-      <button class="b">next</button>
+   <div id="dialogBox" title="'Les 1'">
+      <p><img src="img/dexter4.png" /></p>
+      <p>Na de basis onder de knie te hebben, zal je vervolgens leren om al te beginnen spelen met effectjes zoals hide,
+         fade en allerhande andere combinaties</p>
+      <p>Zo heeft jQuery een resem aan vooraf ingestelde mogelijkheden, maar je kan evenzeer je eigen animatie
+         verzinnen!</p>
    </div>
-   <div class="voorbeelden" style="display: none">
-         
-      
+
+   <!---------------------------------------------------------------------------------------------------->
+
+   <h1 class="animate__animated animate__bounceIn">Effects,</h1>
+
+   <div id="bodycontainer">
+      <div id="contentt">
+         <div class="inhoud">
+            <fieldset>
+               <p>Nu kunnen we beginnen spelen met effectjes.</p>
 
 
-<p><fieldset><div class="mydiv">
-Dit is mijn div.
-</div>
-<input id="hide" type="button" value="Hide" />
-<input id="show" type="button" value="Show" /></fieldset></p>
+            </fieldset>
+            <button id="knoptoggle">info</button>
+            <button class="vb">vb</button>
+            <button class="b">next</button>
+         </div>
+         <div class="voorbeelden" style="display: none">
 
 
-<p><fieldset><div class="mydiv2">
-Dit is mijn div.
-</div>
-<input id="knop2" type="button" value="Hide/Show" /></fieldset></p>
-
-<p><fieldset><div id="foto">
-<img src="img/fade.png" />
-</div>
-<input id="knop3" type="button" value="fadeOut" /></fieldset></p>
 
 
-<p><fieldset><div id="paneel">
-<img src="img/fade.png" />
-</div>
-<p class="slider">
-        <a href="#" class="link-slide">Slide Paneel</a>
-    </p></fieldset></p>
+            <p>
+            <fieldset>
+               <div class="mydiv">
+                  Dit is mijn div.
+               </div>
+               <input id="hide" type="button" value="Hide" />
+               <input id="show" type="button" value="Show" />
+            </fieldset>
+            </p>
 
 
-<p><fieldset>
-   <div class="accordion">
-        <h3>accordeontitel1</h3>
-        <div style="display:none;"><p>accordeoncontent1</p>
-            <p>info info info</p>
-        </div>
-        <h3>accordeontitel2</h3>
-        <div style="display:none;">accordeoncontent2
-            <p>info info info</p></div>
-       
-       
-    </div>
+            <p>
+            <fieldset>
+               <div class="mydiv2">
+                  Dit is mijn div.
+               </div>
+               <input id="knop2" type="button" value="Hide/Show" />
+            </fieldset>
+            </p>
 
- </fieldset></p>
+            <p>
+            <fieldset>
+               <div id="foto">
+                  <img src="img/fade.png" />
+               </div>
+               <input id="knop3" type="button" value="fadeOut" />
+            </fieldset>
+            </p>
 
 
-      <button class="b">next les</button></p>
+            <p>
+            <fieldset>
+               <div id="paneel">
+                  <img src="img/fade.png" />
+               </div>
+               <p class="slider">
+                  <a href="#" class="link-slide">Slide Paneel</a>
+               </p>
+            </fieldset>
+            </p>
+
+
+            <p>
+            <fieldset>
+               <div class="accordion">
+                  <h3>accordeontitel1</h3>
+                  <div style="display:none;">
+                     <p>accordeoncontent1</p>
+                     <p>info info info</p>
+                  </div>
+                  <h3>accordeontitel2</h3>
+                  <div style="display:none;">accordeoncontent2
+                     <p>info info info</p>
+                  </div>
+
+
+               </div>
+
+            </fieldset>
+            </p>
+
+
+            <button class="b">next les</button></p>
+
+         </div>
 
       </div>
-
-      </div>
-</div>
+   </div>
 
 
 
-<!---------------------------------------------------------------------------------------------------------------------------------------------->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script>window.jQuery || document.write ('<script src="js/jquery-3.6.0.min.js"><\/script>')</script><!------------------------------------------------------------------------------------------------------------------------>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script><!---------------------------------------------------------------------------------------------------------------------->
-<script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script><!--------------------------------------------------------------------------------------------------------->
-<script>$(function() { //---------------------------------- SCRIPT --------------------------------|
-$('button').button();
-//----------------------initialise buttons------------------
+   <!---------------------------------------------------------------------------------------------------------------------------------------------->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
+   <!------------------------------------------------------------------------------------------------------------------------>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+   <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
+   <!---------------------------------------------------------------------------------------------------------------------->
+   <script>$(function () { if ($('.ui-helper-hidden:first').is(':visible') === true) { $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head'); } });</script>
+   <!--------------------------------------------------------------------------------------------------------->
+   <script>$(function () { //---------------------------------- SCRIPT --------------------------------|
+         $('button').button();
+         //----------------------initialise buttons------------------
 
-$('div#contentt').fadeIn(5000);
- $('div#inhoud').delay(5333).fadeIn(2222);
-//-----------------------fadecontent-----------------------
+         $('div#contentt').fadeIn(5000);
+         $('div#inhoud').delay(5333).fadeIn(2222);
+         //-----------------------fadecontent-----------------------
 
-$("#dialogBox").dialog({
+         $("#dialogBox").dialog({
             modal: true,
             autoOpen: false,
             title: "Effects,",
             width: 666,
             height: 666,
-            buttons: {           
-                   Ok: function() {
-                     $(this).dialog("close");},}
-                  }, { show: "slide", hide: "puff"});
-//----------------------dialogboxInitialise.autoOpen:false---
+            buttons: {
+               Ok: function () {
+                  $(this).dialog("close");
+               },
+            }
+         }, { show: "slide", hide: "puff" });
+         //----------------------dialogboxInitialise.autoOpen:false---
 
- $("#knoptoggle").click(function () {
-            $('#dialogBox').dialog('open');});
-$('button.vb').on('click', function (){
-   $('.voorbeelden').toggle();});
-$('button.b').on('click', function (){
-   window.location="appindex5.html";});
-//---------------------buttonsInfoVbNext------------------
+         $("#knoptoggle").click(function () {
+            $('#dialogBox').dialog('open');
+         });
+         $('button.vb').on('click', function () {
+            $('.voorbeelden').toggle();
+         });
+         $('button.b').on('click', function () {
+            window.location = "appindex5.html";
+         });
+         //---------------------buttonsInfoVbNext------------------
 
 
 
- let mydiv = $("div.mydiv");
-   let show = $("input#show");
-   let hide = $("input#hide");
+         let mydiv = $("div.mydiv");
+         let show = $("input#show");
+         let hide = $("input#hide");
 
-show.on('click', function() {
-      mydiv.show(3000);
-});
-hide.on('click', function() {
-      mydiv.hide(300);
-});//-------------SHOWHIDE---------------
+         show.on('click', function () {
+            mydiv.show(3000);
+         });
+         hide.on('click', function () {
+            mydiv.hide(300);
+         });//-------------SHOWHIDE---------------
 
-$("#knop2").on('click', function() {
-   $(".mydiv2").toggle(2222);
-});//--------------TOGGLE----------
+         $("#knop2").on('click', function () {
+            $(".mydiv2").toggle(2222);
+         });//--------------TOGGLE----------
 
-$('#knop3').on('click', function() {
-$("#foto").fadeToggle(6000);
-    if ($(this).val() == "fadeOut") {
-        $(this).val('fadeIn');
-    } else {
-        $(this).val('fadeOut');
-    }
-});//------------fadeTOGGLE-----
+         $('#knop3').on('click', function () {
+            $("#foto").fadeToggle(6000);
+            if ($(this).val() == "fadeOut") {
+               $(this).val('fadeIn');
+            } else {
+               $(this).val('fadeOut');
+            }
+         });//------------fadeTOGGLE-----
 
-$(".link-slide").on('click', function(e) {
-$("#paneel").slideToggle("slow");
-    //functionaliteit van a uitschakelen
-    e.preventDefault();
-});//-----------slideTOGGLE-------
+         $(".link-slide").on('click', function (e) {
+            $("#paneel").slideToggle("slow");
+            //functionaliteit van a uitschakelen
+            e.preventDefault();
+         });//-----------slideTOGGLE-------
 
-$('div.accordion h3').on('click', function() {
-$(this).next().slideToggle('500').siblings('div').slideUp('500');
-});
-//-----------------------accordions----------------
+         $('div.accordion h3').on('click', function () {
+            $(this).next().slideToggle('500').siblings('div').slideUp('500');
+         });
+         //-----------------------accordions----------------
 
-});</script><!----------------------------------------- END SCRIPT --------------------------------|
+      });</script>
+   <!----------------------------------------- END SCRIPT --------------------------------|
 </body></html>

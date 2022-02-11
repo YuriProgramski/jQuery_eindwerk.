@@ -1,121 +1,170 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JQuery</title>   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-<link href="../css/styleapp.css" rel="stylesheet">
-<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet"></head>
-<body><div class="ui-helper-hidden"></div>
+<!-- Joeri = alles app -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JQuery</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+   <link href="../css/styleapp.css" rel="stylesheet">
+   <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body>
+   <div class="ui-helper-hidden"></div>
 
 
-<!---------------------------------------------------------------------------------------------------->
+   <!---------------------------------------------------------------------------------------------------->
 
-   <div id="dialogBox" title="'Les 1'"><p><img src="img/dexter2.jpg"/></p><p>Na de inleidende basiskennis van jQuery & DOM zal je aanvangen met basiskennis van selectors, attributen en variabelen.</p><p>Selectors heb je nodig om een bepaald item in het document ('element' in 'Document Object Model') te selecteren waarop je een actie wilt ondernemen. (h1, p, div, ... [met de id/klasse])</p>
+   <div id="dialogBox" title="'Les 1'">
+      <p><img src="img/dexter2.jpg" /></p>
+      <p>Na de inleidende basiskennis van jQuery & DOM zal je aanvangen met basiskennis van selectors, attributen en
+         variabelen.</p>
+      <p>Selectors heb je nodig om een bepaald item in het document ('element' in 'Document Object Model') te selecteren
+         waarop je een actie wilt ondernemen. (h1, p, div, ... [met de id/klasse])</p>
       <p>Attributen zijn eigenschappen van items, die je een waarde kan geven.(class, href, placeholder, ...)
-            </p><p>vb.: $('h1#hoofdtitel').css('font-weight' : 'bold');</br>
-      In dit voorbeeld gaan we de h1 met id 'hoofdtitel' vetgedrukt maken.</p>
+      </p>
+      <p>vb.: $('h1#hoofdtitel').css('font-weight' : 'bold');</br>
+         In dit voorbeeld gaan we de h1 met id 'hoofdtitel' vetgedrukt maken.</p>
       <p>Consulteer bij het 'hover'-voorbeeld zeker ook alvast eens de codering!</p>
-         </div>
-	
-<!---------------------------------------------------------------------------------------------------->
-
-<h1 class="animate__animated animate__bounceIn">Inleiding,</h1>
-
-<div id="bodycontainer">
-   <div id="contentt">
-      <div class="inhoud"><fieldset>
-            <p>Je zal de cursus aanvangen met basiskennis van selectors, attributen en variabelen.</p>
-      
-         
-      </fieldset>
-      <button id="knoptoggle">info</button>
-      <button class="vb">vb</button>
-      <button class="b">next</button>
    </div>
-   <div class="voorbeelden" style="display: none">
-         <p><fieldset><button id="hover">Hover here</button><button id="buttonhovercode">Code</button>
-            <p id="hovercontent"></p>
-            <p id="codehover" style="display: none"><img src="img/codehover.png"/></br>
-         Wanneer de muis over de button met id 'hover' gaat, wordt er tekst toegevoegd aan de paragraaf met id 'hovercontent'. Ook moet je dan declareren dat wanneer de muis weggaat, de tekst verdwijnt.</p></fieldset></p>
 
-      <p><fieldset><p><button class="color">red</button>
-    <button class="color">blue</button>
-    <button class="color">green</button></p>
-    </fieldset></p>
+   <!---------------------------------------------------------------------------------------------------->
 
-      <p><fieldset><p>log when click this: <button class="c">0</button></p>
-      <p>log when click any: <button class="d">0</button></p></fieldset></p>
+   <h1 class="animate__animated animate__bounceIn">Inleiding,</h1>
+
+   <div id="bodycontainer">
+      <div id="contentt">
+         <div class="inhoud">
+            <fieldset>
+               <p>Je zal de cursus aanvangen met basiskennis van selectors, attributen en variabelen.</p>
+
+
+            </fieldset>
+            <button id="knoptoggle">info</button>
+            <button class="vb">vb</button>
+            <button class="b">next</button>
+         </div>
+         <div class="voorbeelden" style="display: none">
+            <p>
+            <fieldset><button id="hover">Hover here</button><button id="buttonhovercode">Code</button>
+               <p id="hovercontent"></p>
+               <p id="codehover" style="display: none"><img src="img/codehover.png" /></br>
+                  Wanneer de muis over de button met id 'hover' gaat, wordt er tekst toegevoegd aan de paragraaf met id
+                  'hovercontent'. Ook moet je dan declareren dat wanneer de muis weggaat, de tekst verdwijnt.</p>
+            </fieldset>
+            </p>
+
+            <p>
+            <fieldset>
+               <p><button class="color">red</button>
+                  <button class="color">blue</button>
+                  <button class="color">green</button>
+               </p>
+            </fieldset>
+            </p>
+
+            <p>
+            <fieldset>
+               <p>log when click this: <button class="c">0</button></p>
+               <p>log when click any: <button class="d">0</button></p>
+            </fieldset>
+            </p>
+
+         </div>
 
       </div>
-
-      </div>
-</div>
+   </div>
 
 
 
-<!---------------------------------------------------------------------------------------------------------------------------------------------->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script>window.jQuery || document.write ('<script src="js/jquery-3.6.0.min.js"><\/script>')</script><!------------------------------------------------------------------------------------------------------------------------>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script><!---------------------------------------------------------------------------------------------------------------------->
-<script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script><!--------------------------------------------------------------------------------------------------------->
-<script>$(function() { //---------------------------------- SCRIPT --------------------------------|
-$('button').button();
-//----------------------initialise buttons------------------
+   <!---------------------------------------------------------------------------------------------------------------------------------------------->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
+   <!------------------------------------------------------------------------------------------------------------------------>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+   <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
+   <!---------------------------------------------------------------------------------------------------------------------->
+   <script>$(function () { if ($('.ui-helper-hidden:first').is(':visible') === true) { $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head'); } });</script>
+   <!--------------------------------------------------------------------------------------------------------->
+   <script>$(function () { //---------------------------------- SCRIPT --------------------------------|
+         $('button').button();
+         //----------------------initialise buttons------------------
 
-$('div#contentt').fadeIn(5000);
- $('div#inhoud').delay(5333).fadeIn(2222);
-//-----------------------fadecontent-----------------------
+         $('div#contentt').fadeIn(5000);
+         $('div#inhoud').delay(5333).fadeIn(2222);
+         //-----------------------fadecontent-----------------------
 
-$("#dialogBox").dialog({
+         $("#dialogBox").dialog({
             modal: true,
             autoOpen: false,
             title: "Inleiding,",
             width: 666,
             height: 666,
-            buttons: {           
-                   Ok: function() {
-                     $(this).dialog("close");},}
-                  }, { show: "slide", hide: "puff"});
-//----------------------dialogboxInitialise.autoOpen:false---
+            buttons: {
+               Ok: function () {
+                  $(this).dialog("close");
+               },
+            }
+         }, { show: "slide", hide: "puff" });
+         //----------------------dialogboxInitialise.autoOpen:false---
 
- $("#knoptoggle").click(function () {
-            $('#dialogBox').dialog('open');});
-$('button.vb').on('click', function (){
-   $('.voorbeelden').toggle();});
-$('button.b').on('click', function (){
-   window.location="appindex3.html";});
-//---------------------buttonsInfoVbNext------------------
+         $("#knoptoggle").click(function () {
+            $('#dialogBox').dialog('open');
+         });
+         $('button.vb').on('click', function () {
+            $('.voorbeelden').toggle();
+         });
+         $('button.b').on('click', function () {
+            window.location = "appindex3.html";
+         });
+         //---------------------buttonsInfoVbNext------------------
 
-$("button#hover").mouseover(function(){
-      $("p#hovercontent").text("jQuery is watching you hover on that button");});
-$("button#hover").mouseleave(function(){
-   $("p#hovercontent").text("");});
-$('#buttonhovercode').on('click', function() {
-$('p#codehover').toggle();});
-//---------------------HOVER-----------------------
+         $("button#hover").mouseover(function () {
+            $("p#hovercontent").text("jQuery is watching you hover on that button");
+         });
+         $("button#hover").mouseleave(function () {
+            $("p#hovercontent").text("");
+         });
+         $('#buttonhovercode').on('click', function () {
+            $('p#codehover').toggle();
+         });
+         //---------------------HOVER-----------------------
 
-$('button.color').mouseover(function(){
-   let $color = $(this).text();
-   $(this).css('color', $color);});
-$('button.color').mouseout(function(){
-   $(this).css('color','#000000');});
-$('button.color').click(function() {
-   let $bgcolor = $(this).text();
-   $('body').css('background-color', $bgcolor);});
-//-----------------------RGBBUTTONS----------------
+         $('button.color').mouseover(function () {
+            let $color = $(this).text();
+            $(this).css('color', $color);
+         });
+         $('button.color').mouseout(function () {
+            $(this).css('color', '#000000');
+         });
+         $('button.color').click(function () {
+            let $bgcolor = $(this).text();
+            $('body').css('background-color', $bgcolor);
+         });
+         //-----------------------RGBBUTTONS----------------
 
 
 
 
-//-------------------------------------------COUNTERBUTTONS--------------------
-let $button = $('button.c');
-let $button2 = $('button.d');
-let $nummer1 = parseInt($button.text());
-let $nummer2 = parseInt($button2.text());
+         //-------------------------------------------COUNTERBUTTONS--------------------
+         let $button = $('button.c');
+         let $button2 = $('button.d');
+         let $nummer1 = parseInt($button.text());
+         let $nummer2 = parseInt($button2.text());
 
-$('button.c').click(function() { 
-    $nummer1++;
-    console.log($nummer1);
-    $button.text($nummer1);});
-$('button').click(function() { 
-    $nummer2++;
-    console.log($nummer2);
-    $button2.text($nummer2);});
-});</script><!----------------------------------------- END SCRIPT --------------------------------|
+         $('button.c').click(function () {
+            $nummer1++;
+            console.log($nummer1);
+            $button.text($nummer1);
+         });
+         $('button').click(function () {
+            $nummer2++;
+            console.log($nummer2);
+            $button2.text($nummer2);
+         });
+      });</script>
+   <!----------------------------------------- END SCRIPT --------------------------------|
 </body></html>

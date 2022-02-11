@@ -1,236 +1,313 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JQuery</title>   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-<link href="../css/styleapp.css" rel="stylesheet">
-<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
-<style>
+<!-- Joeri = alles app -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="../css/styleapp.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <style>
         div.width {
-            margin:10px;
-            padding:12px;
-            border:2px solid #666;
-            width:60px;
+            margin: 10px;
+            padding: 12px;
+            border: 2px solid #666;
+            width: 60px;
         }
 
-        #b {background-color: blue;}
-        #g {background-color: green;}
-        #r {background-color: red;}
-#hint{
-   cursor:pointer;
-}
-#key {color: orange  ;}
-.tooltip{
-   margin-left:33px;
-   padding:8px;
-   border:1px solid blue;
-   background-color:lightblue ;
-   color: darkred ;
-   font-weight:   bolder;
-   position: absolute;
-   z-index: 2;
-}
- #toolt, #toolt2 {cursor:pointer;color: yellow  ; border: 1px solid lightyellow  ;padding: 11px} 
- .forms{display:  none;}  </style></head>
-<body><div class="ui-helper-hidden"></div>
+        #b {
+            background-color: blue;
+        }
+
+        #g {
+            background-color: green;
+        }
+
+        #r {
+            background-color: red;
+        }
+
+        #hint {
+            cursor: pointer;
+        }
+
+        #key {
+            color: orange;
+        }
+
+        .tooltip {
+            margin-left: 33px;
+            padding: 8px;
+            border: 1px solid blue;
+            background-color: lightblue;
+            color: darkred;
+            font-weight: bolder;
+            position: absolute;
+            z-index: 2;
+        }
+
+        #toolt,
+        #toolt2 {
+            cursor: pointer;
+            color: yellow;
+            border: 1px solid lightyellow;
+            padding: 11px
+        }
+
+        .forms {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ui-helper-hidden"></div>
 
 
-<!---------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------->
 
-   <div id="dialogBox" title="'Les 2'"><p><img src="img/dexter3.jpg"/></p><p>Vervolgen doen we met een verdieping in 'events, of gebeurtenissen.</p><p>Na de basis gaan we verder in op 'events'. Op een webpagina speelt zich een constante kakafonie van gebeurtenissen af. We kunnen dus niet enkel items selecteren om acties op toe passen, maar we kunnen aan de hand van triggers dus ook acties enkel laten uitvoeren wanneer er zich een bepaald event voordoet. Muis-events, maar ook document, window & keyboard zijn de voornaamste traceerbare 'events' waarop we acties kunnen instellen.</p></div>
-	
-<!---------------------------------------------------------------------------------------------------->
-
-<h1 class="animate__animated animate__bounceIn">Events,</h1>
-
-<div id="bodycontainer">
-   <div id="contentt">
-      <div class="inhoud"><fieldset>
-            <p>Vervolgen doen we met een verdieping in 'events', of gebeurtenissen.</p>
-      
-         
-      </fieldset>
-      <button id="knoptoggle">info</button>
-      <button class="vb">vb</button>
-      <button class="b">next</button>
-   </div>
-   <div class="voorbeelden" style="display: none">
-         <p><fieldset>Klik ergens willekeurig op de pagina om de x- en y-coordinaten hier te loggen: <span id="xy"></span><p><button id="codexy">Code</button></p><p id="codexeny" style="display:    none;"><img src="img/codeeventxy.png"/></br>
-         Hier wordt via (event) de x- en y-positie opgevraagd, en getoond in de span met id 'xy'.</fieldset></p>
-         <p><fieldset>Druk een willekeurige pijltjestoets in en jQuery zal je zeggen dat deze de <span id="key">" "</span> was.</fieldset></p>
-     
-      <p><fieldset><span id="toolt">?</span><div class="width" id="b">small</div>
-    <div class="width" id="g">small</div>
-    <div class="width" id="r">small</div></fieldset></p><p><fieldset>
-      <p><span id="toolt2">?</span></p>
-         <ul>
-        <li><a href="#sign_in">Sign In</a></li>
-        <li><a href="#sign_up">Sign Up</a></li>
-    </ul>
-    <div id="sign_in" class="forms">
-        <h2>Sign In</h2>
-        <form action="" method="">
-            <p>
-                <label for="sign_in_username">Username</label>
-                <input type="text" name="sign_in_username" id="sign_in_username" />
-            </p>
-            <p>
-                <label for="sign_in_password">Password</label>
-                <input type="password" name="sign_in_password" id="sign_in_password" />
-            </p>
-            <p>
-                <input type="submit" value="Sign In" />
-            </p>
-        </form>
+    <div id="dialogBox" title="'Les 2'">
+        <p><img src="img/dexter3.jpg" /></p>
+        <p>Vervolgen doen we met een verdieping in 'events, of gebeurtenissen.</p>
+        <p>Na de basis gaan we verder in op 'events'. Op een webpagina speelt zich een constante kakafonie van
+            gebeurtenissen af. We kunnen dus niet enkel items selecteren om acties op toe passen, maar we kunnen aan de
+            hand van triggers dus ook acties enkel laten uitvoeren wanneer er zich een bepaald event voordoet.
+            Muis-events, maar ook document, window & keyboard zijn de voornaamste traceerbare 'events' waarop we acties
+            kunnen instellen.</p>
     </div>
-    <div id="sign_up" class="forms">
-        <h2>Sign Up</h2>
-        <form action="" method="">
-            <p>
-                <label for="sign_up_username">Username</label>
-                <input type="text" name="sign_up_username" id="sign_up_username" />
-            </p>
-            <p>
-                <label for="sign_up_password">Password</label>
-                <input type="password" name="sign_up_password" id="sign_up_password" />
-            </p>
-            <p>
-                <label for="sign_up_confirmation">Confirm Password</label>
-                <input type="password" name="sign_up_confirmation" id="sign_up_confirmation" />
-            </p><p id="errors"></p>
-            <p>
-                <input type="submit" value="Sign Up" />
-            </p>
-        </form>
-    </div></fieldset></p>
-      <button class="s">Uitgebreid voorbeeld: Sterrenbeeld berekenen</button></p>
-      </div>
 
-      </div>
-</div>
+    <!---------------------------------------------------------------------------------------------------->
+
+    <h1 class="animate__animated animate__bounceIn">Events,</h1>
+
+    <div id="bodycontainer">
+        <div id="contentt">
+            <div class="inhoud">
+                <fieldset>
+                    <p>Vervolgen doen we met een verdieping in 'events', of gebeurtenissen.</p>
 
 
+                </fieldset>
+                <button id="knoptoggle">info</button>
+                <button class="vb">vb</button>
+                <button class="b">next</button>
+            </div>
+            <div class="voorbeelden" style="display: none">
+                <p>
+                <fieldset>Klik ergens willekeurig op de pagina om de x- en y-coordinaten hier te loggen: <span
+                        id="xy"></span>
+                    <p><button id="codexy">Code</button></p>
+                    <p id="codexeny" style="display:    none;"><img src="img/codeeventxy.png" /></br>
+                        Hier wordt via (event) de x- en y-positie opgevraagd, en getoond in de span met id 'xy'.
+                </fieldset>
+                </p>
+                <p>
+                <fieldset>Druk een willekeurige pijltjestoets in en jQuery zal je zeggen dat deze de <span id="key">"
+                        "</span> was.</fieldset>
+                </p>
 
-<!---------------------------------------------------------------------------------------------------------------------------------------------->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script>window.jQuery || document.write ('<script src="js/jquery-3.6.0.min.js"><\/script>')</script><!------------------------------------------------------------------------------------------------------------------------>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script><!---------------------------------------------------------------------------------------------------------------------->
-<script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script><!--------------------------------------------------------------------------------------------------------->
-<script>$(function() { //---------------------------------- SCRIPT --------------------------------|
-$('button').button();
-//----------------------initialise buttons------------------
+                <p>
+                <fieldset><span id="toolt">?</span>
+                    <div class="width" id="b">small</div>
+                    <div class="width" id="g">small</div>
+                    <div class="width" id="r">small</div>
+                </fieldset>
+                </p>
+                <p>
+                <fieldset>
+                    <p><span id="toolt2">?</span></p>
+                    <ul>
+                        <li><a href="#sign_in">Sign In</a></li>
+                        <li><a href="#sign_up">Sign Up</a></li>
+                    </ul>
+                    <div id="sign_in" class="forms">
+                        <h2>Sign In</h2>
+                        <form action="" method="">
+                            <p>
+                                <label for="sign_in_username">Username</label>
+                                <input type="text" name="sign_in_username" id="sign_in_username" />
+                            </p>
+                            <p>
+                                <label for="sign_in_password">Password</label>
+                                <input type="password" name="sign_in_password" id="sign_in_password" />
+                            </p>
+                            <p>
+                                <input type="submit" value="Sign In" />
+                            </p>
+                        </form>
+                    </div>
+                    <div id="sign_up" class="forms">
+                        <h2>Sign Up</h2>
+                        <form action="" method="">
+                            <p>
+                                <label for="sign_up_username">Username</label>
+                                <input type="text" name="sign_up_username" id="sign_up_username" />
+                            </p>
+                            <p>
+                                <label for="sign_up_password">Password</label>
+                                <input type="password" name="sign_up_password" id="sign_up_password" />
+                            </p>
+                            <p>
+                                <label for="sign_up_confirmation">Confirm Password</label>
+                                <input type="password" name="sign_up_confirmation" id="sign_up_confirmation" />
+                            </p>
+                            <p id="errors"></p>
+                            <p>
+                                <input type="submit" value="Sign Up" />
+                            </p>
+                        </form>
+                    </div>
+                </fieldset>
+                </p>
+                <button class="s">Uitgebreid voorbeeld: Sterrenbeeld berekenen</button></p>
+            </div>
 
-$('div#contentt').fadeIn(5000);
- $('div#inhoud').delay(5333).fadeIn(2222);
-//-----------------------fadecontent-----------------------
+        </div>
+    </div>
 
-$("#dialogBox").dialog({
-            modal: true,
-            autoOpen: false,
-            title: "Events,",
-            width: 666,
-            height: 666,
-            buttons: {           
-                   Ok: function() {
-                     $(this).dialog("close");},}
-                  }, { show: "slide", hide: "puff"});
-//----------------------dialogboxInitialise.autoOpen:false---
 
- $("#knoptoggle").click(function () {
-            $('#dialogBox').dialog('open');});
-$('button.vb').on('click', function (){
-   $('.voorbeelden').toggle();});
-$('button.b').on('click', function (){
-   window.location="appindex4.html";});
-//---------------------buttonsInfoVbNext------------------
 
-$(document).on('click', function(event) {
-   $('span#xy').text("U hebt geklikt op x : " + event.pageX + " en y : " + event.pageY);});
-$('button#codexy').on('click', function(){
-   $('p#codexeny').toggle ();});
+    <!---------------------------------------------------------------------------------------------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
+    <!------------------------------------------------------------------------------------------------------------------------>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
+    <!---------------------------------------------------------------------------------------------------------------------->
+    <script>$(function () { if ($('.ui-helper-hidden:first').is(':visible') === true) { $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head'); } });</script>
+    <!--------------------------------------------------------------------------------------------------------->
+    <script>$(function () { //---------------------------------- SCRIPT --------------------------------|
+            $('button').button();
+            //----------------------initialise buttons------------------
 
-//---------------------X&Y-----------------------
+            $('div#contentt').fadeIn(5000);
+            $('div#inhoud').delay(5333).fadeIn(2222);
+            //-----------------------fadecontent-----------------------
 
-$(document).keyup(function(evt){
-        /*niet zeker met of zonder let*/
-        let $key = $("#key");
-         
-         switch(evt.which){
-           case 37:
-              $key.text("linkerpijltjestoets");
-              break;
-           case 38:
-              $key.text("uppijltjestoets");
-              break;
-           case 39:
-              $key.text("rechterpijltjestoets");
-              break;              
-           case 40:
-              $key.text("downpijltjestoets");
-              break; 
-           default:
-           break;
-         }});
-//----------------------ARROWKEY
+            $("#dialogBox").dialog({
+                modal: true,
+                autoOpen: false,
+                title: "Events,",
+                width: 666,
+                height: 666,
+                buttons: {
+                    Ok: function () {
+                        $(this).dialog("close");
+                    },
+                }
+            }, { show: "slide", hide: "puff" });
+            //----------------------dialogboxInitialise.autoOpen:false---
 
-$('div.width')
-         .on('mouseenter', function makebig(event) {
-            $(this).css('width', '100px');
-            $(this).text('big');
-        })
-         .on('mouseleave', function makesmall(event) {
-            $(this).css('width', '60px');
-            $(this).text('small');
-        })
-//----------------------DIVKES--------------------
+            $("#knoptoggle").click(function () {
+                $('#dialogBox').dialog('open');
+            });
+            $('button.vb').on('click', function () {
+                $('.voorbeelden').toggle();
+            });
+            $('button.b').on('click', function () {
+                window.location = "appindex4.html";
+            });
+            //---------------------buttonsInfoVbNext------------------
 
-$('button.s').on('click', function (){
-   window.location="sterrenbeeld.html", "_blank";});
-//----------------------sterrenbeeldLINK----------KRIJGNIET INNEWTAB
+            $(document).on('click', function (event) {
+                $('span#xy').text("U hebt geklikt op x : " + event.pageX + " en y : " + event.pageY);
+            });
+            $('button#codexy').on('click', function () {
+                $('p#codexeny').toggle();
+            });
 
-$("span#toolt")
-.on('mouseenter', function showTooltip() {
-$('<div class="tooltip"><p>In dit stadium kan je al een tooltip maken!</p><p>Hover over de blokjes en kijk wat er gebeurt!</p></div>').appendTo('body');
-})
-.on('mouseleave', function hideTooltip() {
-$('div.tooltip').remove();
-})
-.on('mousemove', function changeTooltipPos(e) {
-let tooltipX = e.pageX + 15;
-let tooltipY = e.pageY + 8;
-$('div.tooltip').css({ top: tooltipY, left: tooltipX });
-});
-$("span#toolt2")
-.on('mouseenter', function showTooltip() {
-$('<div class="tooltip"><p>Je leert ook al hoe je een bepaald deel van een formulier moet tonen</p><p>Kijk tevens zeker in het "confirm password"-veld hoe je leuke dingen kan doen aan de hand van formulierveldvalidatie!</p></div>').appendTo('body');
-})
-.on('mouseleave', function hideTooltip() {
-$('div.tooltip').remove();
-})
-.on('mousemove', function changeTooltipPos(e) {
-let tooltipX = e.pageX + 15;
-let tooltipY = e.pageY + 8;
-$('div.tooltip').css({ top: tooltipY, left: tooltipX });
-});
-//-----------------------TOOLTIP----------------
+            //---------------------X&Y-----------------------
 
-$("ul li a").on('click',function(event){
-    let href=$(this).attr("href");
-    console.log(href);
-    $(href).show(400).siblings(".forms").hide(400);
-    event.preventDefault();
-});
-$("#sign_up_confirmation").on('keyup',function(){
+            $(document).keyup(function (evt) {
+                /*niet zeker met of zonder let*/
+                let $key = $("#key");
 
-//     if($('#wrong')){
-// $('#wrong').remove();
-// }
-    if( $(this).val() != $("#sign_up_password").val() ) {
-        $('#errors').text('komt niet overeen :(');
-        $('#errors').css({'color' : 'red'});
-    }
-    else {
-               
- $('#errors').text("correct :)");
-         $('#errors').css({'color' : 'lightgreen'});
+                switch (evt.which) {
+                    case 37:
+                        $key.text("linkerpijltjestoets");
+                        break;
+                    case 38:
+                        $key.text("uppijltjestoets");
+                        break;
+                    case 39:
+                        $key.text("rechterpijltjestoets");
+                        break;
+                    case 40:
+                        $key.text("downpijltjestoets");
+                        break;
+                    default:
+                        break;
+                }
+            });
+            //----------------------ARROWKEY
 
-    }
-});//---------------------------SIGNINUP------------------------
-});</script><!----------------------------------------- END SCRIPT --------------------------------|
+            $('div.width')
+                .on('mouseenter', function makebig(event) {
+                    $(this).css('width', '100px');
+                    $(this).text('big');
+                })
+                .on('mouseleave', function makesmall(event) {
+                    $(this).css('width', '60px');
+                    $(this).text('small');
+                })
+            //----------------------DIVKES--------------------
+
+            $('button.s').on('click', function () {
+                window.location = "sterrenbeeld.html", "_blank";
+            });
+            //----------------------sterrenbeeldLINK----------KRIJGNIET INNEWTAB
+
+            $("span#toolt")
+                .on('mouseenter', function showTooltip() {
+                    $('<div class="tooltip"><p>In dit stadium kan je al een tooltip maken!</p><p>Hover over de blokjes en kijk wat er gebeurt!</p></div>').appendTo('body');
+                })
+                .on('mouseleave', function hideTooltip() {
+                    $('div.tooltip').remove();
+                })
+                .on('mousemove', function changeTooltipPos(e) {
+                    let tooltipX = e.pageX + 15;
+                    let tooltipY = e.pageY + 8;
+                    $('div.tooltip').css({ top: tooltipY, left: tooltipX });
+                });
+            $("span#toolt2")
+                .on('mouseenter', function showTooltip() {
+                    $('<div class="tooltip"><p>Je leert ook al hoe je een bepaald deel van een formulier moet tonen</p><p>Kijk tevens zeker in het "confirm password"-veld hoe je leuke dingen kan doen aan de hand van formulierveldvalidatie!</p></div>').appendTo('body');
+                })
+                .on('mouseleave', function hideTooltip() {
+                    $('div.tooltip').remove();
+                })
+                .on('mousemove', function changeTooltipPos(e) {
+                    let tooltipX = e.pageX + 15;
+                    let tooltipY = e.pageY + 8;
+                    $('div.tooltip').css({ top: tooltipY, left: tooltipX });
+                });
+            //-----------------------TOOLTIP----------------
+
+            $("ul li a").on('click', function (event) {
+                let href = $(this).attr("href");
+                console.log(href);
+                $(href).show(400).siblings(".forms").hide(400);
+                event.preventDefault();
+            });
+            $("#sign_up_confirmation").on('keyup', function () {
+
+                //     if($('#wrong')){
+                // $('#wrong').remove();
+                // }
+                if ($(this).val() != $("#sign_up_password").val()) {
+                    $('#errors').text('komt niet overeen :(');
+                    $('#errors').css({ 'color': 'red' });
+                }
+                else {
+
+                    $('#errors').text("correct :)");
+                    $('#errors').css({ 'color': 'lightgreen' });
+
+                }
+            });//---------------------------SIGNINUP------------------------
+        });</script>
+    <!----------------------------------------- END SCRIPT --------------------------------|
 </body></html>

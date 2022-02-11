@@ -1,87 +1,121 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JQuery</title>   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-<link href="../css/styleapp.css" rel="stylesheet">
-<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
-<style>
- 
-</style></head>
-<body><div class="ui-helper-hidden"></div>
+<!-- Joeri = alles app -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JQuery</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+   <link href="../css/styleapp.css" rel="stylesheet">
+   <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+   <style>
+
+   </style>
+</head>
+
+<body>
+   <div class="ui-helper-hidden"></div>
 
 
-<!---------------------------------------------------------------------------------------------------->
+   <!---------------------------------------------------------------------------------------------------->
 
-   <div id="dialogBox" title="'Les 4'"><p><img src="img/dexter5.png"/></p><p>Je zal misschien al gemerkt hebben dat er een basisvertrekframe bestaat met vooraf ingestelde functies, animaties, enz...</p>
-      <p>Bovenop, of in combinatie met, deze reeds ingebakken concepten heb je de volledige vrijheid jou eigen animaties, functionaliteiten, ... uit te werken en op te bouwen.</p>
-      <p>Dit gaat zelfs zo ver dat er een hele community is die plugins voorziet om allerhande effectjes simpel en efficiënt in te voegen.</br>
-      Zo kan jij ook je eigen plugin maken en wie weet wordt deze een alombekende, onmisbare feature!</p>
-      </div>
-      <div id="dialogBox2" title="'Les 4'"><p><img src="img/dexter5.png"/></p><p>Om efficiënter en performanter te werk te gaan leer je op het einde alles via externe bestanden in te voegen!</p></div>
-	
-<!---------------------------------------------------------------------------------------------------->
-
-<h1 class="animate__animated animate__bounceIn">Advanced,</h1>
-
-<div id="bodycontainer">
-   <div id="contentt">
-      <div class="inhoud"><fieldset>
-            <p>Afsluiten doen we met geavanceerde leerstof zoals plugins & json.</p>
-      
-         
-      </fieldset>
-      <button class="ui" id="knoptoggle">plugins</button>
-      <button class="ui" id="vb">json</button>
-      <button class="ui" id="b">home</button>
+   <div id="dialogBox" title="'Les 4'">
+      <p><img src="img/dexter5.png" /></p>
+      <p>Je zal misschien al gemerkt hebben dat er een basisvertrekframe bestaat met vooraf ingestelde functies,
+         animaties, enz...</p>
+      <p>Bovenop, of in combinatie met, deze reeds ingebakken concepten heb je de volledige vrijheid jou eigen
+         animaties, functionaliteiten, ... uit te werken en op te bouwen.</p>
+      <p>Dit gaat zelfs zo ver dat er een hele community is die plugins voorziet om allerhande effectjes simpel en
+         efficiënt in te voegen.</br>
+         Zo kan jij ook je eigen plugin maken en wie weet wordt deze een alombekende, onmisbare feature!</p>
    </div>
-   
-</div>
+   <div id="dialogBox2" title="'Les 4'">
+      <p><img src="img/dexter5.png" /></p>
+      <p>Om efficiënter en performanter te werk te gaan leer je op het einde alles via externe bestanden in te voegen!
+      </p>
+   </div>
 
-</div>
+   <!---------------------------------------------------------------------------------------------------->
 
-<!---------------------------------------------------------------------------------------------------------------------------------------------->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script>window.jQuery || document.write ('<script src="js/jquery-3.6.0.min.js"><\/script>')</script><!------------------------------------------------------------------------------------------------------------------------>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script><!---------------------------------------------------------------------------------------------------------------------->
-<script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script><!--------------------------------------------------------------------------------------------------------->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css
+   <h1 class="animate__animated animate__bounceIn">Advanced,</h1>
+
+   <div id="bodycontainer">
+      <div id="contentt">
+         <div class="inhoud">
+            <fieldset>
+               <p>Afsluiten doen we met geavanceerde leerstof zoals plugins & json.</p>
+
+
+            </fieldset>
+            <button class="ui" id="knoptoggle">plugins</button>
+            <button class="ui" id="vb">json</button>
+            <button class="ui" id="b">home</button>
+         </div>
+
+      </div>
+
+   </div>
+
+   <!---------------------------------------------------------------------------------------------------------------------------------------------->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
+   <!------------------------------------------------------------------------------------------------------------------------>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+   <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
+   <!---------------------------------------------------------------------------------------------------------------------->
+   <script>$(function () { if ($('.ui-helper-hidden:first').is(':visible') === true) { $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head'); } });</script>
+   <!--------------------------------------------------------------------------------------------------------->
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css
 ">
 
-<script>$(function() { //---------------------------------- SCRIPT --------------------------------|
-$('button').button();
-//----------------------initialise buttons------------------
+   <script>$(function () { //---------------------------------- SCRIPT --------------------------------|
+         $('button').button();
+         //----------------------initialise buttons------------------
 
-$('div#contentt').fadeIn(5000);
- $('div#inhoud').delay(5333).fadeIn(2222);
-//-----------------------fadecontent-----------------------
+         $('div#contentt').fadeIn(5000);
+         $('div#inhoud').delay(5333).fadeIn(2222);
+         //-----------------------fadecontent-----------------------
 
-$("#dialogBox").dialog({
+         $("#dialogBox").dialog({
             modal: true,
             autoOpen: false,
             title: "plugins,",
             width: 666,
             height: 666,
-            buttons: {           
-                   Ok: function() {
-                     $(this).dialog("close");},}
-                  }, { show: "slide", hide: "puff"});
-$("#dialogBox2").dialog({
+            buttons: {
+               Ok: function () {
+                  $(this).dialog("close");
+               },
+            }
+         }, { show: "slide", hide: "puff" });
+         $("#dialogBox2").dialog({
             modal: true,
             autoOpen: false,
             title: "json,",
             width: 666,
             height: 666,
-            buttons: {           
-                   Ok: function() {
-                     $(this).dialog("close");},}
-                  }, { show: "slide", hide: "puff"});
-//----------------------dialogboxInitialise.autoOpen:false---
+            buttons: {
+               Ok: function () {
+                  $(this).dialog("close");
+               },
+            }
+         }, { show: "slide", hide: "puff" });
+         //----------------------dialogboxInitialise.autoOpen:false---
 
- $("#knoptoggle").click(function () {
-            $('#dialogBox').dialog('open');});
-$('button#vb').on('click', function (){
-   $('#dialogBox2').dialog('open');});
-$('button#b').on('click', function (){
-   window.location="appindex.html";});
-//---------------------buttonsInfoVbNext------------------
+         $("#knoptoggle").click(function () {
+            $('#dialogBox').dialog('open');
+         });
+         $('button#vb').on('click', function () {
+            $('#dialogBox2').dialog('open');
+         });
+         $('button#b').on('click', function () {
+            window.location = "appindex.html";
+         });
+         //---------------------buttonsInfoVbNext------------------
 
 
-});</script><!----------------------------------------- END SCRIPT --------------------------------|
+      });</script>
+   <!----------------------------------------- END SCRIPT --------------------------------|
 </body></html>
