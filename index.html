@@ -7,85 +7,79 @@
 	<title>JQuery Eindopdracht</title>
 	<link href="jquery-ui.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
-	<!--flexslider css-->
 	<link rel="stylesheet" href="css/flexslider.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-	<!--flexslider script-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
 	<style>
-		section {
-			height: 800px;
+		/*flexslider section*/
+		.flexslider {
+			border: 0;
 		}
 
-/*flexslider section*/
-.flexslider {
-	border: 0;
-}
+		/*section docent*/
+		* {
+			box-sizing: border-box;
+		}
 
-/*section docent*/
-* {
-	box-sizing: border-box;
-}
+		.box {
+			max-width: 1000px;
+			margin: auto;
+		}
 
-.box {
-	max-width: 1000px;
-	margin: auto;
-}
+		.row {
+			margin: 8px -16px;
+		}
 
-.row {
-	margin: 8px -16px;
+		.row,
+		.row>.column {
+			padding: 8px;
+		}
 
-}
+		.column {
+			float: left;
+			width: 50%;
+		}
 
-.row, .row > .column {
-	padding: 8px;
-}
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
 
-.column {
-	float: left;
-	width: 50%;
-}
+		.content {
+			background-color: white;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			padding: 10px;
+		}
 
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
+		/*section fade in animation*/
+		.right-button-wrap {
+			position: fixed;
+			top: 20px;
+			right: -500px;
+			/*width: 100px;*/
+			transition: right 0.3s;
+		}
 
-.content {
-	background-color: white;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	padding: 10px;
-}
+		.right-button-wrap.slide-in {
+			right: 175px;
+		}
 
-/*section fade in animation*/
-.right-button-wrap {
-	position: fixed;
-	top: 20px;
-	right: -500px;
-	/*width: 100px;*/
-	transition: right 0.3s;
-}
+		.left-button-wrap {
+			position: fixed;
+			top: 20px;
+			left: -500px;
+			/*width: 100px;*/
+			transition: left 0.3s;
+		}
 
-.right-button-wrap.slide-in {
-	right: 175px;
-}
-
-.left-button-wrap {
-	position: fixed;
-	top: 20px;
-	left: -500px;
-	/*width: 100px;*/
-	transition: left 0.3s;
-}
-
-.left-button-wrap.slide-in {
-	left: 175px;
-}
-</style>
+		.left-button-wrap.slide-in {
+			left: 175px;
+		}
+	</style>
 
 </head>
 
@@ -94,7 +88,7 @@
 		<div class="navbar">
 			<div class="nav_container">
 				<div class="logo">
-					<h1><a href="https://www.vschool.be/" target="_blank">vSchool</a></h1>
+					<h1><a href="https://www.vschool.be/" target="_blank">DevSchool</a></h1>
 				</div>
 				<nav>
 					<ul>
@@ -116,8 +110,7 @@
 				<li><img src="img/dannybert.jpg" alt="foto docent jQuery"></li>
 			</ul>
 		</div>
-	</section> 
-
+	</section>
 
 	<section>
 		<div class="box">
@@ -128,16 +121,26 @@
 							<h1>jQuery Docent</h1>
 							<h2 id="typewriter"></h2>
 							<p>
-								Is leerkracht in het interessegebied Webdesigner. Voor vSchool ontwikkelde hij de cursussen JavaScript, jQuery en Vue.js. Een elegante code is de voedingsbodem voor essentiële creativiteit.
+								Is leerkracht in het interessegebied Webdesigner. Voor vSchool ontwikkelde hij de
+								cursussen JavaScript, jQuery en Vue.js. Een elegante code is de voedingsbodem voor
+								essentiële creativiteit.
 							</p>
 							<p>
-								Behaalde een graduaat in toegepaste informatica, en specialiseerde zich tot Master in Science Technology Enhanced Learning, Innovation and Change aan de Sheffield Hallam University.
+								Behaalde een graduaat in toegepaste informatica, en specialiseerde zich tot Master in
+								Science Technology Enhanced Learning, Innovation and Change aan de Sheffield Hallam
+								University.
 							</p>
 							<p>
-								In de kinderjaren van het internet begon hij zijn carrière als programmeur, die hij sinds 1999 combineert met zijn loopbaan als leraar. Kan een waaier aan programmeer ervaringen voorleggen die een periode van 30 jaar omvatten, net als een grondige deskundigheid over het leren zelf.
+								In de kinderjaren van het internet begon hij zijn carrière als programmeur, die hij
+								sinds 1999 combineert met zijn loopbaan als leraar. Kan een waaier aan programmeer
+								ervaringen voorleggen die een periode van 30 jaar omvatten, net als een grondige
+								deskundigheid over het leren zelf.
 							</p>
 							<p>
-								Haast pal tegenover zijn identiteit als programmeur, staat de kunstenaar, zoekend naar een grafische vormgeving aan de stroom van het leven. Danny Drijvers produceert al meer dan tien jaar internationaal tentoongesteld werk, waarin hij multidisciplinair te werk gaat.
+								Haast pal tegenover zijn identiteit als programmeur, staat de kunstenaar, zoekend naar
+								een grafische vormgeving aan de stroom van het leven. Danny Drijvers produceert al meer
+								dan tien jaar internationaal tentoongesteld werk, waarin hij multidisciplinair te werk
+								gaat.
 							</p>
 						</div>
 					</div>
@@ -155,22 +158,32 @@
 	<section>
 		<div class="box">
 			<div class="row">
-				<div class="left-button-wrap"> 
+				<div class="left-button-wrap">
 					<div class="column">
-						<div class="content" style="width: 500px;" >
+						<div class="content" style="width: 500px;">
 							<img src="img/studie.jpeg" alt="jQuery cursus" style="width:100%;">
 							<h1>jQuery cursus</h1>
-							<p>	
-								Eenvoudig en snel programmeren, dat doe je met jQuery. Het is een rijke, snelle en elegante uitbreiding op JavaScript. Het is opensource, er is een uitgebreide documentatie voorzien en een zeer actieve community. Daardoor wordt er heel regelmatig een update uitgebracht en verschijnen er constant nieuwe plugins.
+							<p>
+								Eenvoudig en snel programmeren, dat doe je met jQuery. Het is een rijke, snelle en
+								elegante uitbreiding op JavaScript. Het is opensource, er is een uitgebreide
+								documentatie voorzien en een zeer actieve community. Daardoor wordt er heel regelmatig
+								een update uitgebracht en verschijnen er constant nieuwe plugins.
 							</p>
 							<p>
-								Het gemak waarmee je in deze cursus jQuery leert programmeren tegenover gewone JavaScript is verbazend. Een lichtgewicht qua KB, uitstekende performantie en zeer uitgebreide ingebouwde voorzieningen laten de huidige webdesigners kiezen voor deze tool.
+								Het gemak waarmee je in deze cursus jQuery leert programmeren tegenover gewone
+								JavaScript is verbazend. Een lichtgewicht qua KB, uitstekende performantie en zeer
+								uitgebreide ingebouwde voorzieningen laten de huidige webdesigners kiezen voor deze
+								tool.
 							</p>
 							<p>
-								jQuery is een verzameling van functies die de oorspronkelijke JavaScript functies uitbreiden. Je hebt complete controle over de DOM (Document Object Model), met andere woorden de elementen in je HTML-pagina.
+								jQuery is een verzameling van functies die de oorspronkelijke JavaScript functies
+								uitbreiden. Je hebt complete controle over de DOM (Document Object Model), met andere
+								woorden de elementen in je HTML-pagina.
 							</p>
 							<p>
-								Er zijn 2 belangrijke uitbreidingen op jQuery zelf, namelijk jQuery UI, een plugin voor effecten en gebruikersinteractie elementen, enjQuery Mobile, om te ontwikkelen voor alle mobiele platformen.
+								Er zijn 2 belangrijke uitbreidingen op jQuery zelf, namelijk jQuery UI, een plugin voor
+								effecten en gebruikersinteractie elementen, enjQuery Mobile, om te ontwikkelen voor alle
+								mobiele platformen.
 							</p>
 
 							<p>
@@ -178,7 +191,8 @@
 							</p>
 
 							<p>
-								Websites die gebruik maken van jQuery zijn onder andere Google, Amazon, IBM, Microsoft, Twitter, Dell, NBC, WordPress, Drupal, Mozilla, Opera, …
+								Websites die gebruik maken van jQuery zijn onder andere Google, Amazon, IBM, Microsoft,
+								Twitter, Dell, NBC, WordPress, Drupal, Mozilla, Opera, …
 							</p>
 						</div>
 					</div>
@@ -193,10 +207,12 @@
 								<li>Basisprincipes javascript – variabelen, functies, strings, arrays,…</li>
 								<li>Basistechnieken jQuery – implementatie script</li>
 								<li>Selectors – selecteren van elementen op de pagina</li>
-								<li>Events – gebeurtenissen opsporen en afhandelen, bijvoorbeeld een muisklik, pagina inladen,…</li>
+								<li>Events – gebeurtenissen opsporen en afhandelen, bijvoorbeeld een muisklik, pagina
+									inladen,…</li>
 								<li>Effects – fade, slide, toggle, animate,…</li>
 								<li>jQuery UI – gebruikers interactie elementen toevoegen en instellen</li>
-								<li>JSON en AJAX – externe data inlezen en wegschrijven, zonder een pagina refresh te doen</li>
+								<li>JSON en AJAX – externe data inlezen en wegschrijven, zonder een pagina refresh te
+									doen</li>
 								<li>jQuery Mobile – ontwerp voor mobiel</li>
 							</ul>
 						</div>
@@ -204,20 +220,18 @@
 				</div>
 			</div>
 		</div>
-	</section> 
+	</section>
 
 	<section>
 		<h1>jQuery app</h1>
 		<img src="img/ipad.jpg" alt="ipad frame app">
 	</section>
 
-
 	<footer>
 		<div class="footer_container">
 			<div class="container_rows">
 				<div class="container_columns">
 					<h1>Meer info</h1>
-					<!--- waarom wordt deze H1 als een link getoond???-->
 					<ul>
 						<li><a href="#">Opleiding</a></li>
 						<li><a href="#">Inschrijven</a></li>
@@ -247,63 +261,61 @@
 	<!--------------------------------------------------------------------------------------------------------------------------------------->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-		<script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
-			<script src="animatie.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
+	<script src="animatie.js"></script>
 
-			<script src="js/jquery.flexslider.js"></script>
-			<script src="https://rawgit.com/Ashish-Bansal/jquery-typewriter/master/jquery.typewriter.js" defer=""></script>
-			<!--------------------------------------------------------------------------------------------------------------------------------------->
-			<!-- <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script> -->
-			<!--------------------------------------------------------------------------------------------------------------------------------------->
-			<script>$(document).ready(function () {
-				$('button').button();
+	<script src="js/jquery.flexslider.js"></script>
+	<script src="https://rawgit.com/Ashish-Bansal/jquery-typewriter/master/jquery.typewriter.js" defer=""></script>
+	<!--------------------------------------------------------------------------------------------------------------------------------------->
+	<!-- <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script> -->
+	<!--------------------------------------------------------------------------------------------------------------------------------------->
+	<script>$(document).ready(function () {
+			$('button').button();
 
-				let $knop1 = $("button#butt1");
-				let $fade = $("div#fadeinfo");
-				$knop1.on('click', function () {
-					$fade.fadeToggle();
-				});
-
-				$(window).scroll(function(){
-					let scroll = $(window).scrollTop();
-					if (scroll > 0) {
-						$("header").addClass("sticky");
-					} 
-					else {
-						$("header").removeClass("sticky");
-					}
-				});
-
-
-				$('.flexslider').flexslider({
-					animation: "slide",
-					slideshowSpeed: 2500,
-					pauseOnAction: true,
-					pauseOnHover: true,
-					useCSS: true,
-					touch: true,
-					directionNav: true
-				});
-
-				$("#typewriter").typewriter({
-					prefix : "Hallo ",
-					text : ["mijn naam is", "mijn naam is Danny", "mijn naam is Danny Drijvers"],
-					typeDelay : 100,
-					waitingTime : 1500,
-					blinkSpeed : 800
-				});
-
-				$(window).on('scroll', function() {
-					var y = $(this).scrollTop();
-					$('.right-button-wrap').toggleClass('slide-in', y > 1450 && y < 1800)
-					$('.left-button-wrap').toggleClass('slide-in', y > 1450 && y < 1800)
-				});
-
-
+			let $knop1 = $("button#butt1");
+			let $fade = $("div#fadeinfo");
+			$knop1.on('click', function () {
+				$fade.fadeToggle();
 			});
-		</script>
-		<!--------------------------------------------------------------------------------------------------------------------------------------->
-	</body>
 
-	</html>
+			$(window).scroll(function () {
+				let scroll = $(window).scrollTop();
+				if (scroll <= 750) {
+					$("header").addClass("sticky");
+				}
+				else {
+					$("header").removeClass("sticky");
+				}
+			});
+
+			$('.flexslider').flexslider({
+				animation: "slide",
+				slideshowSpeed: 2500,
+				pauseOnAction: true,
+				pauseOnHover: true,
+				useCSS: true,
+				touch: true,
+				directionNav: true
+			});
+
+			$("#typewriter").typewriter({
+				prefix: "Hallo ",
+				text: ["mijn naam is", "mijn naam is Danny", "mijn naam is Danny Drijvers"],
+				typeDelay: 100,
+				waitingTime: 1500,
+				blinkSpeed: 800
+			});
+
+			$(window).on('scroll', function () {
+				var y = $(this).scrollTop();
+				$('.right-button-wrap').toggleClass('slide-in', y > 1450 && y < 1800)
+				$('.left-button-wrap').toggleClass('slide-in', y > 1450 && y < 1800)
+			});
+
+		});
+	</script>
+	<!--------------------------------------------------------------------------------------------------------------------------------------->
+</body>
+
+</html>

@@ -3,17 +3,19 @@
 
 /*------ Variabel section ------- */
 :root {
-	--main-color: #50adac;
+	--main-color: #8fc7e9;
 }
 
 body, html {
   margin: 0;
   height: 100%;
+  font-family:  'Public Sans';
 }
 
 /*------- Header section ------- */
 header {
   background: var(--main-color);
+  font-size: 17px;
 }
 
 /*Om header sticky te maken*/
@@ -21,13 +23,18 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 10;
 }
 
 .navbar {
   width: 100%;
   color: white;
   height: 100px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
 }
 
 .navbar .nav_container {
@@ -43,6 +50,7 @@ nav ul {
   display: flex;
   margin-right: 10px;
 }
+
 nav ul li {
   list-style-type: none;
 }
@@ -53,8 +61,11 @@ nav ul li a {
   margin: 0 10px;
 }
 
-
 /*-------- body section --------*/
+section {
+			height: 800px;
+		}
+
 .container{max-width:   999px; margin:  auto;text-align:  center  ;}
 /*align content----------------joeri*/
 
@@ -127,7 +138,6 @@ nav ul li a {
 /*-------- Footer section --------*/
 footer {
   background: var(--main-color);
-  font-family:  'Public Sans';
   font-size: 17px;
 }
 
@@ -145,7 +155,6 @@ footer {
 .container_columns {
   width: 30%;
   padding: 0 15px;
-
 }
 
 .container_columns h1 {
@@ -154,7 +163,6 @@ footer {
   margin-left: 37px;
   font-family:  'Russo One';
   font-size:  20px;
-
 }
 
 .container_columns li {
@@ -179,20 +187,12 @@ ul {
   list-style-type: none;
 }
 
-.cf{}
-.cf:after
-{
+.cf:after {
   content: "";
   clear: both;
   display: table;
 }
 
-.docentleft{float: left};
-.docentright{float: right;}
-#butt1{margin-top:  55px;
-  margin-left:  -55px;
-  margin-bottom: 33px;}
-  #fadeinfo{padding-left:   300px;}
 
 
 
