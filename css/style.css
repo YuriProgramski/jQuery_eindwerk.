@@ -9,7 +9,7 @@
 body, html {
   margin: 0;
   height: 100%;
-  font-family:  'Public Sans';
+  font-family: 'Public Sans';
 }
 
 /*------- Header section ------- */
@@ -21,7 +21,6 @@ header {
 .navbar {
   width: 100%;
   color: white;
-  height: 100px;
 }
 
 .logo a {
@@ -63,7 +62,7 @@ nav ul li a {
 
 /*-------- body section --------*/
 section {
-		height: 800px;
+		height: 850px;
 	}
 
 .container{max-width:   999px; margin:  auto;text-align:  center  ;}
@@ -130,17 +129,35 @@ section {
   padding: 50px;
 }
 
+.content img {
+  width: 100%;
+}
+
+.cursus-size {
+  width: 500px;
+  height: 800px;
+}
+
+.programma-lijst li {
+  margin-left: -25px;
+}
+
 .auto_writer h1 {
   font-size: 40px;
   margin: 0;
+}
+
+.content p, .content li {
+  color: grey;
+  line-height: 25px;
 }
 
 .container-foto {
   position: relative;
 }
 
-.container-foto img {
-  height: 532px;
+.background-foto {
+  height: 760px;
 }
 
 .overlay {
@@ -161,8 +178,11 @@ section {
   background: silver;
 }
 
+/*jQuery appgame section*/
 
-
+.appgame {
+  text-align: center;
+}
 
 /*-------- Contact form section --------*/
 .inschrijfform {
@@ -275,7 +295,7 @@ footer {
   margin-left: 40px;
 }
 
-ul {
+.container_columns ul {
   list-style-type: none;
 }
 

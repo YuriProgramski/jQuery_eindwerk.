@@ -84,9 +84,9 @@
 				</div>
 
 				<div class="column">
-					<div class="content">
+					<div class="content background-foto">
 						<div class="container-foto">
-							<img src="img/danny1.jpeg" alt="Foto van Danny" style="width:100%;">
+							<img src="img/danny1.jpeg" alt="Foto van Danny">
 							<div class="overlay">Danny Drijvers</div>
 						</div>
 					</div>
@@ -100,8 +100,8 @@
 			<div class="row">
 				<div class="left-button-wrap">
 					<div class="column">
-						<div class="content" style="width: 500px;">
-							<img src="img/studie.jpeg" alt="jQuery cursus" style="width:100%;">
+						<div class="content cursus-size">
+							<img src="img/studie.jpeg" alt="jQuery cursus">
 							<h1>jQuery cursus</h1>
 							<p>
 								Eenvoudig en snel programmeren, dat doe je met jQuery. Het is een rijke, snelle en
@@ -125,11 +125,9 @@
 								effecten en gebruikersinteractie elementen, enjQuery Mobile, om te ontwikkelen voor alle
 								mobiele platformen.
 							</p>
-
 							<p>
 								jQuery ondersteunt alle populaire en minder populaire browsers.
 							</p>
-
 							<p>
 								Websites die gebruik maken van jQuery zijn onder andere Google, Amazon, IBM, Microsoft,
 								Twitter, Dell, NBC, WordPress, Drupal, Mozilla, Opera, …
@@ -140,10 +138,10 @@
 
 				<div class="right-button-wrap">
 					<div class="column">
-						<div class="content" style="width: 500px;">
-							<img src="img/coding.jpeg" alt="jQuery programma" style="width:100%;">
+						<div class="content cursus-size">
+							<img src="img/coding.jpeg" alt="jQuery programma">
 							<h1>Programma</h1>
-							<ul>
+							<ul class="programma-lijst">
 								<li>Basisprincipes javascript – variabelen, functies, strings, arrays,…</li>
 								<li>Basistechnieken jQuery – implementatie script</li>
 								<li>Selectors – selecteren van elementen op de pagina</li>
@@ -163,8 +161,10 @@
 	</section>
 
 	<section>
-		<h1>jQuery app</h1>
-		<img src="img/ipad.jpg" alt="ipad frame app">
+		<div class="appgame">
+			<h1>jQuery app - Let's play a game</h1>
+			<img src="img/ipad.jpg" alt="ipad">
+		</div>
 	</section>
 
 	<footer>
@@ -249,8 +249,8 @@
 
 			$(window).on('scroll', function () {
 				var y = $(this).scrollTop();
-				$('.right-button-wrap').toggleClass('slide-in', y > 1450 && y < 1800)
-				$('.left-button-wrap').toggleClass('slide-in', y > 1450 && y < 1800)
+				$('.right-button-wrap').toggleClass('slide-in', y > 1750 && y < 1900)
+				$('.left-button-wrap').toggleClass('slide-in', y > 1750 && y < 1900)
 			});
 
 		});
