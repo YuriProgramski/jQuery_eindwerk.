@@ -12,11 +12,6 @@
 	<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-	<style>
-
-	</style>
-
 </head>
 
 <body>
@@ -115,23 +110,6 @@
 								uitgebreide ingebouwde voorzieningen laten de huidige webdesigners kiezen voor deze
 								tool.
 							</p>
-							<p>
-								jQuery is een verzameling van functies die de oorspronkelijke JavaScript functies
-								uitbreiden. Je hebt complete controle over de DOM (Document Object Model), met andere
-								woorden de elementen in je HTML-pagina.
-							</p>
-							<p>
-								Er zijn 2 belangrijke uitbreidingen op jQuery zelf, namelijk jQuery UI, een plugin voor
-								effecten en gebruikersinteractie elementen, enjQuery Mobile, om te ontwikkelen voor alle
-								mobiele platformen.
-							</p>
-							<p>
-								jQuery ondersteunt alle populaire en minder populaire browsers.
-							</p>
-							<p>
-								Websites die gebruik maken van jQuery zijn onder andere Google, Amazon, IBM, Microsoft,
-								Twitter, Dell, NBC, WordPress, Drupal, Mozilla, Opera, …
-							</p>
 						</div>
 					</div>
 				</div>
@@ -198,7 +176,7 @@
 			</div>
 		</div>
 	</footer>
-	<!--------------------------------------------------------------------------------------------------------------------------------------->
+
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -207,18 +185,8 @@
 
 	<script src="js/jquery.flexslider.js"></script>
 	<script src="https://rawgit.com/Ashish-Bansal/jquery-typewriter/master/jquery.typewriter.js" defer=""></script>
-	<!--------------------------------------------------------------------------------------------------------------------------------------->
-	<!-- <script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script> -->
-	<!--------------------------------------------------------------------------------------------------------------------------------------->
+	<script>$(function () { if ($('.ui-helper-hidden:first').is(':visible') === true) { $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head'); } });</script>
 	<script>$(document).ready(function () {
-			$('button').button();
-
-			let $knop1 = $("button#butt1");
-			let $fade = $("div#fadeinfo");
-			$knop1.on('click', function () {
-				$fade.fadeToggle();
-			});
-
 			$(window).scroll(function () {
 				let scroll = $(window).scrollTop();
 				if (scroll <= 750) {
@@ -249,13 +217,11 @@
 
 			$(window).on('scroll', function () {
 				var y = $(this).scrollTop();
-				$('.right-button-wrap').toggleClass('slide-in', y > 1750 && y < 1900)
-				$('.left-button-wrap').toggleClass('slide-in', y > 1750 && y < 1900)
+				$('.right-button-wrap').toggleClass('slide-in', y > 1700 && y < 1900)
+				$('.left-button-wrap').toggleClass('slide-in', y > 1700 && y < 1900)
 			});
-
 		});
 	</script>
-	<!--------------------------------------------------------------------------------------------------------------------------------------->
 </body>
 
 </html>
