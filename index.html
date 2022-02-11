@@ -14,71 +14,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 	<style>
-		/*flexslider section*/
-		.flexslider {
-			border: 0;
-		}
 
-		/*section docent*/
-		* {
-			box-sizing: border-box;
-		}
-
-		.box {
-			max-width: 1000px;
-			margin: auto;
-		}
-
-		.row {
-			margin: 8px -16px;
-		}
-
-		.row,
-		.row>.column {
-			padding: 8px;
-		}
-
-		.column {
-			float: left;
-			width: 50%;
-		}
-
-		.row:after {
-			content: "";
-			display: table;
-			clear: both;
-		}
-
-		.content {
-			background-color: white;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			padding: 10px;
-		}
-
-		/*section fade in animation*/
-		.right-button-wrap {
-			position: fixed;
-			top: 20px;
-			right: -500px;
-			/*width: 100px;*/
-			transition: right 0.3s;
-		}
-
-		.right-button-wrap.slide-in {
-			right: 175px;
-		}
-
-		.left-button-wrap {
-			position: fixed;
-			top: 20px;
-			left: -500px;
-			/*width: 100px;*/
-			transition: left 0.3s;
-		}
-
-		.left-button-wrap.slide-in {
-			left: 175px;
-		}
 	</style>
 
 </head>
@@ -93,7 +29,8 @@
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="#tabs">Cursus</a></li>
+						<li><a href="#cursus">Cursus</a></li>
+						<li><a href="#cursus">Programma</a></li>
 						<li><a href="contact.html">Inschrijven</a></li>
 						<li><a target="_blank" href="https://www.vschool.be/contact/">Contact</a></li>
 					</ul>
@@ -103,7 +40,7 @@
 	</header>
 
 	<section>
-		<div class="flexslider">
+		<div class="flexslider" style="border: 0;">
 			<ul class="slides">
 				<li><img src="img/cvo.jpeg" alt="CVO De Verdieping gebouw"></li>
 				<li><img src="img/cvo4.jpeg" alt="CVO De Verdieping gebouw"></li>
@@ -148,14 +85,17 @@
 
 				<div class="column">
 					<div class="content">
-						<img src="img/danny1.jpeg" alt="Foto van Danny" style="width:100%;">
+						<div class="container-foto">
+							<img src="img/danny1.jpeg" alt="Foto van Danny" style="width:100%;">
+							<div class="overlay">Danny Drijvers</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section>
+	<section id="cursus">
 		<div class="box">
 			<div class="row">
 				<div class="left-button-wrap">
@@ -202,7 +142,7 @@
 					<div class="column">
 						<div class="content" style="width: 500px;">
 							<img src="img/coding.jpeg" alt="jQuery programma" style="width:100%;">
-							<h1>Het programma</h1>
+							<h1>Programma</h1>
 							<ul>
 								<li>Basisprincipes javascript – variabelen, functies, strings, arrays,…</li>
 								<li>Basistechnieken jQuery – implementatie script</li>
