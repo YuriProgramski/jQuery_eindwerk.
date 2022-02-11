@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Russo+One&family=Sacramento&display=swap');
 
-
+/*------ Begin Pui ------- */
 /*------ Variabel section ------- */
 :root {
 	--main-color: #8fc7e9;
@@ -63,10 +63,7 @@ nav ul li a {
 /*-------- body section --------*/
 section {
 		height: 850px;
-	}
-
-.container{max-width:   999px; margin:  auto;text-align:  center  ;}
-/*align content----------------joeri*/
+}
 
 /*section fade in animation*/
 .right-button-wrap {
@@ -183,6 +180,8 @@ section {
 .appgame {
   text-align: center;
 }
+/*------ Einde Pui ------- */
+
 
 /*-------- Contact form section Steven --------*/
 .inschrijfform {
@@ -246,7 +245,10 @@ section {
 .verzenden-button input:focus {
   background-color: #303030;
 }
+/*-------- Contact form section Steven --------*/
 
+
+/*------ Begin Pui ------- */
 /*-------- Footer section --------*/
 footer {
   background: var(--main-color);
@@ -304,6 +306,7 @@ footer {
   clear: both;
   display: table;
 }
+/*------ Einde Pui ------- */
 
 
 /*-----------poging css confirm into maincss-----------------*/
