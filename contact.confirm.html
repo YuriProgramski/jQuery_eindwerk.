@@ -7,8 +7,8 @@
     <title>Contact</title>
     <style>/*-----------poging css confirm into maincss-----------------*/
 body{}#confirm{min-height:   777px;}#hidden{text-align:  center; margin-top: 69px;;padding: 22px; min-height: 444px ;display: none;}#test {max-width: 150px;min-height:   150px; background-color:    grey;}
-#koffer {position:  absolute    ; left:     622px; top: 399px; display: none;}
-#pc {position:  absolute    ; left:     1055px; top: 300px; display: none;}
+#koffer {position:  absolute    ; left:     622px; top: 399px;}
+#pc {position:  absolute    ; left:     1090px; top: 300px;}
 #hiddenimg{position: relative; z-index: 3;}
 #proef{color: purple;}
 #confirm{max-width: 666px; margin: auto; text-align: center;
@@ -120,7 +120,8 @@ padding-top: 69px; margin-top: 69px;}
     <script src="https://rawgit.com/Ashish-Bansal/jquery-typewriter/master/jquery.typewriter.js" defer=""></script>
     <script>
         $(document).ready(function () {
-
+            $('#koffer').hide();
+            $('#pc').hide();
             let $button = $('#submit_button');
             $button.on('click', function(e) {
                 e.preventDefault();
@@ -171,12 +172,12 @@ padding-top: 69px; margin-top: 69px;}
     $('#h3').delay(16000).fadeIn(4666);
 
         $('#newtekst2').delay(6666).fadeIn(666);
-
-    $('#koffer').delay(10000).animate({
-        left: "+=422px"
+    
+    $('#koffer').delay(10000).fadeIn(250).animate({
+        left: "+=162px"
     }, 2222);
-    $('#pc').delay(10000).animate({
-        top: "+=422px"
+    $('#pc').delay(10000).fadeIn(250).animate({
+        top: "+=122px"
     }, 1669);
                 }
             });
