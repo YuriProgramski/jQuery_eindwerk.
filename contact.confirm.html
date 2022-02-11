@@ -1,40 +1,92 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Contact</title>
-    <style>/*-----------poging css confirm into maincss-----------------*/
-body{}#confirm{min-height:   777px;}#hidden{text-align:  center; margin-top: 69px;;padding: 22px; min-height: 444px ;display: none;}#test {max-width: 150px;min-height:   150px; background-color:    grey;}
-#koffer {position:  absolute    ; left:     622px; top: 399px; display: none;}
-#pc {position:  absolute    ; left:     1090px; top: 300px; display: none;}
-#hiddenimg{position: relative; z-index: 3;}
-#proef{color: purple;}
-#confirm{max-width: 666px; margin: auto; text-align: center;
-padding-top: 69px; margin-top: 69px;}
-/*-----------poging css confirm into maincss-----------------*/
-</style>
-</head>
-<body>
+    <style>
+        /*----------- Begin Joeri poging css confirm into maincss-----------------*/
+        body {}
 
-    <!--  IMAGES SHOWEN NIET MEER ??? !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+        #confirm {
+            min-height: 777px;
+        }
+
+        #hidden {
+            text-align: center;
+            margin-top: 69px;
+            ;
+            padding: 22px;
+            min-height: 444px;
+            display: none;
+        }
+
+        #test {
+            max-width: 150px;
+            min-height: 150px;
+            background-color: grey;
+        }
+
+        #koffer {
+            position: absolute;
+            left: 622px;
+            top: 399px;
+            display: none;
+        }
+
+        #pc {
+            position: absolute;
+            left: 1090px;
+            top: 300px;
+            display: none;
+        }
+
+        #hiddenimg {
+            position: relative;
+            z-index: 3;
+        }
+
+        #proef {
+            color: purple;
+        }
+
+        #confirm {
+            max-width: 666px;
+            margin: auto;
+            text-align: center;
+            padding-top: 69px;
+            margin-top: 69px;
+        }
+
+        /*-----------Einde Joeri poging css confirm into maincss-----------------*/
+    </style>
+</head>
+
+<body>
+    <!-- Begin Pui -->
     <header>
         <div class="navbar">
             <div class="nav_container">
                 <div class="logo">
-                    <h1>vSchool</h1>
+                    <h1><a href="https://www.vschool.be/" target="_blank">DevSchool</a></h1>
                 </div>
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#cursus">Cursus</a></li>
+                        <li><a href="#cursus">Cursus</a></li>
+                        <li><a href="#cursus">Programma</a></li>
+                        <li><a href="contact.confirm.html">Inschrijven</a></li>
                         <li><a target="_blank" href="https://www.vschool.be/contact/">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
+    <!-- Einde Pui -->
+
+    <!-- Begin Steven -->
     <div class="inschrijfform">
         <main>
             <form id="inschrijven">
@@ -55,43 +107,52 @@ padding-top: 69px; margin-top: 69px;}
                 </div>
 
             </form>
-            
+
         </main>
     </div>
+    <!-- Einde Steven -->
+
+    <!-- Begin Joeri -->
     <section id="confirm">
-               
-                <img id="koffer" src="app/img/koffer.png"/>
-                <img id="pc" src="app/img/pc.jpg"/>
-                <section>
-                    
-                    <div class="check" style="display: none;"><img src="img/check.png"/></div>
-                    <div id="hiddenimg" style="display: none;">
-                        <img src="img/confir.png"/></div>
-                    <div id="hiddentekst" style="display: none;"><p>Bedankt voor je aanvraag!</p>
-                        <p>Wij hebben je aanvraag goed ontvangen en zullen je aanvraag zsm verwerken.</p>
-                        <p>Je ontvangt van ons nog een e-mail ter bevestiging van je aanvraag.</p>
-                        <hr></div>
-                    <div id="newtekst2" style="display: none;">
-                        <h2 id="typewriter2"></h2>
-                    </div>
-                    
-                    <div id="newtekst" style="display: none;">
-                        <h2 id="typewriter"></h2><p><a href="index.html">Home</a></p>
-                    </div>
-                    <h3 id="h3" style="display: none;">CVO De Verdieping | vSchool</h3>
-        
-                </section>
-            </section>
+
+        <img id="koffer" src="app/img/koffer.png" />
+        <img id="pc" src="app/img/pc.jpg" />
+        <section>
+
+            <div class="check" style="display: none;"><img src="img/check.png" /></div>
+            <div id="hiddenimg" style="display: none;">
+                <img src="img/confir.png" />
+            </div>
+            <div id="hiddentekst" style="display: none;">
+                <p>Bedankt voor je aanvraag!</p>
+                <p>Wij hebben je aanvraag goed ontvangen en zullen je aanvraag zsm verwerken.</p>
+                <p>Je ontvangt van ons nog een e-mail ter bevestiging van je aanvraag.</p>
+                <hr>
+            </div>
+            <div id="newtekst2" style="display: none;">
+                <h2 id="typewriter2"></h2>
+            </div>
+
+            <div id="newtekst" style="display: none;">
+                <h2 id="typewriter"></h2>
+                <p><a href="index.html">Home</a></p>
+            </div>
+            <h3 id="h3" style="display: none;">CVO De Verdieping | vSchool</h3>
+
+        </section>
+    </section>
+    <!-- Einde Joeri -->-->
+
+    <!-- Begin Pui -->
     <footer>
         <div class="footer_container">
             <div class="container_rows">
                 <div class="container_columns">
                     <h1>Meer info</h1>
-                    <!--- waarom wordt deze H1 als een link getoond???-->
                     <ul>
                         <li><a href="#">Opleiding</a></li>
                         <li><a href="#">Inschrijven</a></li>
-                        <li><a href="#">Over ons</a></li>
+                        <li><a href="https://www.vschool.be/team/">Over ons</a></li>
                     </ul>
                 </div>
 
@@ -114,6 +175,8 @@ padding-top: 69px; margin-top: 69px;}
             </div>
         </div>
     </footer>
+    <!-- Einde Pui -->
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -122,7 +185,7 @@ padding-top: 69px; margin-top: 69px;}
         $(document).ready(function () {
             /*Begin Steven Code */
             let $button = $('#submit_button');
-            $button.on('click', function(e) {
+            $button.on('click', function (e) {
                 e.preventDefault();
                 let $naam = $('#naam').val();
                 let $email = $('#email').val();
@@ -162,41 +225,42 @@ padding-top: 69px; margin-top: 69px;}
                 if (!$naam_border.hasClass('error_border') && !$email_border.hasClass('error_border')) {
                     $('.inschrijfform').fadeOut(750);
                     /*Einde Steven Code */
-                    $('.check').fadeIn(7500).delay(1500).animate({
-        right: "+=250",
-        opacity: "toggle"
-    }, 333);
-    $('#hiddentekst').fadeIn(5000).delay(500).fadeOut(3000);
-    $('#hiddenimg').delay(10000).fadeIn(666);
-    $('#newtekst').delay(15000).fadeIn(666);
-    $('#h3').delay(16000).fadeIn(4666);
 
-        $('#newtekst2').delay(6666).fadeIn(666);
-    /*Begin Steven en Joeri Code */
-    $('#koffer').delay(10000).fadeIn(250).animate({
-        left: "+=162px"
-    }, 2222);
-    $('#pc').delay(10000).fadeIn(250).animate({
-        top: "+=122px"
-    }, 1669);
+                    // Begin Joeri
+                    $('.check').fadeIn(7500).delay(1500).animate({
+                        right: "+=250",
+                        opacity: "toggle"
+                    }, 333);
+                    $('#hiddentekst').fadeIn(5000).delay(500).fadeOut(3000);
+                    $('#hiddenimg').delay(10000).fadeIn(666);
+                    $('#newtekst').delay(15000).fadeIn(666);
+                    $('#h3').delay(16000).fadeIn(4666);
+
+                    $('#newtekst2').delay(6666).fadeIn(666);
+                    //Einde Joeri
+
+                    /*Begin Steven en Joeri Code */
+                    $('#koffer').delay(10000).fadeIn(250).animate({
+                        left: "+=162px"
+                    }, 2222);
+                    $('#pc').delay(10000).fadeIn(250).animate({
+                        top: "+=122px"
+                    }, 1669);
                 }
             });
-    /*Einde Steven en Joeri Code */
+            /*Einde Steven en Joeri Code */
 
-
-
-
-
-//Begin code Joeri
-$("#typewriter").typewriter({
-                prefix : [""],
-                text : ["proef en krijg goesting", "hedendaagse helden", "digitale duizendpoten", "veel succes", "future fanatics", "web weavers", "practical programmers"],
-                typeDelay : 100,
-                waitingTime : 1500,
-                blinkSpeed : 800
+            //Begin code Joeri
+            $("#typewriter").typewriter({
+                prefix: [""],
+                text: ["proef en krijg goesting", "hedendaagse helden", "digitale duizendpoten", "veel succes", "future fanatics", "web weavers", "practical programmers"],
+                typeDelay: 100,
+                waitingTime: 1500,
+                blinkSpeed: 800
             });
         });
-//Einde code Joeri
-    </script>    
+        //Einde code Joeri
+    </script>
 </body>
+
 </html>
