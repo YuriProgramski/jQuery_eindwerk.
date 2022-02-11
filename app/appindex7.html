@@ -3,33 +3,7 @@
 <link href="../css/styleapp.css" rel="stylesheet">
 <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
 <style>
-      #box{
-    width: 100px;
-    height: 100px;
-    background-color: #000;
-}
-div{
-    margin-bottom: 25px;
-}
- .divvb {
-    background-color:#ffaa00;
-    width:30px;
-    height:30px;
-    padding:3px;
-    margin: 3px;
-}
-ul{
-    margin: 0 0 1em;
-    width: 125px;
-    list-style: none;
-}
-li{
-    width:80px;
-    height:40px;
-    background:darkcyan ;
-    margin-bottom:10px;
-}
-.stop li{background: orange;}
+ 
 </style></head>
 <body><div class="ui-helper-hidden"></div>
 
@@ -41,53 +15,28 @@ li{
       <p>Je kan ook ganse divs laten animeren in hoogte en/of breedte,</br>
       en je kan ook animeren positiegewijs!</p>
       <p>De factor die hier uiteindelijk de limiet stelt inzake animatiemogelijkheden, is jouw eigenste fantasie!</p></div>
+      <div id="dialogBox2" title="'Les 4'"><p><img src="img/dexter5.png"/></p><p>De Jquery-uitbreidingsbibliotheek genaamd 'animate' stelt ons in staat, met of zonder een combinatie van vooropgestelde animaties, onze eigen animaties in te stellen!</p>
+      <p>Zo kan je bijvoorbeeld titels laten shaken on load</p>
+      <p>Je kan ook ganse divs laten animeren in hoogte en/of breedte,</br>
+      en je kan ook animeren positiegewijs!</p>
+      <p>De factor die hier uiteindelijk de limiet stelt inzake animatiemogelijkheden, is jouw eigenste fantasie!</p></div>
 	
 <!---------------------------------------------------------------------------------------------------->
 
-<h1 class="animate__animated animate__bounceIn">Animate,</h1>
+<h1 class="animate__animated animate__bounceIn">Advanced,</h1>
 
 <div id="bodycontainer">
    <div id="contentt">
       <div class="inhoud"><fieldset>
-            <p>Vervolgen doen we met 'Animate'.</p>
+            <p>Afsluiten doen we met geavanceerde leerstof zoals plugins & json.</p>
       
          
       </fieldset>
-      <button class="ui" id="knoptoggle">info</button>
-      <button class="ui" id="vb">vb</button>
-      <button class="ui" id="b">next</button>
+      <button class="ui" id="knoptoggle">plugins</button>
+      <button class="ui" id="vb">json</button>
+      <button class="ui" id="b">home</button>
    </div>
-   <div class="voorbeelden" style="display: none">
-
-    <p><fieldset><p>Click op de button en na 3s zie je de alert</p>
-<button id="alert">Klik</button></fieldset></p>
-
-       
- 
-<p><fieldset>
-<ul class="stop">
-    <li>index</li>
-    <li>about</li>
-    <li>contact</li>
-</ul></fieldset></p>
-
-
-
-
-
-         <p><fieldset><h2 class="animate__animated animate__bounceIn">Animatie met animate.css</h2>
-<div>
-        <a id="link" href="#">Flash de box</a>
-        <div id="box" class="animate__animated"></div>
-</div>
-<div>Naam:
-        <input id="naam" type="text" class="animate__animated"> </input>
-        <button id="knop">Verzend</button>
-</div>
-</fieldset></p>
-
-         <p><fieldset><button id="curtains"><a href="curtains/index.html" target="_blank">Uitgebreid voorbeeld 'schouwgordijn'</a></button></fieldset></p>
-      </div>
+   
 </div>
 
 </div>
@@ -110,7 +59,17 @@ $('div#contentt').fadeIn(5000);
 $("#dialogBox").dialog({
             modal: true,
             autoOpen: false,
-            title: "Animate,",
+            title: "plugins,",
+            width: 666,
+            height: 666,
+            buttons: {           
+                   Ok: function() {
+                     $(this).dialog("close");},}
+                  }, { show: "slide", hide: "puff"});
+$("#dialogBox2").dialog({
+            modal: true,
+            autoOpen: false,
+            title: "json,",
             width: 666,
             height: 666,
             buttons: {           
@@ -122,59 +81,10 @@ $("#dialogBox").dialog({
  $("#knoptoggle").click(function () {
             $('#dialogBox').dialog('open');});
 $('button#vb').on('click', function (){
-   $('.voorbeelden').toggle();});
+   $('#dialogBox2').dialog('open');});
 $('button#b').on('click', function (){
-   window.location="appindex7.html";});
+   window.location="appindex.html";});
 //---------------------buttonsInfoVbNext------------------
-
-$('button#alert').on('click', function() {
-setTimeout(function() { 
-alert("Hello world"); }, 3000);
-});
-//---------------------alertDELAY-----------------------
-
-    let $link = $('#link');
-    let $box = $('#box');
-    let $knop = $('#knop');
-    let $naam = $('#naam');
-$link.on('click', function() {
-animatie($box, "animate__flash");
-});
-
-$knop.on('click', function() {
-if ($naam.val().length == 0) {
-animatie($naam, "animate__shakeX");
-}
-});
-function animatie(element_ID, animatieClass) {
-console.log(element_ID);
-element_ID.addClass(animatieClass);
-window.setTimeout(function() {
-            element_ID.removeClass(animatieClass);
-        }, 1300);
-};
-
-
-//----------------------ARROWKEY
-
-
-
-//----------------------DIVKES--------------------
-
-
-$(".stop li").hover(
-function() {
-$(this).stop().animate({ width: "444px" }, 1111);
-},
-function() {
-$(this).stop().animate({ width: "80px" }, 222);
-}
-);
-
-//----------------------sterrenbeeldLINK----------KRIJGNIET INNEWTAB
-
-
-//-----------------------TOOLTIP----------------
 
 
 });</script><!----------------------------------------- END SCRIPT --------------------------------|

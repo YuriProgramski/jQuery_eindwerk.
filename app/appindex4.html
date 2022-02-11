@@ -7,7 +7,7 @@
 
 <!---------------------------------------------------------------------------------------------------->
 
-   <div id="dialogBox" title="'Les 1'"><p><img src="img/dexter4.png"/></p><p>Na de basis onder de knie te hebben, zal je vervolgens leren om al te beginnen spelen met effectjes zoals delay, hide, fade en allerhande andere combinaties</p><p>Zo heeft jQuery een resem aan vooraf ingestelde mogelijkheden, maar je kan evenzeer je eigen animatie verzinnen!</p>
+   <div id="dialogBox" title="'Les 1'"><p><img src="img/dexter4.png"/></p><p>Na de basis onder de knie te hebben, zal je vervolgens leren om al te beginnen spelen met effectjes zoals hide, fade en allerhande andere combinaties</p><p>Zo heeft jQuery een resem aan vooraf ingestelde mogelijkheden, maar je kan evenzeer je eigen animatie verzinnen!</p>
          </div>
 	
 <!---------------------------------------------------------------------------------------------------->
@@ -26,8 +26,7 @@
       <button class="b">next</button>
    </div>
    <div class="voorbeelden" style="display: none">
-         <p><fieldset><p>Click op de button en na 3s zie je de alert</p>
-<button id="alert">Klik</button></fieldset></p>
+         
       
 
 
@@ -97,7 +96,7 @@ $('div#contentt').fadeIn(5000);
 $("#dialogBox").dialog({
             modal: true,
             autoOpen: false,
-            title: "Welkom,",
+            title: "Effects,",
             width: 666,
             height: 666,
             buttons: {           
@@ -114,11 +113,7 @@ $('button.b').on('click', function (){
    window.location="appindex5.html";});
 //---------------------buttonsInfoVbNext------------------
 
-$('button#alert').on('click', function() {
-setTimeout(function() { 
-alert("Hello world"); }, 3000);
-});
-//---------------------alertDELAY-----------------------
+
 
  let mydiv = $("div.mydiv");
    let show = $("input#show");
