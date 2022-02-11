@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JQuery</title>   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+<link href="../css/styleapp.css" rel="stylesheet">
+<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+<style>
+       </style></head>
+<body><div class="ui-helper-hidden"></div>
+
+
+<!---------------------------------------------------------------------------------------------------->
+
+   <div id="dialogBox" title="'Les 4'"><p><img src="img/dexter3.jpg"/></p><p>De Jquery-library 'animate' stelt ons in staat volgende leuke dingen te doen:</p>
+      <p>titels</p>
+      <p>boxes height width cue</p>
+      <p>STOP</p>
+      <p>shake form input after validate</p>
+      <p>curtains</p>
+      <p>menu .animate</p></div>
+	
+<!---------------------------------------------------------------------------------------------------->
+
+<h1 class="animate__animated animate__bounceIn">Animate,</h1>
+
+<div id="bodycontainer">
+   <div id="contentt">
+      <div class="inhoud"><fieldset>
+            <p>Vervolgen doen we met 'Animate'.</p>
+      
+         
+      </fieldset>
+      <button class="ui" id="knoptoggle">info</button>
+      <button class="ui" id="vb">vb</button>
+      <button class="ui" id="b">next</button>
+   </div>
+   <div class="voorbeelden" style="display: none">
+         <p><fieldset></fieldset></p>
+
+         
+      </div>
+</div>
+
+</div>
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script>window.jQuery || document.write ('<script src="js/jquery-3.6.0.min.js"><\/script>')</script><!------------------------------------------------------------------------------------------------------------------------>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script><script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script><!---------------------------------------------------------------------------------------------------------------------->
+<script>$(function() {if ($('.ui-helper-hidden:first').is(':visible') === true) {$('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');}});</script><!--------------------------------------------------------------------------------------------------------->
+<script>$(function() { //---------------------------------- SCRIPT --------------------------------|
+$('button.ui').button();
+        $('#dis').button({ icon: 'ui-icon-locked', disabled: true })
+$("#geslacht").controlgroup();
+$(".skills").checkboxradio();
+//----------------------initialise buttons------------------
+
+$('div#contentt').fadeIn(5000);
+ $('div#inhoud').delay(5333).fadeIn(2222);
+//-----------------------fadecontent-----------------------
+
+$("#dialogBox").dialog({
+            modal: true,
+            autoOpen: false,
+            title: "Welkom,",
+            width: 666,
+            height: 666,
+            buttons: {           
+                   Ok: function() {
+                     $(this).dialog("close");},}
+                  }, { show: "slide", hide: "puff"});
+//----------------------dialogboxInitialise.autoOpen:false---
+
+ $("#knoptoggle").click(function () {
+            $('#dialogBox').dialog('open');});
+$('button#vb').on('click', function (){
+   $('.voorbeelden').toggle();});
+$('button#b').on('click', function (){
+   window.location="appindex6.html";});
+//---------------------buttonsInfoVbNext------------------
+
+let $t = $('input#open');
+    $t.button();
+let $dialog = $("div#dialogDiv");
+$dialog.dialog({ autoOpen: false });
+$("#effectopen").change(function() {
+    let effect = $(this).val();
+    if (effect == "No effect") effect = false;
+    $dialog.dialog("option", "show", effect);
+});
+$("#effectclose").change(function() {
+    let effect = $(this).val();
+    if (effect == "No effect") effect = false;
+    $dialog.dialog("option", "hide", effect);
+});
+$("#open").click(function() {
+    $dialog.dialog("open");
+});
+//---------------------X&Y-----------------------
+
+
+//----------------------ARROWKEY
+
+
+//----------------------DIVKES--------------------
+
+
+//----------------------sterrenbeeldLINK----------KRIJGNIET INNEWTAB
+
+
+//-----------------------TOOLTIP----------------
+
+
+});</script><!----------------------------------------- END SCRIPT --------------------------------|
+</body></html>
