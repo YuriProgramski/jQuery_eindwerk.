@@ -7,7 +7,7 @@
 
 <!---------------------------------------------------------------------------------------------------->
 
-   <div id="dialogBox" title="'Les 1'"><p><img src="img/dexter2.jpg"/></p><p>Na de basis onder de knie te hebben, zal je vervolgens leren om al te beginnen spelen met effectjes zoals delay, hide, fade en allerhande andere combinaties</p><p>Zo heeft jQuery een resem aan vooraf ingestelde mogelijkheden, maar je kan evenzeer je eigen animatie verzinnen!</p>
+   <div id="dialogBox" title="'Les 1'"><p><img src="img/dexter4.png"/></p><p>Na de basis onder de knie te hebben, zal je vervolgens leren om al te beginnen spelen met effectjes zoals delay, hide, fade en allerhande andere combinaties</p><p>Zo heeft jQuery een resem aan vooraf ingestelde mogelijkheden, maar je kan evenzeer je eigen animatie verzinnen!</p>
          </div>
 	
 <!---------------------------------------------------------------------------------------------------->
@@ -59,11 +59,11 @@ Dit is mijn div.
 
 <p><fieldset>
    <div class="accordion">
-        <h1>accordeontitel1</h1>
+        <h3>accordeontitel1</h3>
         <div style="display:none;"><p>accordeoncontent1</p>
             <p>info info info</p>
         </div>
-        <h1>accordeontitel2</h1>
+        <h3>accordeontitel2</h3>
         <div style="display:none;">accordeoncontent2
             <p>info info info</p></div>
        
@@ -72,14 +72,7 @@ Dit is mijn div.
 
  </fieldset></p>
 
-<p>kijken hoe of wat</p>
-      <p>accordion</p>
-      <p>social media bar</p>
-      <p>animated menu</p>
-      
 
-
-      <p></p>
       <button class="b">next les</button></p>
 
       </div>
@@ -157,7 +150,7 @@ $("#paneel").slideToggle("slow");
     e.preventDefault();
 });//-----------slideTOGGLE-------
 
-$('div.accordion h1').on('click', function() {
+$('div.accordion h3').on('click', function() {
 $(this).next().slideToggle('500').siblings('div').slideUp('500');
 });
 //-----------------------accordions----------------
