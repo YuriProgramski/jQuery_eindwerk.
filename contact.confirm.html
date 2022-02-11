@@ -120,6 +120,7 @@ padding-top: 69px; margin-top: 69px;}
     <script src="https://rawgit.com/Ashish-Bansal/jquery-typewriter/master/jquery.typewriter.js" defer=""></script>
     <script>
         $(document).ready(function () {
+            /*Begin Steven Code */
             let $button = $('#submit_button');
             $button.on('click', function(e) {
                 e.preventDefault();
@@ -160,6 +161,7 @@ padding-top: 69px; margin-top: 69px;}
                 }
                 if (!$naam_border.hasClass('error_border') && !$email_border.hasClass('error_border')) {
                     $('.inschrijfform').fadeOut(750);
+                    /*Einde Steven Code */
                     $('.check').fadeIn(7500).delay(1500).animate({
         right: "+=250",
         opacity: "toggle"
@@ -170,7 +172,7 @@ padding-top: 69px; margin-top: 69px;}
     $('#h3').delay(16000).fadeIn(4666);
 
         $('#newtekst2').delay(6666).fadeIn(666);
-    
+    /*Begin Steven en Joeri Code */
     $('#koffer').delay(10000).fadeIn(250).animate({
         left: "+=162px"
     }, 2222);
@@ -179,6 +181,7 @@ padding-top: 69px; margin-top: 69px;}
     }, 1669);
                 }
             });
+    /*Einde Steven en Joeri Code */
 
 
 
